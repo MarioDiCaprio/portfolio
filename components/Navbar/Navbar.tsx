@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.scss";
-import React, {useState} from "react";
-import {AnimatePresence, motion, MotionProps} from "framer-motion";
+import React, {useEffect, useState} from "react";
+import {AnimatePresence, motion, MotionProps, useScroll} from "framer-motion";
 import {Link as ScrollLink} from "react-scroll";
 import {ReactScrollLinkProps} from "react-scroll/modules/components/Link";
 import AnimateLetters from "../AnimateLetters/AnimateLetters";
@@ -132,7 +132,19 @@ const Sidebar: React.FC<SidebarProps> = ({ open , onLinkClick }) => {
 
 const Navbar: React.FC = () => {
     const isSmallScreen = useSmallScreen();
+    const {scrollY} = useScroll();
+    const [contextStyle, setContextStyle] = useState<string>(styles.context);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+    useEffect(() => {
+        scrollY.onChange(y => {
+            if (y > 100) {
+                setContextStyle(styles.contextWhenScrolled);
+            } else {
+                setContextStyle(styles.context);
+            }
+        })
+    }, []);
 
     function toggleMenuOpen() {
         setIsMenuOpen(!isMenuOpen);
@@ -155,7 +167,7 @@ const Navbar: React.FC = () => {
 
     if (isSmallScreen) {
         return (
-            <div className={styles.context}>
+            <div className={contextStyle}>
 
                 <motion.div className={styles.logoWrapper} {...logoMotion}>
                     <img src="/logo100.png" alt="logo" style={{ width: '100%', height: '100%' }} />
@@ -170,7 +182,7 @@ const Navbar: React.FC = () => {
     }
 
     return (
-        <div className={styles.context}>
+        <div className={contextStyle}>
 
             <motion.div className={styles.logoWrapper} {...logoMotion}>
                 <img src="/logo50.png" alt="logo" style={{ width: '100%', height: '100%' }} />

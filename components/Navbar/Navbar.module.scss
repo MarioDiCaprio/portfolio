@@ -4,7 +4,7 @@
 
 .context {
     width: 100vw;
-    height: 75px;
+    height: 100px;
     padding: 5px 100px 5px 100px;
     position: fixed;
     top: 0;
@@ -14,11 +14,17 @@
     align-items: center;
     background: rgba($background, 0.5);
     backdrop-filter: blur(10px);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.19);
     z-index: 1199;
+    transition: 0.3s;
     @media (max-width: $medium) {
         padding: 5px 20px 5px 20px;
     }
+}
+
+.contextWhenScrolled {
+    @extend .context;
+    height: 75px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.22);
 }
 
 .logoWrapper {
