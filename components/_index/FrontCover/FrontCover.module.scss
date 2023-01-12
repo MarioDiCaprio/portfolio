@@ -33,4 +33,20 @@
 
 .summary {
     @include Textual;
+    margin-bottom: 70px;
+}
+
+.githubButton {
+    border: 1px solid $vibrant;
+    border-radius: 5px;
+    background: transparent;
+    color: $vibrant;
+    font-family: "Source Code Pro", monospace;
+    text-decoration: none;
+    padding: 20px;
+    transition: background 0.3s;
+    &:hover {
+        background: rgba($vibrant, 0.12);
+        transition: background 0.3s;
+    }
 }

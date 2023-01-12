@@ -56,6 +56,10 @@ const FrontCover: React.FC = () => {
                     I'm an aspiring software developer specializing in web-development.
                 </motion.div>
 
+                <motion.a href="https://github.com/MarioDiCaprioUni" className={styles.githubButton} variants={childVariants}>
+                    Check out my GitHub!
+                </motion.a>
+
             </motion.div>
         </div>
     );
