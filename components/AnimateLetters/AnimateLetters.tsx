@@ -1,4 +1,4 @@
-import styles from "./AnimateLetters.module.scss";
+import styles from "./AnimateLetters.module.sass";
 import React, {ReactNode} from "react";
 import {motion, Variant, Variants} from "framer-motion";
 

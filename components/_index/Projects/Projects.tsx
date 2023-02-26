@@ -1,4 +1,4 @@
-import styles from "./Projects.module.scss";
+import styles from "./Projects.module.sass";
 import React, {ReactNode} from "react";
 import MaskedImage from "../../MaskedImage/MaskedImage";
 import {BsGithub as GithubIcon} from "react-icons/bs";

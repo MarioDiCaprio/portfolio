@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import {motion, MotionProps, Transition, useScroll} from "framer-motion";
-import styles from "./Skills.module.scss";
+import styles from "./Skills.module.sass";
 import {useMaxScreen, useMediumScreen} from "../../../hooks/useScreen";
 
 

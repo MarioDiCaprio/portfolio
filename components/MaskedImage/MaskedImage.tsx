@@ -1,4 +1,4 @@
-import styles from "./MaskedImage.module.scss";
+import styles from "./MaskedImage.module.sass";
 import React from "react";
 
 

@@ -1,4 +1,4 @@
-import styles from "./Navbar.module.scss";
+import styles from "./Navbar.module.sass";
 import React, {useEffect, useState} from "react";
 import {AnimatePresence, motion, MotionProps, useScroll} from "framer-motion";
 import {Link as ScrollLink} from "react-scroll";

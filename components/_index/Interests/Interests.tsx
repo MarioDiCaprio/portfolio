@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import styles from './Interests.module.scss';
+import styles from './Interests.module.sass';
 import {motion, MotionProps, useScroll, Variants} from "framer-motion";
 import {useSmallScreen} from "../../../hooks/useScreen";
 

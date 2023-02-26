@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.scss';
+import styles from '../styles/Home.module.sass';
 import type { NextPage } from 'next';
 import FrontCover from "../components/_index/FrontCover/FrontCover";
 import About from "../components/_index/About/About";

@@ -1,4 +1,4 @@
-import styles from "./FrontCover.module.scss";
+import styles from "./FrontCover.module.sass";
 import React from "react";
 import {motion, MotionProps, Variants} from "framer-motion";
 

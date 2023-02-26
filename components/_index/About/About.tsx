@@ -1,4 +1,4 @@
-import styles from "./About.module.scss";
+import styles from "./About.module.sass";
 import React from "react";
 import {motion, MotionProps, Variants} from "framer-motion";
 import {useLargeScreen} from "../../../hooks/useScreen";
