@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {AnimatePresence, useScroll} from "framer-motion";
+import {AnimatePresence, useScroll, useVelocity} from "framer-motion";
 import {AiOutlineMenu as MenuButtonClosedIcon} from "react-icons/ai";
 import {IoClose as MenuButtonOpenIcon} from "react-icons/io5";
 import {useSmallScreen} from "../../hooks/useScreen";
@@ -12,13 +12,22 @@ import {logoMotion, menuButtonMotion} from "./Navbar.motion";
 const Navbar: React.FC = () => {
     const isSmallScreen = useSmallScreen();
     const {scrollY} = useScroll();
+    const scrollVelocity = useVelocity(scrollY);
     const [isElevated, setIsElevated] = useState<boolean>(false);
+    const [isHidden, setIsHidden] = useState<boolean>(false);
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
     useEffect(() => {
         scrollY.onChange(y => {
             setIsElevated(y > 100);
-        })
+        });
+        scrollVelocity.onChange(v => {
+            if (v > 0) {
+                setIsHidden(true);
+            } else if (v < 0) {
+                setIsHidden(false);
+            }
+        });
     }, []);
 
     function toggleMenuOpen() {
@@ -42,7 +51,7 @@ const Navbar: React.FC = () => {
 
     if (isSmallScreen) {
         return (
-            <Context elevated={isElevated}>
+            <Context elevated={isElevated} hidden={isHidden}>
 
                 <LogoWrapper {...logoMotion}>
                     <img src="/logo100.png" alt="logo" style={{ width: '100%', height: '100%' }} />
@@ -57,7 +66,7 @@ const Navbar: React.FC = () => {
     }
 
     return (
-        <Context elevated={isElevated}>
+        <Context elevated={isElevated} hidden={isHidden}>
 
             <LogoWrapper {...logoMotion}>
                 <img src="/logo50.png" alt="logo" style={{ width: '100%', height: '100%' }} />

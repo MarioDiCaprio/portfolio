@@ -3,7 +3,7 @@ import {theme} from "../../theme";
 import {motion} from "framer-motion";
 
 
-export const Context = styled.div<{ elevated: boolean }>`
+export const Context = styled.div<{ elevated: boolean, hidden: boolean }>`
   width: 100vw;
   height: ${props => props.elevated ? 75 : 100}px;
   padding: 5px 100px 5px 100px;
@@ -16,6 +16,7 @@ export const Context = styled.div<{ elevated: boolean }>`
   background: rgba(10, 25, 47, 0.5);
   backdrop-filter: blur(10px);
   box-shadow: ${props => props.elevated? '5px 5px 20px rgba(0, 0, 0, 0.22)' : 'none'};
+  transform: ${props => props.hidden? 'translateY(-100px)' : 'none'};
   z-index: 1199;
   transition: 0.3s;
   @media (max-width: ${theme.breakpoints.md}px) {
