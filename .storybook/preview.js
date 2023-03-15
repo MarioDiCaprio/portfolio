@@ -1,5 +1,5 @@
 import { RouterContext } from "next/dist/shared/lib/router-context";
-import "../styles/globals.sass";
+import "../src/styles/globals.sass";
 
 
 export const parameters = {
