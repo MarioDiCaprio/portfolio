@@ -11,7 +11,7 @@ import Credentials from "../components/Credentials/Credentials";
 
 const Home: NextPage = () => {
     return (
-        <div>
+        <>
 
             {/* Appendix to document head */}
             <Head>
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
 
             <Credentials />
 
-        </div>
+        </>
     );
 }
 
