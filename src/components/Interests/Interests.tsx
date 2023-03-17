@@ -1,26 +1,30 @@
-import React, {useState, useEffect} from 'react';
-import {motion, MotionProps, useScroll} from "framer-motion";
-import {useSmallScreen} from "../../hooks/useScreen";
-import {ChessWheelWrapper, ContentWrapper, Context, Interest, InterestList} from "./Interests.styles";
+import React, {useState} from 'react';
+import {motion, MotionProps, useMotionValueEvent, useScroll} from "framer-motion";
+import {useMediumScreen, useSmallScreen} from "../../hooks/useScreen";
+import {
+    ChessWheelWrapper,
+    ContentWrapper,
+    Context,
+    Interest,
+    InterestList,
+    ParallaxContent,
+    ParallaxWrapper
+} from "./Interests.styles";
 import {PrimaryHeadline, VibrantCode} from "../../styles/presets.styles";
 import {interestListMotion, interestVariants} from "./Interests.motion";
+import ParallaxText from "../ParallaxText/ParallaxText";
 
 
 /**
  * This is a decorative wheel made of chess pieces. It rotates on scroll.
  */
 const ChessWheel: React.FC = () => {
-    /** The wheel's current rotation */
     const [rotation, setRotation] = useState<number>(0);
-    /** The global scroll value. Used to update rotation. */
     const { scrollY } = useScroll();
 
-    /* Updates the wheel's rotation on scroll */
-    useEffect(() => {
-        scrollY.onChange(x => {
-            setRotation(x * 0.25);
-        });
-    }, [scrollY])
+    useMotionValueEvent(scrollY, "change", val => {
+        setRotation(val * 0.25);
+    });
 
     return (
         <ChessWheelWrapper>
@@ -43,6 +47,7 @@ const ChessWheel: React.FC = () => {
  */
 const Interests: React.FC = () => {
     const isSmallScreen = useSmallScreen();
+    const isMediumScreen = useMediumScreen();
 
     const fadeOnScrollEffect: MotionProps = {
         initial: { opacity: 0 },
@@ -50,43 +55,70 @@ const Interests: React.FC = () => {
         whileInView: { opacity: 1, transition: { duration: 0.8 } }
     }
 
+    const parallaxVelocity = isMediumScreen? 1 : 0.5;
+
     return (
-        <Context id="interests" {...fadeOnScrollEffect}>
+        <>
+            <Context id="interests" {...fadeOnScrollEffect}>
 
-            <ChessWheel />
+                <ChessWheel />
 
-            <ContentWrapper>
+                <ContentWrapper>
 
-                <PrimaryHeadline>
-                    <VibrantCode>
-                        03.
-                    </VibrantCode>
-                    My Interests
-                </PrimaryHeadline>
+                    <PrimaryHeadline>
+                        <VibrantCode>
+                            03.
+                        </VibrantCode>
+                        My Interests
+                    </PrimaryHeadline>
 
-                <InterestList {...interestListMotion}>
+                    <InterestList {...interestListMotion}>
 
-                    <Interest variants={interestVariants}>
-                        I like developing new skills
-                    </Interest>
+                        <Interest variants={interestVariants}>
+                            I like developing new skills
+                        </Interest>
 
-                    <Interest variants={interestVariants}>
-                        I <b>LOVE</b> playing chess
-                    </Interest>
+                        <Interest variants={interestVariants}>
+                            I <b>LOVE</b> playing chess
+                        </Interest>
 
-                    <Interest variants={interestVariants}>
-                        I take an interest in cooking
-                    </Interest>
+                        <Interest variants={interestVariants}>
+                            I take an interest in cooking
+                        </Interest>
 
-                    <Interest variants={interestVariants}>
-                        I enjoy traveling and exploring new cultures
-                    </Interest>
+                        <Interest variants={interestVariants}>
+                            I enjoy traveling and exploring new cultures
+                        </Interest>
 
-                </InterestList>
+                    </InterestList>
 
-            </ContentWrapper>
+                </ContentWrapper>
 
-        </Context>
+
+
+            </Context>
+
+            <ParallaxWrapper>
+                <ParallaxText baseVelocity={parallaxVelocity}>
+                    <ParallaxContent>
+                        Did you know? My favourite opening is the Sicilian Defense, especially the
+                        Sveshnikov variation!
+                    </ParallaxContent>
+                </ParallaxText>
+            </ParallaxWrapper>
+
+            <ParallaxWrapper>
+                <ParallaxText baseVelocity={-parallaxVelocity}>
+                    <ParallaxContent>
+                        Also, my favourite plate of pasta is the very classy Spaghetti Carbonara!
+                    </ParallaxContent>
+                </ParallaxText>
+            </ParallaxWrapper>
+
+            <div style={{ marginBottom: 200 }} />
+
+        </>
+
     );
 }
 

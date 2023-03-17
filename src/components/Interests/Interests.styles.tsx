@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
 import {theme} from "../../theme";
-import {Text} from "../../styles/presets.styles";
+import {Text, VibrantCode} from "../../styles/presets.styles";
 
 
 export const Context = styled(motion.div)`
@@ -47,4 +47,19 @@ export const ChessWheelWrapper = styled.div`
   @media(max-width: ${theme.breakpoints.md}px) {
     margin: 50px 0 50px 0;
   }
+`;
+
+export const ParallaxWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px 0 13px 0;
+  margin: 50px 0 50px 0;
+  border: 1px solid ${theme.palette.seaGreen};
+  border-left: none;
+  border-right: none;
+`;
+
+export const ParallaxContent = styled(VibrantCode)`
+  font-size: 3rem;
+  user-select: none;
 `;
