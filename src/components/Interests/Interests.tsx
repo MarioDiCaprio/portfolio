@@ -2,6 +2,7 @@ import React from 'react';
 import {motion, MotionProps, useTransform} from "framer-motion";
 import {useSmallScreen} from "../../hooks/useScreen";
 import {
+    BulletPoint,
     ChessWheelWrapper,
     ContentWrapper,
     Context,
@@ -14,6 +15,13 @@ import {PrimaryHeadline, VibrantCode} from "../../styles/presets.styles";
 import {interestListMotion, interestVariants} from "./Interests.motion";
 import ParallaxText from "../ParallaxText/ParallaxText";
 import {useParallaxScroll} from "../../hooks/useParallaxScroll";
+import {
+    FaChessKnight as KnightIcon,
+    FaChessRook as RookIcon,
+    FaChessKing as KingIcon,
+    FaChessBishop as BishopIcon,
+    FaChessQueen as QueenIcon
+} from "react-icons/fa";
 
 
 /**
@@ -68,19 +76,39 @@ const Interests: React.FC = () => {
                     <InterestList {...interestListMotion}>
 
                         <Interest variants={interestVariants}>
+                            <BulletPoint>
+                                <KnightIcon />
+                            </BulletPoint>
                             I like developing new skills
                         </Interest>
 
                         <Interest variants={interestVariants}>
+                            <BulletPoint>
+                                <KingIcon />
+                            </BulletPoint>
                             I <b>LOVE</b> playing chess
                         </Interest>
 
                         <Interest variants={interestVariants}>
+                            <BulletPoint>
+                                <RookIcon />
+                            </BulletPoint>
                             I take an interest in cooking
                         </Interest>
 
                         <Interest variants={interestVariants}>
+                            <BulletPoint>
+                                <BishopIcon />
+                            </BulletPoint>
                             I enjoy traveling and exploring new cultures
+                        </Interest>
+
+                        <Interest variants={interestVariants}>
+                            <BulletPoint>
+                                <QueenIcon />
+                            </BulletPoint>
+                            I go to the gym
+                            <img alt="" src="/gif/flexedBiceps.gif" style={{ height: '1.5rem', marginLeft: 5 }} />
                         </Interest>
 
                     </InterestList>

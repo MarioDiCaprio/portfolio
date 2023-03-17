@@ -29,10 +29,14 @@ export const ContentWrapper = styled.div`
 export const InterestList = styled(Text)`
   display: flex;
   flex-direction: column;
+  font-size: 1.1rem;
 `;
 
 export const Interest = styled(motion.span)`
   margin: 2px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 `;
 
 export const ChessWheelWrapper = styled.div`
@@ -48,6 +52,11 @@ export const ChessWheelWrapper = styled.div`
   @media(max-width: ${theme.breakpoints.md}px) {
     display: none;
   }
+`;
+
+export const BulletPoint = styled.span`
+  color: ${theme.palette.seaGreen};
+  margin-right: 10px;
 `;
 
 export const ParallaxWrapper = styled.div`
