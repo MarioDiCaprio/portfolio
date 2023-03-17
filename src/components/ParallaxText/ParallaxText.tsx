@@ -1,7 +1,8 @@
 import React, {ReactNode, useEffect, useRef, useState} from "react";
-import {useAnimationFrame, useMotionValue, useScroll, useSpring, useTransform, useVelocity} from "framer-motion";
+import {useTransform} from "framer-motion";
 import {Child, Context, Scroller} from "./ParallaxText.styles";
 import {wrap} from "@motionone/utils";
+import {useParallaxScroll} from "../../hooks/useParallaxScroll";
 
 
 // DISCLAIMER
@@ -28,36 +29,11 @@ const ParallaxText: React.FC<ParallaxTextProps> = ({ baseVelocity, children }) =
         }
     }, [contextRef, childRef]);
 
-    const baseX = useMotionValue(0);
-    const { scrollY } = useScroll();
-    const scrollVelocity = useVelocity(scrollY);
-    const smoothVelocity = useSpring(scrollVelocity, {
-        damping: 50,
-        stiffness: 400
-    });
-    const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-        clamp: false
-    });
+    const baseX = useParallaxScroll(baseVelocity);
 
     // wraps text between (-100% / n) and 0%, where n is the number of total children. For example,
     // if we have 4 children, then the text is wrapped between -25% and 0%
-    const x = useTransform(baseX, (v) => `${wrap(-50/numberOfChildren, 0, v)}%`);
-
-    const directionFactor = useRef<number>(1);
-    useAnimationFrame((_t, delta) => {
-        let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-        // change direction on scroll
-        if (velocityFactor.get() < 0) {
-            directionFactor.current = -1;
-        } else if (velocityFactor.get() > 0) {
-            directionFactor.current = 1;
-        }
-
-        moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
-        baseX.set(baseX.get() + moveBy);
-    });
+    const x = useTransform(baseX, v => `${wrap(-50/numberOfChildren, 0, v)}%`);
 
     return (
         <Context ref={contextRef}>

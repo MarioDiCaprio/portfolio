@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {motion, MotionProps, useMotionValueEvent, useScroll} from "framer-motion";
+import React from 'react';
+import {motion, MotionProps, useTransform} from "framer-motion";
 import {useSmallScreen} from "../../hooks/useScreen";
 import {
     ChessWheelWrapper,
@@ -13,26 +13,22 @@ import {
 import {PrimaryHeadline, VibrantCode} from "../../styles/presets.styles";
 import {interestListMotion, interestVariants} from "./Interests.motion";
 import ParallaxText from "../ParallaxText/ParallaxText";
+import {useParallaxScroll} from "../../hooks/useParallaxScroll";
 
 
 /**
  * This is a decorative wheel made of chess pieces. It rotates on scroll.
  */
 const ChessWheel: React.FC = () => {
-    const [rotation, setRotation] = useState<number>(0);
-    const { scrollY } = useScroll();
-
-    useMotionValueEvent(scrollY, "change", val => {
-        setRotation(val * 0.25);
-    });
+    const baseRotation = useParallaxScroll(50);
+    const rotate = useTransform(baseRotation, r => `${r}deg`);
 
     return (
         <ChessWheelWrapper>
             <motion.img
                 alt=""
                 src="/img/chesswheel.png"
-                animate={{ rotate: rotation }}
-                transition={{ duration: 2, ease: 'easeOut' }}
+                style={{ rotate }}
             />
         </ChessWheelWrapper>
     );

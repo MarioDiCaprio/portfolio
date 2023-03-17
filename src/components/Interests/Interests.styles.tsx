@@ -13,7 +13,7 @@ export const Context = styled(motion.div)`
   align-items: center;
   gap: 100px;
   @media(max-width: ${theme.breakpoints.md}px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 50px 20px 50px 20px;
   }
   @media(max-width: ${theme.breakpoints.sm}px) {
@@ -40,12 +40,13 @@ export const ChessWheelWrapper = styled.div`
   position: relative;
   width: 70%;
   max-width: 400px;
+  padding: 30px;
   img {
     width: 100%;
     object-fit: contain;
   }
   @media(max-width: ${theme.breakpoints.md}px) {
-    margin: 50px 0 50px 0;
+    display: none;
   }
 `;
 
