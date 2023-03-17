@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {motion, MotionProps, useMotionValueEvent, useScroll} from "framer-motion";
-import {useMediumScreen, useSmallScreen} from "../../hooks/useScreen";
+import {useSmallScreen} from "../../hooks/useScreen";
 import {
     ChessWheelWrapper,
     ContentWrapper,
@@ -47,15 +47,12 @@ const ChessWheel: React.FC = () => {
  */
 const Interests: React.FC = () => {
     const isSmallScreen = useSmallScreen();
-    const isMediumScreen = useMediumScreen();
 
     const fadeOnScrollEffect: MotionProps = {
         initial: { opacity: 0 },
         viewport: { once: true, margin: isSmallScreen? '50px' : '-300px' },
         whileInView: { opacity: 1, transition: { duration: 0.8 } }
     }
-
-    const parallaxVelocity = isMediumScreen? 1 : 0.5;
 
     return (
         <>
@@ -99,7 +96,7 @@ const Interests: React.FC = () => {
             </Context>
 
             <ParallaxWrapper>
-                <ParallaxText baseVelocity={parallaxVelocity}>
+                <ParallaxText baseVelocity={2.5}>
                     <ParallaxContent>
                         Did you know? My favourite opening is the Sicilian Defense, especially the
                         Sveshnikov variation!
@@ -108,7 +105,7 @@ const Interests: React.FC = () => {
             </ParallaxWrapper>
 
             <ParallaxWrapper>
-                <ParallaxText baseVelocity={-parallaxVelocity}>
+                <ParallaxText baseVelocity={-2.5}>
                     <ParallaxContent>
                         Also, my favourite plate of pasta is the very classy Spaghetti Carbonara!
                     </ParallaxContent>
