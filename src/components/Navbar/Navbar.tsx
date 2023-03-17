@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
             <Context elevated={isElevated} hidden={isHidden}>
 
                 <LogoWrapper {...logoMotion}>
-                    <img src="/logo100.png" alt="logo" style={{ width: '100%', height: '100%' }} />
+                    <img src="/logo50.png" alt="logo" style={{ width: '100%', height: '100%' }} />
                 </LogoWrapper>
 
                 <MenuButton />

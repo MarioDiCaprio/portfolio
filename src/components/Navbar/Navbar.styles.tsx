@@ -6,7 +6,7 @@ import {motion} from "framer-motion";
 export const Context = styled.div<{ elevated: boolean, hidden: boolean }>`
   width: 100vw;
   height: ${props => props.elevated ? 75 : 100}px;
-  padding: 5px 100px 5px 100px;
+  padding: 5px 50px 5px 50px;
   position: fixed;
   top: 0;
   left: 0;
@@ -25,8 +25,7 @@ export const Context = styled.div<{ elevated: boolean, hidden: boolean }>`
 `;
 
 export const LogoWrapper = styled(motion.div)`
-  max-width: 50px;
-  max-height: 50px;
+  max-width: 37px;
 `;
 
 export const Links = styled.div`
