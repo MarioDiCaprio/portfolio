@@ -1,8 +1,8 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {Transition, useScroll} from "framer-motion";
+import React, {useRef} from 'react';
+import {useMotionValue, useMotionValueEvent, useScroll, useSpring} from "framer-motion";
 import CardCouple from "../CardCouple/CardCouple";
 import {fadeOnScrollEffect} from "../../styles/presets.motion";
-import {ArrowBody, ArrowHead, CardWrapper, Context, Subtitle, Title} from "./Skills.styles";
+import {Arrow, ArrowBody, ArrowHead, CardWrapper, Context, Subtitle, Title} from "./Skills.styles";
 import {VibrantCode} from "../../styles/presets.styles";
 
 
@@ -15,38 +15,32 @@ import {VibrantCode} from "../../styles/presets.styles";
  * @see CardCouple
  */
 const SkillsPanel: React.FC = () => {
-    /** A reference to a wrapper for this component. Used for the arrow's scroll animation. */
     const ref = useRef<HTMLDivElement>(null);
-    /** The arrow's scroll progression. Between 0 and 1. */
-    const [scroll, setScroll] = useState<number>(0);
-    /** This component's height. This is the arrow's maximum length. */
-    const [height, setHeight] = useState<number>(0);
-    /** Scroll progression with respects to this component.  */
+
+    const arrow = useMotionValue(0);
+
+    const arrowBodyHeight = useMotionValue(0);
+
+    const arrowHeadTop = useSpring(arrow, {
+        stiffness: 100,
+        damping: 13,
+        duration: 0.5
+    });
+
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ['start end', 'end center']
     });
 
-    /* Delegates `onChange` events for the component's height. */
-    useEffect(() => {
-        setHeight(ref.current?.clientHeight ?? 0);
+    useMotionValueEvent(scrollYProgress, "change", val => {
+        let maximum = ref.current?.clientHeight ?? 0;
+        arrow.set(val * (maximum + 200));
     });
 
-    /* Delegates `onChange` events for the arrow's scroll progression. */
-    useEffect(() => {
-        scrollYProgress.onChange(setScroll);
-    }, []);
+    useMotionValueEvent(arrowHeadTop, "change", val => {
+        arrowBodyHeight.set(val + 40);
+    });
 
-    /** The arrow's current length with respects to scroll progression. */
-    const arrowLength = scroll * height * 1.1;
-
-    /** The arrow's transition for the animation. */
-    const arrowTransition: Transition = {
-        type: "spring",
-        stiffness: 100,
-        damping: 13,
-        duration: 0.5
-    }
 
     return (
         <Context id="skills" {...fadeOnScrollEffect}>
@@ -63,20 +57,18 @@ const SkillsPanel: React.FC = () => {
                 What tools do I use?
             </Subtitle>
 
-            {/* The arrow's body */}
-            <ArrowBody
-                animate={{ scaleY: arrowLength, originY: 0 }}
-                transition={arrowTransition}>
-                <line x1={0} y1={0} x2={0} y2={1} />
-            </ArrowBody>
+            <Arrow>
 
-            {/* The arrow's head */}
-            <ArrowHead
-                animate={{ translateY: arrowLength + 60, scaleY: -1, originY: 0 }}
-                transition={arrowTransition}
-                viewBox="0 0 237.64 237.64">
-                <path xmlns="http://www.w3.org/2000/svg" d="M7.954,226.53c-2.23,4.623-2.295,8.072-0.609,9.915c3.911,4.275,15.926-3.905,23.323-9.051   l58.416-40.662c7.397-5.145,20.402-11.835,29.414-11.993c0.897-0.016,1.8-0.011,2.703,0.011c9.007,0.218,21.958,7.016,29.3,12.238   l56.403,40.151c7.343,5.221,19.303,13.473,23.301,9.219c1.74-1.849,1.751-5.33-0.381-9.997L129.648,7.047   c-4.264-9.333-11.335-9.404-15.79-0.163L7.954,226.53z"/>
-            </ArrowHead>
+                {/* The arrow's body */}
+                <ArrowBody style={{ height: arrowBodyHeight }} />
+
+                {/* The arrow's head */}
+                <ArrowHead style={{ top: arrowHeadTop }} viewBox="0 0 237.64 237.64">
+                    <path xmlns="http://www.w3.org/2000/svg" d="M7.954,226.53c-2.23,4.623-2.295,8.072-0.609,9.915c3.911,4.275,15.926-3.905,23.323-9.051   l58.416-40.662c7.397-5.145,20.402-11.835,29.414-11.993c0.897-0.016,1.8-0.011,2.703,0.011c9.007,0.218,21.958,7.016,29.3,12.238   l56.403,40.151c7.343,5.221,19.303,13.473,23.301,9.219c1.74-1.849,1.751-5.33-0.381-9.997L129.648,7.047   c-4.264-9.333-11.335-9.404-15.79-0.163L7.954,226.53z"/>
+                </ArrowHead>
+
+            </Arrow>
+
 
             {/* A wrapper for the cards */}
             <CardWrapper ref={ref}>

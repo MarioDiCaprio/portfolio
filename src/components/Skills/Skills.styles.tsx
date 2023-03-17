@@ -27,14 +27,20 @@ export const Subtitle = styled(SecondaryHeadline)`
   margin: 0 0 80px 0;
 `;
 
-export const ArrowBody = styled(motion.svg)`
-  line {
-    stroke: ${theme.palette.seaGreen};
-    stroke-width: 75px;
-  }
+export const Arrow = styled.div`
+  width: 100%;
   position: relative;
-  left: calc(50% - 20px);
-  max-height: 1px;
+  margin-bottom: 200px;
+`;
+
+export const ArrowBody = styled(motion.div)`
+  width: 50px;
+  height: 200px;
+  background: ${theme.palette.seaGreen};
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 50px / 2);
   @media(max-width: ${theme.breakpoints.md}px) {
     display: none;
   }
@@ -43,8 +49,8 @@ export const ArrowBody = styled(motion.svg)`
 export const ArrowHead = styled(motion.svg)`
   width: 120px;
   height: 120px;
-  position: relative;
-  left: calc(50% - 60px);
+  position: absolute;
+  left: calc(50% - 120px / 2);
   transform: scale(-1);
   path {
     fill: ${theme.palette.maastrichtBlue};
