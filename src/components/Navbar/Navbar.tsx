@@ -3,10 +3,11 @@ import {AnimatePresence, useScroll, useVelocity} from "framer-motion";
 import {AiOutlineMenu as MenuButtonClosedIcon} from "react-icons/ai";
 import {IoClose as MenuButtonOpenIcon} from "react-icons/io5";
 import {useSmallScreen} from "../../hooks/useScreen";
-import {Context, Links, LogoWrapper, MenuButtonWrapper} from "./Navbar.styles";
+import {Context, Links, MenuButtonWrapper} from "./Navbar.styles";
 import Sidebar from "../Sidebar/Sidebar";
 import NavbarLink from "../NavbarLink/NavbarLink";
-import {logoMotion, menuButtonMotion} from "./Navbar.motion";
+import {menuButtonMotion} from "./Navbar.motion";
+import Logo from "../Logo/Logo";
 
 
 const Navbar: React.FC = () => {
@@ -53,9 +54,7 @@ const Navbar: React.FC = () => {
         return (
             <Context elevated={isElevated} hidden={isHidden}>
 
-                <LogoWrapper {...logoMotion}>
-                    <img src="/logo50.png" alt="logo" style={{ width: '100%', height: '100%' }} />
-                </LogoWrapper>
+                <Logo width={37} />
 
                 <MenuButton />
 
@@ -68,9 +67,7 @@ const Navbar: React.FC = () => {
     return (
         <Context elevated={isElevated} hidden={isHidden}>
 
-            <LogoWrapper {...logoMotion}>
-                <img src="/logo50.png" alt="logo" style={{ width: '100%', height: '100%' }} />
-            </LogoWrapper>
+            <Logo width={37} />
 
             <Links>
 

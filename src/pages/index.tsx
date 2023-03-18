@@ -16,7 +16,7 @@ const Home: NextPage = () => {
             {/* Appendix to document head */}
             <Head>
                 <title>Mario Di Caprio</title>
-                <link rel="icon" href="/favicon.png" />
+                <link rel="icon" href="/logo_borderless.svg" />
             </Head>
 
             <Navbar />

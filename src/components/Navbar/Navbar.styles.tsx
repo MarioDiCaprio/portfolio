@@ -24,10 +24,6 @@ export const Context = styled.div<{ elevated: boolean, hidden: boolean }>`
   }
 `;
 
-export const LogoWrapper = styled(motion.div)`
-  max-width: 37px;
-`;
-
 export const Links = styled.div`
   display: flex;
   gap: 30px;
