@@ -2,8 +2,17 @@ import React, {useRef} from 'react';
 import {useMotionValue, useMotionValueEvent, useScroll, useSpring} from "framer-motion";
 import CardCouple from "../CardCouple/CardCouple";
 import {fadeOnScrollEffect} from "../../styles/presets.motion";
-import {Arrow, ArrowBody, ArrowHead, CardWrapper, Context, Subtitle, Title} from "./Skills.styles";
+import {
+    Arrow,
+    ArrowBody,
+    ArrowHead,
+    CardWrapper,
+    Context,
+    Subtitle,
+    Title
+} from "./Skills.styles";
 import {VibrantCode} from "../../styles/presets.styles";
+import NoteworthySkills from "../NoteworthySkills/NoteworthySkills";
 
 
 /**
@@ -143,16 +152,17 @@ const SkillsPanel: React.FC = () => {
                             much easier too, because of the additional documentation that types infer.`
                     }}
                     right={{
-                        title: 'Sass',
-                        imageSrc: '/img/sass.png',
+                        title: 'MUI',
+                        imageSrc: '/img/mui.png',
                         text:
-                            `Sass (or Scss) is a helpful precompiler for standard CSS. It adds a ton of features, such as
-                            mixins, extensions and a proper support for variables, which makes development much more
-                            compact.`
+                            `Material UI is probably the best component library out there. It provides huge customization
+                            options, easy theming and built-in styled components.`
                     }}
                 />
 
             </CardWrapper>
+
+            <NoteworthySkills />
 
         </Context>
     );

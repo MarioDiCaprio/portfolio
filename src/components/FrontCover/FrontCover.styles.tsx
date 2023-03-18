@@ -11,6 +11,9 @@ export const Context = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
+  @media (max-width: 410px) {
+    margin-top: 25px;
+  }
 `;
 
 export const ContentWrapper = styled(motion.div)`
@@ -35,6 +38,11 @@ export const Slogan = styled(SecondaryHeadline)`
 
 export const Summary = styled(Text)`
   margin-bottom: 70px;
+  max-width: 540px;
+  a {
+    color: ${theme.palette.seaGreen};
+    text-decoration: none;
+  }
 `;
 
 export const GithubButton = styled(motion.a)`

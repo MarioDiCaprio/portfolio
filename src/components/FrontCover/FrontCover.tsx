@@ -26,7 +26,9 @@ const FrontCover: React.FC = () => {
                 </Slogan>
 
                 <Summary variants={childVariants}>
-                    I'm an aspiring software developer specializing in web-development.
+                    I'm an aspiring software developer specializing in web-development. Soon,
+                    I will be joining <a href="https://www.wieland.com" target="_blank" rel="noreferrer">Wieland-Werke</a> to
+                    work on my CS-degree and work with a large-scale company.
                 </Summary>
 
                 <GithubButton

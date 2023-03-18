@@ -36,8 +36,8 @@ const About: React.FC = () => {
     }
 
     return (
-        <Context>
-            <ContentWrapper id="about" {...containerMotion}>
+        <Context id="about">
+            <ContentWrapper {...containerMotion}>
 
                 <PrimaryHeadline variants={childVariants}>
                     <VibrantCode>01.</VibrantCode>
@@ -53,6 +53,11 @@ const About: React.FC = () => {
                     turning complex problems into simple, beautiful solutions. If i am
                     not coding, I am most likely developing my cooking skills, devouring
                     chess books or enjoying a nice evening with friends and family.
+                </Text>
+                <Text variants={childVariants}>
+                    At the moment, I am collecting experience developing software, with a special
+                    interest in web development. I also study lots of chess, with the ambition of
+                    becoming a respectable player in the future.
                 </Text>
 
             </ContentWrapper>

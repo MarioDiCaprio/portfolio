@@ -7,6 +7,7 @@ export const Context = styled.div`
   text-align: center;
   font-family: "Source Code Pro", monospace;
   font-size: small;
+  margin-top: 50px;
   margin-bottom: 30px;
   span {
     color: ${theme.palette.seaGreen};

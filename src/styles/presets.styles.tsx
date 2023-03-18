@@ -11,9 +11,8 @@ export const VibrantCode = styled(motion.span)`
 
 export const PrimaryHeadline = styled(motion.h1)`
   color: ${theme.palette.lavenderBlue};
-  font-family: 'Montserrat', serif;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 35px;
   span {
     font-size: 28px;
@@ -24,15 +23,13 @@ export const PrimaryHeadline = styled(motion.h1)`
 
 export const SecondaryHeadline = styled(motion.h2)`
   color: ${theme.palette.coolGrey};
-  font-family: 'Montserrat', serif;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 35px;
 `;
 
 export const Text = styled(motion.p)`
   color: ${theme.palette.coolGrey};
-  font-family: 'Montserrat', serif;
-  font-size: 20px;
-  line-height: 27px;
+  font-size: 1.1rem;
+  line-height: 1.5;
 `;

@@ -13,12 +13,10 @@ export const Context = styled(motion.div)`
   align-items: center;
   gap: 100px;
   @media(max-width: ${theme.breakpoints.md}px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 50px 20px 50px 20px;
-  }
-  @media(max-width: ${theme.breakpoints.sm}px) {
-    flex-direction: column;
-    padding: 50px 20px 50px 20px;
+    margin-top: 130px;
+    gap: 20px;
   }
 `;
 
@@ -50,7 +48,6 @@ export const ChessWheelWrapper = styled.div`
     object-fit: contain;
   }
   @media(max-width: ${theme.breakpoints.md}px) {
-    display: none;
   }
 `;
 

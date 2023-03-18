@@ -4,11 +4,11 @@ import {motion} from "framer-motion";
 
 export const Context = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 80px 20px 20px 20px;
 `;
 
 export const ContentWrapper = styled(motion.div)`

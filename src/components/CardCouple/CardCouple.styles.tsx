@@ -32,7 +32,6 @@ export const CardContext = styled(motion.div)`
     line-height: 1.5rem;
   }
   h1 {
-    font-family: "Montserrat", serif;
     color: ${theme.palette.lavenderBlue};
   }
   img {
