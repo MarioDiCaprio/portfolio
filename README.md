@@ -32,6 +32,12 @@ and intuitive manner:
   directory structure.
 - More general styles and animations, as well as styles and animations for
   individual pages, are stored under `/src/styles`
+- Page stories are stored under `/src/stories`.
+
+# Storybook
+
+Ideally, all components have a storybook to view them in isolation. To run
+the storybook application: execute `yarn storybook`.
 
 # Disclaimer
 
