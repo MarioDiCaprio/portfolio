@@ -45,11 +45,11 @@ const ChessWheel: React.FC = () => {
 
 /**
  * This is the panel displaying the author's interests. On the left can be
- * found a decorative {@link ChessWheel}, while on the right is a list of
+ * found a decorative `ChessWheel`, while on the right is a list of
  * interests. This component is responsive: On small screens the wheel
- * is on top and the list is on the bottom.
+ * is on the bottom of the component.
  */
-const Interests: React.FC = () => {
+export const Interests: React.FC = () => {
     const isSmallScreen = useSmallScreen();
 
     const fadeOnScrollEffect: MotionProps = {

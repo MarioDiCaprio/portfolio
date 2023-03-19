@@ -16,17 +16,33 @@ import {VibrantCode} from "../../styles/presets.styles";
 
 
 interface FeaturedProjectProps {
+    /**
+     * The project's title.
+     */
     title: string;
+    /**
+     * The source of the project's thumbnail.
+     */
     imgSrc: string;
+    /**
+     * Optional links for the project
+     */
     links?: {
         github?: string;
         official?: string;
     };
+    /**
+     * A description for this project. Goes into the blue box besides the thumbnail.
+     */
     children?: ReactNode;
 }
 
 
-const FeaturedProject: React.FC<FeaturedProjectProps> = ({ title, imgSrc, links, children }) => {
+/**
+ * This component highlights a project to show off. Orientation alternates between left and right
+ * with each `FeaturedProject`.
+ */
+export const FeaturedProject: React.FC<FeaturedProjectProps> = ({ title, imgSrc, links, children }) => {
     const isSmallScreen = useMaxScreen(1100);
 
 

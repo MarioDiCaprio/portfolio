@@ -10,7 +10,15 @@ import {menuButtonMotion} from "./Navbar.motion";
 import Logo from "../Logo/Logo";
 
 
-const Navbar: React.FC = () => {
+/**
+ * This is the page's navbar. It contains the logo and useful links to
+ * scroll to. On small screens, contains a button that opens a sidebar
+ * to access those links.
+ * The Navbar is elevated when scrolled away from the top of the page
+ * and generally hidden when scrolled down, but shown when scrolled
+ * up.
+ */
+export const Navbar: React.FC = () => {
     const isSmallScreen = useSmallScreen();
     const {scrollY} = useScroll();
     const scrollVelocity = useVelocity(scrollY);

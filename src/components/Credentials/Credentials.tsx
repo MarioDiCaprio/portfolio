@@ -3,7 +3,11 @@ import {Context} from "./Credentials.styles";
 import {useRouter} from "next/router";
 
 
-const Credentials: React.FC = () => {
+/**
+ * This component highlights the author's credentials. It goes at the end
+ * of the page.
+ */
+export const Credentials: React.FC = () => {
     const router = useRouter();
 
     return (

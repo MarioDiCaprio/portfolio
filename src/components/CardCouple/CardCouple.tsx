@@ -9,8 +9,6 @@ import {cardMotion} from "./CardCouple.motion";
  * This interface represents a card that describes a skill.
  * Note that this interface is solely used for its corresponding
  * component.
- * @see CardCoupleProps
- * @see CardCouple
  */
 interface Card {
     /** The skill's title */
@@ -24,10 +22,6 @@ interface Card {
 /**
  * This interface represents a couple of cards. That is, in a table
  * of cards this interface holds two cards in the same row.
- * Note that this interface is solely used for its corresponding
- * component.
- * @see Card
- * @see CardCouple
  */
 interface CardCoupleProps {
     /** The card on the left */
@@ -42,11 +36,8 @@ interface CardCoupleProps {
  * This component is responsive: On small screens the cards aren't placed
  * besides each other, but on top of each other. Therefore, the animation
  * is removed in that case.
- * @param props The props for this component
- * @see Card
- * @see CardCoupleProps
  */
-const CardCouple: React.FC<CardCoupleProps> = ({ left, right }) => {
+export const CardCouple: React.FC<CardCoupleProps> = ({ left, right }) => {
     /** A reference to a wrapper for the cards. Used to identify scrolling events. */
     const ref = useRef(null);
     /** The progress of the animation. Between 0 and 1. */

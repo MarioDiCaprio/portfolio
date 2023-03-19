@@ -1,3 +1,5 @@
+// noinspection JSUnusedGlobalSymbols
+
 import type { NextPage } from 'next';
 import FrontCover from "../components/FrontCover/FrontCover";
 import About from "../components/About/About";
@@ -9,7 +11,10 @@ import Navbar from "../components/Navbar/Navbar";
 import Credentials from "../components/Credentials/Credentials";
 
 
-const Home: NextPage = () => {
+/**
+ * This is the main page.
+ */
+const Index: NextPage = () => {
     return (
         <>
 
@@ -33,4 +38,4 @@ const Home: NextPage = () => {
     );
 }
 
-export default Home;
+export default Index;

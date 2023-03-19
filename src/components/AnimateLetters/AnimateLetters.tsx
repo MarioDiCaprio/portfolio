@@ -5,19 +5,34 @@ import {defaultContainerVariants, defaultLetterVariants} from "./AnimateLetters.
 
 
 interface AnimateLettersProps {
+    /**
+     * Framer-Motion variants for the container component.
+     * By default, staggers children (letters) for a short time.
+     */
     containerVariants?: {
         before: Variant;
         after: Variant;
     };
+    /**
+     * Framer-Motion variants applied to each letter.
+     * By default, performs a "swing" animation on each letter.
+     */
     letterVariants?: {
         before: Variant;
         after: Variant;
     };
+    /**
+     * The component's children. Note that only textual data is supported.
+     */
     children?: ReactNode;
 }
 
 
-const AnimateLetters: React.FC<AnimateLettersProps> = ({ containerVariants, letterVariants, children }) => {
+/**
+ * This component animates each letter that is passed as a child. Note that children should be composed of
+ * textual data only!
+ */
+export const AnimateLetters: React.FC<AnimateLettersProps> = ({ containerVariants = defaultContainerVariants, letterVariants = defaultLetterVariants, children }) => {
     if (typeof children !== 'string') {
         return <></>;
     }
@@ -26,7 +41,7 @@ const AnimateLetters: React.FC<AnimateLettersProps> = ({ containerVariants, lett
         let letters = Array.from(word).map((letter, letterIndex) => (
             <Letter
                 key={`word-${wordIndex}-letter-${letterIndex}`}
-                variants={letterVariants ?? defaultLetterVariants}
+                variants={letterVariants}
             >
                 {letter === " " ? "\u00A0" : letter}
             </Letter>
@@ -43,7 +58,7 @@ const AnimateLetters: React.FC<AnimateLettersProps> = ({ containerVariants, lett
         <Words
             initial="before"
             animate="after"
-            variants={containerVariants ?? defaultContainerVariants}
+            variants={containerVariants}
         >
             { words }
         </Words>

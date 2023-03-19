@@ -7,7 +7,7 @@ import {childVariants, containerMotion} from "./FrontCover.motion";
  * The main display on the home page. This display consists of the author's
  * name in glowing, vibrant colors. Each letter has an intro-animation.
  */
-const FrontCover: React.FC = () => {
+export const FrontCover: React.FC = () => {
 
     return (
         <Context id="front-cover">

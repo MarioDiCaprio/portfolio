@@ -3,12 +3,26 @@ import {Hexagon, Letter, StyledSvg} from "./Logo.styles";
 
 
 interface LogoProps {
+    /**
+     * The logo's width. The height is automatically calculated and is
+     * slightly larger.
+     */
     width: number;
+    /**
+     * The CSS length unit for the width (e.g. `px`, `%`).
+     */
     widthUnit?: string;
+    /**
+     * Whether the logo should be borderless.
+     */
     borderless?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ width, widthUnit = 'px', borderless }) => {
+
+/**
+ * This is the main logo as a JSX component. Its size and appearance are adjustable.
+ */
+export const Logo: React.FC<LogoProps> = ({ width, widthUnit = 'px', borderless = false }) => {
     return (
         <StyledSvg
             width={width + widthUnit}
@@ -35,6 +49,5 @@ const Logo: React.FC<LogoProps> = ({ width, widthUnit = 'px', borderless }) => {
         </StyledSvg>
     );
 }
-
 
 export default Logo;

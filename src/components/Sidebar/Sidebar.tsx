@@ -6,12 +6,24 @@ import NavbarLink from "../NavbarLink/NavbarLink";
 
 
 interface SidebarProps {
+    /**
+     * Whether the sidebar is open.
+     */
     open: boolean;
+    /**
+     * An event that is triggered when the links in the sidebar
+     * are clicked.
+     */
     onLinkClick?: () => void;
 }
 
 
-const Sidebar: React.FC<SidebarProps> = ({ open , onLinkClick }) => {
+/**
+ * This is a sidebar that is used for small screens. It contains the links on the `Navbar`
+ * that cannot be displayed there because of a small screen. Instead, they are rendered here.
+ * The sidebar can be accessed via a button on the navbar that is visible on small screens.
+ */
+export const Sidebar: React.FC<SidebarProps> = ({ open , onLinkClick }) => {
     return (
         <AnimatePresence>
             {open &&

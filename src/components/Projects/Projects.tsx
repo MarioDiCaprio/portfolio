@@ -12,7 +12,10 @@ const fadeOnScrollEffect: MotionProps = {
 }
 
 
-const Projects: React.FC = () => {
+/**
+ * This section highlights the author's projects.
+ */
+export const Projects: React.FC = () => {
     return (
         <Context id="projects">
             <div>

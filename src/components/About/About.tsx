@@ -20,7 +20,11 @@ const childVariants: Variants = {
 }
 
 
-const About: React.FC = () => {
+/**
+ * This is the "About" section. It outlines the author's personal and
+ * professional life.
+ */
+export const About: React.FC = () => {
     const isLargeScreen = useLargeScreen();
 
     const containerMotion: MotionProps = {

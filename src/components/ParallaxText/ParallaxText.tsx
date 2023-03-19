@@ -11,11 +11,26 @@ import {useParallaxScroll} from "../../hooks/useParallaxScroll";
 
 
 interface ParallaxTextProps {
+    /**
+     * The base velocity of the text in percent with respect to the children's width.
+     * Needs to be adjusted according to the use case.
+     */
     baseVelocity: number;
+    /**
+     * The children. This is what the animation is applied to.
+     */
     children?: ReactNode;
 }
 
-const ParallaxText: React.FC<ParallaxTextProps> = ({ baseVelocity, children }) => {
+
+/**
+ * This component animates its children by applying a sliding effect. The slide's velocity is
+ * enhanced when the page is scrolled, providing a parallax effect. The slide's direction also
+ * changes.
+ * This component works by cloning the given children until the component's max-width is reached
+ * (all of which is dynamically calculated) and sliding them along the x-axis.
+ */
+export const ParallaxText: React.FC<ParallaxTextProps> = ({ baseVelocity, children }) => {
     // procedure to dynamically calculate number of children for the text
     // to repeat itself in a minimal manner
     const contextRef = useRef<HTMLDivElement>(null);

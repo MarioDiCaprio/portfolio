@@ -11,7 +11,11 @@ const Skill: React.FC<{ children?: ReactNode }> = ({ children }) => (
 );
 
 
-const NoteworthySkills: React.FC = () => {
+/**
+ * This component in included in the `Skills` section and showcases
+ * additional skills the author possesses.
+ */
+export const NoteworthySkills: React.FC = () => {
     return (
         <Context>
             <Header>

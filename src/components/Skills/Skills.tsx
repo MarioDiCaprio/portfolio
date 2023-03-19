@@ -17,13 +17,12 @@ import NoteworthySkills from "../NoteworthySkills/NoteworthySkills";
 
 /**
  * This component highlights the author's skills. It consists of skills
- * wrapped inside of {@link CardCouple}s stacked upon each other. Also,
+ * wrapped inside of `CardCouple`s stacked upon each other. Also,
  * there is an arrow on top of this component that expands downwards
  * as the page scrolls, fitting perfectly with the `CardCouple` animation.
  * This component is responsive: The arrow is hidden on small screens.
- * @see CardCouple
  */
-const SkillsPanel: React.FC = () => {
+export const Skills: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null);
 
     const arrow = useMotionValue(0);
@@ -168,4 +167,4 @@ const SkillsPanel: React.FC = () => {
     );
 }
 
-export default SkillsPanel;
+export default Skills;
