@@ -11,11 +11,17 @@
     <a href="https://vercel.com/" target="_blank" rel="noreferrer">Vercel</a>.
 </p>
 
+# Screenshots
+
+![](public/screenshots/front-page.png)
+![](public/screenshots/interests.png)
+
 # Tech Stack
 
 This application was developed with the following technologies:
 - [React](https://reactjs.org)
 - [Next JS](https://nextjs.org)
+- [Storybook](https://storybook.js.org/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Styled Components](https://styled-components.com/)
 
@@ -36,8 +42,10 @@ and intuitive manner:
 
 # Storybook
 
-Ideally, all components have a storybook to view them in isolation. To run
-the storybook application: execute `yarn storybook`.
+Ideally, all components have a story to view them in isolation. The storybook
+for this application is deployed on [Chromatic](https://www.chromatic.com/)
+and is publicly accessible [here](https://www.chromatic.com/builds?appId=6417438718d9224ca85e6f32).
+
 
 # Disclaimer
 
