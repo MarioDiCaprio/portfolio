@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token 6c61ed7f797e"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -47,5 +48,7 @@
     "sass": "^1.59.3",
     "storybook": "^7.0.0-rc.4",
     "typescript": "4.8.3"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "portfolio@0.1.0"
 }
