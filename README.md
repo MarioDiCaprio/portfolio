@@ -46,6 +46,55 @@ Ideally, all components have a story to view them in isolation. The storybook
 for this application is deployed on [Chromatic](https://www.chromatic.com/)
 and is publicly accessible [here](https://www.chromatic.com/builds?appId=6417438718d9224ca85e6f32).
 
+![](public/screenshots/chromatic.png)
+
+Alternatively, you can run the storybook locally as follows:
+
+1. First, install all dependencies:
+
+```shell
+yarn install
+```
+
+2. Now you can run the storybook locally:
+
+```shell
+yarn storybook
+```
+
+# Installation
+
+1. First, install all dependencies:
+
+```shell
+yarn install
+```
+
+2. Already, you can run this project on your local machine!
+
+```shell
+yarn dev
+```
+
+3. Alternatively, you can first build this project and then run the
+   compiled code:
+
+```shell
+yarn build && yarn start
+```
+
+# Color Palette
+
+Naming conventions for each color code are as per [this](https://www.color-name.com/) tool.
+
+| Color Name      | Color Code                                                         |
+|-----------------|--------------------------------------------------------------------|
+| Cool Grey       | ![#8892b0](https://placehold.co/10x10/8892b0/8892b0.png) `#8892b0` |
+| Lavender Blue   | ![#ccd6f6](https://placehold.co/10x10/ccd6f6/ccd6f6.png) `#ccd6f6` |
+| Sea Green       | ![#1dffca](https://placehold.co/10x10/1dffca/1dffca.png) `#1dffca` |
+| Aquamarine      | ![#64ffda](https://placehold.co/10x10/64ffda/64ffda.png) `#64ffda` |
+| Maastricht Blue | ![#0a192f](https://placehold.co/10x10/0a192f/0a192f.png) `#0a192f` |
+
 
 # Disclaimer
 
