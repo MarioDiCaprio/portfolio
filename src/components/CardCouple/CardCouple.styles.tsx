@@ -18,7 +18,8 @@ export const Context = styled('div')`
 export const CardContext = styled(motion.div)`
   min-width: 80%;
   min-height: 300px;
-  border: 2px solid ${props => props.theme.palette.primary.main};
+  background: ${props => props.theme.palette.background.paper};
+  box-shadow: 10px 10px 10px black;
   border-radius: 8px;
   padding: 30px;
   display: flex;
