@@ -10,13 +10,13 @@
     <g transform="translate(-54.172757,-25.817531)">
 
         <path
-                style="fill: #0a192f"
+                style="fill: #061E28"
                 d="m 108.6531,99.844207 -38.429785,-2e-6 -19.214892,-33.281173 19.214895,-33.28117 38.429782,1e-6 19.2149,33.281173 z"
                 transform="matrix(0.86589124,0.50524724,-0.49992254,0.87511389,45.270809,-36.466358)"
         />
 
         <text
-                style="font-size: 50px; font-family: aakar, serif; fill: #66ffd9"
+                style="font-size: 50px; font-family: aakar, serif; fill: #00FFC6"
                 x="69.241219"
                 y="81.70752"
                 transform="scale(0.99053464,1.0095558)"

@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="logo" src="public/logo_borderless.svg" width="100">
+    <img alt="logo" src="public/logo.svg" width="100">
 </div>
 <h1 align="center">
     mariodicaprio.vercel.app
