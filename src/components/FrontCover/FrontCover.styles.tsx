@@ -1,10 +1,9 @@
-import styled from "styled-components";
+import {styled} from "@mui/material";
 import {motion} from "framer-motion";
 import {PrimaryHeadline, SecondaryHeadline, Text, VibrantCode} from "../../styles/presets.styles";
-import {theme} from "../../theme";
 
 
-export const Context = styled.div`
+export const Context = styled('div')`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -40,16 +39,16 @@ export const Summary = styled(Text)`
   margin-bottom: 70px;
   max-width: 540px;
   a {
-    color: ${theme.palette.seaGreen};
+    color: ${props => props.theme.palette.primary.main};
     text-decoration: none;
   }
 `;
 
 export const GithubButton = styled(motion.a)`
-  border: 1px solid ${theme.palette.seaGreen};
+  border: 1px solid ${props => props.theme.palette.primary.main};
   border-radius: 5px;
   background: transparent;
-  color: ${theme.palette.seaGreen};
+  color: ${props => props.theme.palette.primary.main};
   font-family: "Source Code Pro", monospace;
   text-decoration: none;
   padding: 20px;

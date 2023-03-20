@@ -1,9 +1,8 @@
-import styled from "styled-components";
-import {theme} from "../../theme";
+import {styled} from "@mui/material";
 import {motion} from "framer-motion";
 
 
-export const Context = styled.div<{ elevated: boolean, hidden: boolean }>`
+export const Context = styled('div')<{ elevated: boolean, hidden: boolean }>`
   width: 100vw;
   height: ${props => props.elevated ? 75 : 100}px;
   padding: 5px 50px 5px 50px;
@@ -19,12 +18,12 @@ export const Context = styled.div<{ elevated: boolean, hidden: boolean }>`
   transform: ${props => props.hidden? 'translateY(-100px)' : 'none'};
   z-index: 1199;
   transition: 0.3s;
-  @media (max-width: ${theme.breakpoints.md}px) {
+  @media (max-width: ${props => props.theme.breakpoints.values.md}px) {
     padding: 5px 20px 5px 20px;
   }
 `;
 
-export const Links = styled.div`
+export const Links = styled('div')`
   display: flex;
   gap: 30px;
   * {
@@ -33,7 +32,7 @@ export const Links = styled.div`
 `;
 
 export const MenuButtonWrapper = styled(motion.div)`
-  color: ${theme.palette.seaGreen};
+  color: ${props => props.theme.palette.primary.main};
   font-size: 30px;
   cursor: pointer;
   z-index: 999999999;

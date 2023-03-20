@@ -2,7 +2,7 @@
 
 import {Meta, StoryFn} from "@storybook/react";
 import {AnimateLetters} from "./AnimateLetters";
-import {theme} from "../../theme";
+import {styled} from "@mui/material";
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -16,10 +16,14 @@ type Story = StoryFn<typeof AnimateLetters>;
 
 ////////////////////////////////////////////////////////////////////////
 
+const Wrapper = styled('h2')`
+  color: ${props => props.theme.palette.text.primary};
+`;
+
 export const Main: Story = props => (
-    <h2 style={{ color: theme.palette.lavenderBlue }}>
+    <Wrapper>
         <AnimateLetters {...props}>
             Hello, World!
         </AnimateLetters>
-    </h2>
+    </Wrapper>
 );

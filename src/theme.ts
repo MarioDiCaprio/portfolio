@@ -1,14 +1,17 @@
-export const theme = {
+import {createTheme} from "@mui/material";
+
+
+export const theme = createTheme({
     palette: {
-        lavenderBlue: '#ccd6f6',
-        coolGrey: '#8892b0',
-        seaGreen: '#1dffca',
-        aquamarine: '#64ffda',
-        maastrichtBlue: '#0a192f'
-    },
-    breakpoints: {
-        lg: 1200,
-        md: 992,
-        sm: 768
+        primary: {
+            main: '#64ffda'
+        },
+        text: {
+            primary: '#ccd6f6',
+            secondary: '#8892b0'
+        },
+        background: {
+            default: '#0a192f'
+        }
     }
-}
+});

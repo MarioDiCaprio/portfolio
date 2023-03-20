@@ -1,6 +1,5 @@
-import styled from "styled-components";
+import {styled} from "@mui/material";
 import {motion} from "framer-motion";
-import {theme} from "../../theme";
 import {Text} from "../../styles/presets.styles";
 
 
@@ -12,7 +11,7 @@ export const Context = styled(motion.div)`
   justify-content: space-around;
   align-items: center;
   gap: 100px;
-  @media(max-width: ${theme.breakpoints.md}px) {
+  @media(max-width: ${props => props.theme.breakpoints.values.md}px) {
     flex-direction: column-reverse;
     padding: 50px 20px 50px 20px;
     margin-top: 130px;
@@ -20,7 +19,7 @@ export const Context = styled(motion.div)`
   }
 `;
 
-export const ContentWrapper = styled.div`
+export const ContentWrapper = styled('div')`
   
 `;
 
@@ -37,7 +36,7 @@ export const Interest = styled(motion.span)`
   gap: 4px;
 `;
 
-export const ChessWheelWrapper = styled.div`
+export const ChessWheelWrapper = styled('div')`
   overflow: hidden;
   position: relative;
   width: 70%;
@@ -47,24 +46,24 @@ export const ChessWheelWrapper = styled.div`
     width: 100%;
     object-fit: contain;
   }
-  @media(max-width: ${theme.breakpoints.md}px) {
+  @media(max-width: ${props => props.theme.breakpoints.values.md}px) {
   }
 `;
 
-export const BulletPoint = styled.span`
-  color: ${theme.palette.seaGreen};
+export const BulletPoint = styled('span')`
+  color: ${props => props.theme.palette.primary.main};
   margin-right: 10px;
 `;
 
-export const ParallaxWrapper = styled.div`
+export const ParallaxWrapper = styled('span')`
   display: flex;
   align-items: center;
   padding: 10px 0 13px 0;
   margin: 30px 0 30px 0;
 `;
 
-export const ParallaxContent = styled.span`
-  color: ${theme.palette.seaGreen};
+export const ParallaxContent = styled('span')`
+  color: ${props => props.theme.palette.primary.main};
   font-family: "Plaster", serif;
   font-size: 3rem;
   user-select: none;

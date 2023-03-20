@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import {styled} from "@mui/material";
 import {motion} from "framer-motion";
 import {PrimaryHeadline, Text} from "../../styles/presets.styles";
-import {theme} from "../../theme";
 
 
 export const SmallContext = styled(motion.div)`
@@ -30,14 +29,14 @@ export const SmallDescription = styled(motion.p)`
 export const SmallLinks = styled(motion.div)`
   font-size: 25px;
   * {
-    color: ${theme.palette.seaGreen};
+    color: ${props => props.theme.palette.primary.main};
     margin: 5px;
   }
 `;
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
-export const Context = styled.div`
+export const Context = styled('div')`
   width: 1000px;
   height: 370px;
   position: relative;
@@ -114,11 +113,11 @@ export const Thumbnail = styled(motion.div)`
 export const Links = styled(motion.div)`
   font-size: 25px;
   a {
-    color: ${theme.palette.lavenderBlue};
+    color: ${props => props.theme.palette.text.primary};
     margin: 5px;
     transition: 0.3s;
     &:hover {
-      color: ${theme.palette.seaGreen};
+      color: ${props => props.theme.palette.primary.main};
       transition: 0.3s;
     }
   }

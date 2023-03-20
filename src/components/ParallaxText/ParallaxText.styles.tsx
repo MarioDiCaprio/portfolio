@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import {styled} from "@mui/material";
 import {motion} from "framer-motion";
 
 
-export const Context = styled.div`
+export const Context = styled('div')`
   overflow-x: hidden;
   overflow-y: visible;
   letter-spacing: -2px;
@@ -22,7 +22,7 @@ export const Scroller = styled(motion.div)`
   flex-wrap: nowrap;
 `;
 
-export const Child = styled.span`
+export const Child = styled('span')`
   display: block;
   margin-right: 30px;
 `;

@@ -1,14 +1,13 @@
-import styled from "styled-components";
-import {theme} from "../../theme";
+import {styled} from "@mui/material";
 import {motion} from "framer-motion";
 
 
-export const Context = styled.div`
+export const Context = styled('div')`
   width: 100%;
   height: fit-content;
   display: flex;
   justify-content: center;
-  @media(max-width: ${theme.breakpoints.md}px) {
+  @media(max-width: ${props => props.theme.breakpoints.values.md}px) {
     flex-direction: column;
     gap: 30px;
     padding: 0 10px 0 10px;
@@ -19,20 +18,21 @@ export const Context = styled.div`
 export const CardContext = styled(motion.div)`
   min-width: 80%;
   min-height: 300px;
-  border: 2px solid ${theme.palette.seaGreen};
+  border: 2px solid ${props => props.theme.palette.primary.main};
   border-radius: 8px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
   div {
+    color: ${props => props.theme.palette.text.secondary};
     display: flex;
     justify-content: space-between;
     font-size: 1.1rem;
     line-height: 1.5rem;
   }
   h1 {
-    color: ${theme.palette.lavenderBlue};
+    color: ${props => props.theme.palette.text.primary};
   }
   img {
     width: 150px;
@@ -47,7 +47,7 @@ export const CardContext = styled(motion.div)`
       margin-bottom: 0;
     }
   }
-  @media(max-width: ${theme.breakpoints.md}px) {
+  @media(max-width: ${props => props.theme.breakpoints.values.md}px) {
     animation: none;
   }
 `;

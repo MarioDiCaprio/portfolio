@@ -1,15 +1,14 @@
-import styled from "styled-components";
-import {theme} from "../../theme";
+import {styled} from "@mui/material";
 import {PrimaryHeadline} from "../../styles/presets.styles";
 
 
-export const Context = styled.div`
+export const Context = styled('div')`
   width: 100%;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: ${theme.breakpoints.md}px) {
+  @media (max-width: ${props => props.theme.breakpoints.values.md}px) {
     margin-top: 50px;
   }
 `;
@@ -19,25 +18,25 @@ export const Header = styled(PrimaryHeadline)`
   text-align: center;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled('div')`
   width: 100%;
-  max-width: ${theme.breakpoints.md};
+  max-width: ${props => props.theme.breakpoints.values.md}px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 `;
 
-export const SkillGroup = styled.div`
+export const SkillGroup = styled('div')`
   display: flex;
   flex-direction: column;
   gap: 10px;
 `;
 
-export const SkillItem = styled.span`
+export const SkillItem = styled('div')`
   display: flex;
   align-items: center;
   gap: 10px;
   * {
-    color: ${theme.palette.seaGreen};
+    color: ${props => props.theme.palette.primary.main};
   }
 `;

@@ -3,8 +3,7 @@
 import type { Preview } from "@storybook/react";
 import {theme} from "../src/theme";
 import {INITIAL_VIEWPORTS, DEFAULT_VIEWPORT} from "@storybook/addon-viewport";
-import {ThemeProvider} from "styled-components";
-import {GlobalCSS} from "../src/pages/_app";
+import {CssBaseline, ThemeProvider} from "@mui/material";
 
 
 const preview: Preview = {
@@ -19,7 +18,7 @@ const preview: Preview = {
         backgrounds: {
             default: 'maastrichtBlue',
             values: [
-                { name: 'maastrichtBlue', value: theme.palette.maastrichtBlue }
+                { name: 'maastrichtBlue', value: theme.palette.background.default }
             ]
         },
         viewport: {
@@ -32,7 +31,7 @@ const preview: Preview = {
     decorators: [
         (Story) => (
             <ThemeProvider theme={theme}>
-                <GlobalCSS />
+                <CssBaseline />
                 <Story />
             </ThemeProvider>
         )

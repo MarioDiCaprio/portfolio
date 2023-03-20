@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import {theme} from "../../theme";
+import {styled} from "@mui/material";
 
 
-export const Context = styled.div`
+export const Context = styled('div')`
   width: 100%;
   text-align: center;
   font-family: "Source Code Pro", monospace;
@@ -10,7 +9,7 @@ export const Context = styled.div`
   margin-top: 50px;
   margin-bottom: 30px;
   span {
-    color: ${theme.palette.seaGreen};
+    color: ${props => props.theme.palette.primary.main};
     cursor: pointer;
   }
 `;

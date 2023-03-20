@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import {styled} from "@mui/material";
 import {PrimaryHeadline} from "../../styles/presets.styles";
 
 
-export const Context = styled.div`
+export const Context = styled('div')`
   width: 100%;
   min-height: 100vh;
   height: fit-content;

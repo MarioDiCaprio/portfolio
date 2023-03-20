@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import {styled} from "@mui/material";
 import {motion} from "framer-motion";
 
 
-export const Context = styled.div`
+export const Context = styled('div')`
   width: 100%;
   min-height: 100vh;
   display: flex;

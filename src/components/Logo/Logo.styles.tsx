@@ -1,8 +1,7 @@
-import styled from "styled-components";
-import {theme} from "../../theme";
+import {styled} from "@mui/material";
 
 
-export const StyledSvg = styled.svg`
+export const StyledSvg = styled('svg')`
   &:hover {
     path {
       fill: rgba(29, 255, 202, 0.1);
@@ -10,17 +9,17 @@ export const StyledSvg = styled.svg`
   }
 `;
 
-export const Hexagon = styled.path<{ borderless?: boolean }>`
-  fill: ${theme.palette.maastrichtBlue};
-  stroke: ${theme.palette.aquamarine};
+export const Hexagon = styled('path')<{ borderless?: boolean }>`
+  fill: ${props => props.theme.palette.background.default};
+  stroke: ${props => props.theme.palette.primary.light};
   stroke-width: ${props => props.borderless? 0 : 4};
   transition: 0.3s;
 `;
 
-export const Letter = styled.text`
+export const Letter = styled('text')`
   font-size: 50px;
   font-family: aakar, serif;
-  fill: ${theme.palette.aquamarine};
+  fill: ${props => props.theme.palette.primary.light};
   stroke-width:0;
   user-select: none;
 `;

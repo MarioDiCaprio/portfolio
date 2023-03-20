@@ -2,7 +2,7 @@
 
 import {Meta, StoryFn} from "@storybook/react";
 import {CardCouple} from "./CardCouple";
-import styled from "styled-components";
+import {styled} from "@mui/material";
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -16,7 +16,7 @@ type Story = StoryFn<typeof CardCouple>;
 
 ////////////////////////////////////////////////////////////////////////
 
-const Wrapper = styled.div`
+const Wrapper = styled('div')`
   width: 100%;
   max-width: 800px;
   display: flex;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import {styled} from "@mui/material";
 import {motion} from "framer-motion";
 
 
@@ -8,7 +8,7 @@ export const Letter = styled(motion.span)`
   width: auto;
 `;
 
-export const Word = styled.div`
+export const Word = styled('div')`
   display: inline-block;
 `;
 

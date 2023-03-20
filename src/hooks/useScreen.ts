@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {useMediaQuery} from "react-responsive";
-import {theme} from "../theme";
+import {useTheme} from "@mui/material";
 
 
 export function useMaxScreen(width: number) {
@@ -16,15 +16,18 @@ export function useMaxScreen(width: number) {
 
 
 export function useSmallScreen() {
-    return useMaxScreen(theme.breakpoints.sm);
+    const theme = useTheme();
+    return useMaxScreen(theme.breakpoints.values.sm);
 }
 
 
 export function useMediumScreen() {
-    return useMaxScreen(theme.breakpoints.md);
+    const theme = useTheme();
+    return useMaxScreen(theme.breakpoints.values.md);
 }
 
 
 export function useLargeScreen() {
-    return useMaxScreen(theme.breakpoints.lg);
+    const theme = useTheme();
+    return useMaxScreen(theme.breakpoints.values.lg);
 }
