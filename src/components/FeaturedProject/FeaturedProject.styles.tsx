@@ -10,7 +10,7 @@ export const SmallContext = styled(motion.div)`
   padding: 25px;
   margin-bottom: 30px;
   border-radius: 5px;
-  background: #112240;
+  background: ${props => props.theme.palette.background.paper};
 `;
 
 export const SmallHeadline = styled(PrimaryHeadline)`
@@ -22,7 +22,6 @@ export const SmallHeadline = styled(PrimaryHeadline)`
 export const SmallDescription = styled(motion.p)`
   width: 100%;
   font-size: 15.5px;
-  color: #a9b2ce;
   line-height: 24px;
 `;
 
@@ -80,9 +79,8 @@ export const Headline = styled(PrimaryHeadline)`
 export const Description = styled(Text)`
   width: 100%;
   font-size: 15.5px;
-  color: #a9b2ce;
   line-height: 24px;
-  background: #112240;
+  background: ${props => props.theme.palette.background.paper};
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.26);
   padding: 25px;
 `;

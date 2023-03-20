@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
-import {AnimatePresence, useScroll, useVelocity} from "framer-motion";
-import {AiOutlineMenu as MenuButtonClosedIcon} from "react-icons/ai";
-import {IoClose as MenuButtonOpenIcon} from "react-icons/io5";
+import {useScroll, useVelocity} from "framer-motion";
+import {AiOutlineMenu as MenuIcon} from "react-icons/ai";
 import {useSmallScreen} from "../../hooks/useScreen";
 import {Context, Links, MenuButtonWrapper} from "./Navbar.styles";
 import Sidebar from "../Sidebar/Sidebar";
@@ -43,30 +42,17 @@ export const Navbar: React.FC = () => {
         setIsMenuOpen(!isMenuOpen);
     }
 
-    const MenuButton: React.FC = () => (
-        <AnimatePresence>
-            {
-                isMenuOpen ?
-                    <MenuButtonWrapper onClick={toggleMenuOpen} {...menuButtonMotion}>
-                        <MenuButtonOpenIcon />
-                    </MenuButtonWrapper>
-                    :
-                    <MenuButtonWrapper onClick={toggleMenuOpen} {...menuButtonMotion}>
-                        <MenuButtonClosedIcon />
-                    </MenuButtonWrapper>
-            }
-        </AnimatePresence>
-    );
-
     if (isSmallScreen) {
         return (
             <Context elevated={isElevated} hidden={isHidden}>
 
                 <Logo width={37} />
 
-                <MenuButton />
+                <MenuButtonWrapper onClick={toggleMenuOpen} {...menuButtonMotion}>
+                    <MenuIcon />
+                </MenuButtonWrapper>
 
-                <Sidebar open={isMenuOpen} onLinkClick={toggleMenuOpen} />
+                <Sidebar open={isMenuOpen} onLinkClick={toggleMenuOpen} onClose={toggleMenuOpen} />
 
             </Context>
         );

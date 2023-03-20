@@ -1,31 +1,27 @@
 import {styled} from "@mui/material";
-import {motion} from "framer-motion";
 
 
-export const Mask = styled(motion.div)`
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  left: 0;
+export const Top = styled('div')`
+  width: 100%;
+  height: 75px;
+  position: absolute;
+  font-size: 30px;
   top: 0;
-  z-index: 1200;
-  background: rgba(17, 34, 64, 0.5);
-  touch-action: none;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 10px 5px 10px;
 `;
 
-export const Root = styled(motion.div)`
+export const Content = styled('div')`
   width: fit-content;
   min-width: 60vw;
   height: 100vh;
   padding: 50px 10px 50px 10px;
-  position: fixed;
-  right: 0;
-  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   gap: 10px;
-  background: #112240;
-  z-index: 1202;
+  background: ${props => props.theme.palette.background.paper};
 `;

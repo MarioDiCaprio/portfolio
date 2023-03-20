@@ -9,7 +9,7 @@ export const VibrantCode = styled(motion.span)`
 `;
 
 export const PrimaryHeadline = styled(motion.h1)`
-  color: ${props => props.theme.palette.text.primary};
+  color: ${props => props.theme.palette.secondary.main};
   font-size: 32px;
   font-weight: 700;
   line-height: 35px;
@@ -21,7 +21,7 @@ export const PrimaryHeadline = styled(motion.h1)`
 `;
 
 export const SecondaryHeadline = styled(motion.h2)`
-  color: ${props => props.theme.palette.text.secondary};
+  color: ${props => props.theme.palette.secondary.dark};
   font-size: 28px;
   font-weight: 700;
   line-height: 35px;
