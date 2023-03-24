@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
         return (
             <Context elevated={isElevated} hidden={isHidden}>
 
-                <Logo width={37} />
+                <Logo width={45} />
 
                 <MenuButtonWrapper onClick={toggleMenuOpen} {...menuButtonMotion}>
                     <MenuIcon />
@@ -61,7 +61,7 @@ export const Navbar: React.FC = () => {
     return (
         <Context elevated={isElevated} hidden={isHidden}>
 
-            <Logo width={37} />
+            <Logo width={45} />
 
             <Links>
 

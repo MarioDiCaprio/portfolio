@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 <svg
-        width="70.530907mm"
-        height="82.309509mm"
-        viewBox="0 0 70.530907 82.309509"
+        width="300px"
+        height="300px"
+        viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
 >
 
-    <g transform="translate(-54.172757,-25.817531)">
+    <path
+            style="
+            fill: #040F16;
+            stroke-width: 4.0;
+        "
+        d="M 50, 5
+           L 11, 27
+           L 11, 72
+           L 50, 95
+           L 89, 73
+           L 89, 28 z"
+    />
 
-        <path
-                style="fill: #061E28"
-                d="m 108.6531,99.844207 -38.429785,-2e-6 -19.214892,-33.281173 19.214895,-33.28117 38.429782,1e-6 19.2149,33.281173 z"
-                transform="matrix(0.86589124,0.50524724,-0.49992254,0.87511389,45.270809,-36.466358)"
-        />
-
-        <text
-                style="font-size: 50px; font-family: aakar, serif; fill: #00FFC6"
-                x="69.241219"
-                y="81.70752"
-                transform="scale(0.99053464,1.0095558)"
-        >
-            M
-        </text>
-
-    </g>
+    <text
+            style="
+                font-size: 40px;
+                font-family: 'Roboto Slab', serif;
+                fill: #00FFC6;
+                stroke-linejoin: round;
+                stroke-linecap: round;
+                text-anchor: middle;
+                dominant-baseline: central;
+                user-select: none;
+            "
+            x="50" y="50"
+    >
+        M
+    </text>
 
 </svg>
