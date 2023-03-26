@@ -3,7 +3,7 @@ import {useSmallScreen} from "../../hooks/useScreen";
 import {Link} from "react-scroll/modules";
 import AnimateLetters from "../AnimateLetters/AnimateLetters";
 import {ReactScrollLinkProps} from "react-scroll/modules/components/Link";
-import {ContentWrapper, Prefix, Title} from "./ScrollLink.styles";
+import {ContentWrapper, Prefix, Title} from "./NavbarLink.styles";
 
 
 const linkScrollStyle: Partial<ReactScrollLinkProps> = {
