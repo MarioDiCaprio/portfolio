@@ -2,6 +2,7 @@ import React from "react";
 import {ContentWrapper, Context, GithubButton, Greeting, Name, Slogan, Summary} from "./LandingPage.styles";
 import {childVariants, containerMotion} from "./LandingPage.motion";
 import {UnderlinedLink} from "../../styles/presets.styles";
+import LandingPageBackground from "../LandingPageBackground/LandingPageBackground";
 
 
 /**
@@ -42,6 +43,8 @@ export const LandingPage: React.FC = () => {
                 </GithubButton>
 
             </ContentWrapper>
+
+            <LandingPageBackground />
         </Context>
     );
 }
