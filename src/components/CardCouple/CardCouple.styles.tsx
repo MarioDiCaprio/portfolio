@@ -19,12 +19,13 @@ export const CardContext = styled(motion.div)`
   min-width: 80%;
   min-height: 300px;
   background: ${props => props.theme.palette.background.paper};
-  box-shadow: 10px 10px 10px black;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
   padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
+
   div {
     color: ${props => props.theme.palette.text.secondary};
     display: flex;
@@ -32,23 +33,27 @@ export const CardContext = styled(motion.div)`
     font-size: 1.1rem;
     line-height: 1.5rem;
   }
+
   h1 {
     color: ${props => props.theme.palette.text.primary};
   }
+
   img {
     width: 150px;
     height: 150px;
     object-fit: contain;
   }
-  @media(max-width: 1300px) {
+
+  @media (max-width: 1300px) {
     div {
       flex-direction: column;
     }
+
     h1 {
       margin-bottom: 0;
     }
   }
-  @media(max-width: ${props => props.theme.breakpoints.values.md}px) {
+  @media (max-width: ${props => props.theme.breakpoints.values.md}px) {
     animation: none;
   }
 `;
