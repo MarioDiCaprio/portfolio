@@ -13,7 +13,7 @@
 
 # Screenshots
 
-![](public/screenshots/frontCover.png)
+![](public/screenshots/landingPage.png)
 ![](public/screenshots/interests.png)
 
 # Tech Stack
