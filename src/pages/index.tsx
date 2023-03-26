@@ -2,7 +2,7 @@
 
 import type { NextPage } from 'next';
 import {useState} from "react";
-import FrontCover from "../components/FrontCover/FrontCover";
+import LandingPage from "../components/LandingPage/LandingPage";
 import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
 import Interests from "../components/Interests/Interests";
@@ -33,7 +33,7 @@ const Index: NextPage = () => {
 
             <Navbar />
 
-            <FrontCover />
+            <LandingPage />
             <About />
             <Skills />
             <Interests />

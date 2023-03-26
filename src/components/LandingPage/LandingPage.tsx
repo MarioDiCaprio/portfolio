@@ -1,6 +1,6 @@
 import React from "react";
-import {ContentWrapper, Context, GithubButton, Greeting, Name, Slogan, Summary} from "./FrontCover.styles";
-import {childVariants, containerMotion} from "./FrontCover.motion";
+import {ContentWrapper, Context, GithubButton, Greeting, Name, Slogan, Summary} from "./LandingPage.styles";
+import {childVariants, containerMotion} from "./LandingPage.motion";
 import {UnderlinedLink} from "../../styles/presets.styles";
 
 
@@ -8,7 +8,7 @@ import {UnderlinedLink} from "../../styles/presets.styles";
  * The main display on the home page. This display consists of the author's
  * name in glowing, vibrant colors. Each letter has an intro-animation.
  */
-export const FrontCover: React.FC = () => {
+export const LandingPage: React.FC = () => {
 
     return (
         <Context id="front-cover">
@@ -47,4 +47,4 @@ export const FrontCover: React.FC = () => {
 }
 
 
-export default FrontCover;
+export default LandingPage;

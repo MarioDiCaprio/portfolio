@@ -1,17 +1,17 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {Meta, StoryObj} from "@storybook/react";
-import {FrontCover} from "./FrontCover";
+import {LandingPage} from "./LandingPage";
 
 ////////////////////////////////////////////////////////////////////////
 
 export default {
-    title: 'Sections/FrontCover',
-    component: FrontCover,
+    title: 'Sections/LandingPage',
+    component: LandingPage,
     tags: ['autodocs']
-} as Meta<typeof FrontCover>;
+} as Meta<typeof LandingPage>;
 
-type Story = StoryObj<typeof FrontCover>;
+type Story = StoryObj<typeof LandingPage>;
 
 ////////////////////////////////////////////////////////////////////////
 
