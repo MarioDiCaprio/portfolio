@@ -1,6 +1,7 @@
 import React from "react";
 import {ContentWrapper, Context, GithubButton, Greeting, Name, Slogan, Summary} from "./FrontCover.styles";
 import {childVariants, containerMotion} from "./FrontCover.motion";
+import {UnderlinedLink} from "../../styles/presets.styles";
 
 
 /**
@@ -27,7 +28,7 @@ export const FrontCover: React.FC = () => {
 
                 <Summary variants={childVariants}>
                     I'm an aspiring software developer specializing in web-development. Soon,
-                    I will be joining <a href="https://www.wieland.com" target="_blank" rel="noreferrer">Wieland-Werke</a> to
+                    I will be joining <UnderlinedLink href="https://www.wieland.com" target="_blank" rel="noreferrer">Wieland-Werke</UnderlinedLink> to
                     work on my CS-degree and work with a large-scale company.
                 </Summary>
 

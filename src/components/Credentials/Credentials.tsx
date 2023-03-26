@@ -1,6 +1,7 @@
 import React from "react";
 import {Context} from "./Credentials.styles";
 import {useRouter} from "next/router";
+import {UnderlinedLink} from "../../styles/presets.styles";
 
 
 /**
@@ -12,7 +13,7 @@ export const Credentials: React.FC = () => {
 
     return (
         <Context>
-            Built by <span onClick={router.reload}>Mario Di Caprio</span>
+            Built by <UnderlinedLink onClick={router.reload}>Mario Di Caprio</UnderlinedLink>
         </Context>
     );
 }

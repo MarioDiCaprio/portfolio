@@ -32,3 +32,26 @@ export const Text = styled(motion.p)`
   font-size: 1.1rem;
   line-height: 1.5;
 `;
+
+export const UnderlinedLink = styled(motion.a)`
+  display: inline-block;
+  position: relative;
+  color: ${props => props.theme.palette.primary.main};
+  text-decoration: none;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: ${props => props.theme.palette.primary.main};
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+`;

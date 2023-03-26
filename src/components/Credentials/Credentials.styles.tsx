@@ -8,7 +8,7 @@ export const Context = styled('div')`
   font-size: small;
   margin-top: 50px;
   margin-bottom: 30px;
-  span {
+  a {
     color: ${props => props.theme.palette.primary.main};
     cursor: pointer;
   }
