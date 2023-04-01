@@ -1,7 +1,8 @@
 import {styled} from "@mui/material";
+import {motion} from "framer-motion";
 
 
-export const Context = styled('video')`
+export const Context = styled(motion.video)`
   width: 100vw;
   height: 100%;
   margin-top: 50px;

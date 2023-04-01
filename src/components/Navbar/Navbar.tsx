@@ -2,10 +2,10 @@ import React, {useEffect, useState} from "react";
 import {useScroll, useVelocity} from "framer-motion";
 import {AiOutlineMenu as MenuIcon} from "react-icons/ai";
 import {useSmallScreen} from "../../hooks/useScreen";
-import {Context, Links, MenuButtonWrapper} from "./Navbar.styles";
+import {Context, Links, LogoWrapper, MenuButtonWrapper} from "./Navbar.styles";
 import Sidebar from "../Sidebar/Sidebar";
 import NavbarLink from "../NavbarLink/NavbarLink";
-import {menuButtonMotion} from "./Navbar.motion";
+import {logoMotion, menuButtonMotion} from "./Navbar.motion";
 import Logo from "../Logo/Logo";
 
 
@@ -46,7 +46,9 @@ export const Navbar: React.FC = () => {
         return (
             <Context elevated={isElevated} hidden={isHidden}>
 
-                <Logo width={45} />
+                <LogoWrapper {...logoMotion}>
+                    <Logo width={45} />
+                </LogoWrapper>
 
                 <MenuButtonWrapper onClick={toggleMenuOpen} {...menuButtonMotion}>
                     <MenuIcon />
@@ -61,7 +63,9 @@ export const Navbar: React.FC = () => {
     return (
         <Context elevated={isElevated} hidden={isHidden}>
 
-            <Logo width={45} />
+            <LogoWrapper {...logoMotion}>
+                <Logo width={45} />
+            </LogoWrapper>
 
             <Links>
 

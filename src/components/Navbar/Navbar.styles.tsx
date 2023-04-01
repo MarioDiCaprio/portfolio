@@ -37,3 +37,7 @@ export const MenuButtonWrapper = styled(motion.div)`
   cursor: pointer;
   z-index: 999999999;
 `;
+
+export const LogoWrapper = styled(motion.div)`
+
+`;
