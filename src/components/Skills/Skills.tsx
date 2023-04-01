@@ -85,7 +85,7 @@ export const Skills: React.FC = () => {
                 <CardCouple
                     left={{
                         title: 'React Js',
-                        imageSrc: '/img/react.png',
+                        imageSrc: '/skills/react.webp',
                         text:
                             `I love the way React lets you isolate each part of a website into single components.
                             The event-driven style that comes with this library is also extremely useful and easy
@@ -93,7 +93,7 @@ export const Skills: React.FC = () => {
                     }}
                     right={{
                         title: 'Next Js',
-                        imageSrc: '/img/next.png',
+                        imageSrc: '/skills/next.webp',
                         text:
                             `Built on top of React, Next Js is my framework of choice. I love how it provides a clear
                             project structure and many useful features from the get-go. It is also really easy to deploy
@@ -105,7 +105,7 @@ export const Skills: React.FC = () => {
                 <CardCouple
                     left={{
                         title: 'Redux',
-                        imageSrc: '/img/redux.png',
+                        imageSrc: '/skills/redux.webp',
                         text:
                             `This is perhaps the best state-management library there is. Redux lets you easily manage
                             states across your whole application. RTK-Query also adds seamless support for
@@ -113,7 +113,7 @@ export const Skills: React.FC = () => {
                     }}
                     right={{
                         title: 'Framer',
-                        imageSrc: '/img/framer.png',
+                        imageSrc: '/skills/framer.webp',
                         text:
                             `Framer helps to create beautiful animations with few lines of code, such as this one!
                             If used correctly, it can help to create awesome-looking applications.`
@@ -124,7 +124,7 @@ export const Skills: React.FC = () => {
                 <CardCouple
                     left={{
                         title: 'Cypress',
-                        imageSrc: '/img/cypress.png',
+                        imageSrc: '/skills/cypress.webp',
                         text:
                             `This is my testing library of choice. Cypress seamlessly provides unit tests and
                             integration tests out of the box. It also has support for modern third-party libraries,
@@ -132,7 +132,7 @@ export const Skills: React.FC = () => {
                     }}
                     right={{
                         title: 'Storybook',
-                        imageSrc: '/img/storybook.png',
+                        imageSrc: '/skills/storybook.webp',
                         text:
                             `Along with Cypress, Storybook is extremely useful to test and view components in isolation.
                             This becomes especially clear when the application grows in size and keeping track of
@@ -144,7 +144,7 @@ export const Skills: React.FC = () => {
                 <CardCouple
                     left={{
                         title: 'TypeScript',
-                        imageSrc: '/img/typescript.png',
+                        imageSrc: '/skills/typescript.webp',
                         text:
                             `TypeScript is, simply but, the complete version of JavaScript. Adding typing compatibility,
                             it makes up for what JavaScript simply lacks. Developing larger applications becomes
@@ -152,7 +152,7 @@ export const Skills: React.FC = () => {
                     }}
                     right={{
                         title: 'MUI',
-                        imageSrc: '/img/mui.png',
+                        imageSrc: '/skills/mui.webp',
                         text:
                             `Material UI is probably the best component library out there. It provides huge customization
                             options, easy theming and built-in styled components.`

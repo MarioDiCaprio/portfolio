@@ -32,7 +32,7 @@ const ChessWheel: React.FC = () => {
         <ChessWheelWrapper>
             <motion.img
                 alt=""
-                src="/img/chesswheel.png"
+                src="/interests/chesswheel.webp"
                 style={{ rotate }}
             />
         </ChessWheelWrapper>
@@ -104,7 +104,7 @@ export const Interests: React.FC = () => {
                             <QueenIcon />
                         </BulletPoint>
                         I go to the gym
-                        <img alt="" src="/gif/flexedBiceps.gif" style={{ height: '1.5rem', marginLeft: 5 }} />
+                        <video src="/interests/flexBiceps.mp4" autoPlay muted loop style={{ height: '1.5rem', marginLeft: 5 }} />
                     </Interest>
 
                 </InterestList>

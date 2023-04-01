@@ -28,7 +28,7 @@ export const Projects: React.FC = () => {
                 </Title>
 
                 <FeaturedProject
-                    imgSrc="/thumbnails/domcol_js.png"
+                    imgSrc="/projects/domcol-js.webp"
                     title="Domcol-JS"
                     links={{
                         official: 'https://domcol-js.vercel.app',
@@ -41,7 +41,7 @@ export const Projects: React.FC = () => {
                 </FeaturedProject>
 
                 <FeaturedProject
-                    imgSrc="/thumbnails/travel2go.png"
+                    imgSrc="/projects/travel2go.webp"
                     title="Travel2Go"
                     links={{
                         official: 'https://travel2go.vercel.app',
