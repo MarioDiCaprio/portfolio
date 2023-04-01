@@ -1,8 +1,11 @@
 import {styled} from "@mui/material";
 
 
-export const Context = styled('img')`
+export const Context = styled('video')`
   width: 100vw;
+  height: 100%;
+  margin-top: 50px;
+  padding-left: 20vw;
   overflow-x: hidden;
   overflow-y: visible;
   z-index: -9999;
@@ -11,6 +14,7 @@ export const Context = styled('img')`
   right: 0;
   pointer-events: none;
   user-select: none;
+  border-bottom: 1px solid ${props => props.theme.palette.divider};
   @media (max-width: 1150px) {
     display: none;
   }

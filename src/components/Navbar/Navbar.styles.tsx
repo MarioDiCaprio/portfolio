@@ -12,8 +12,8 @@ export const Context = styled('div')<{ elevated: boolean, hidden: boolean }>`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: ${props => props.elevated? 'rgba(4,15,22,0.22)' : '#040F16'};
-  backdrop-filter: blur(10px);
+  background: ${props => props.elevated? 'rgba(4,15,22,0.22)' : 'transparent'};
+  backdrop-filter: ${props => props.elevated? 'blur(10px)' : 'none'};
   box-shadow: ${props => props.elevated? '5px 5px 20px rgba(0, 0, 0, 0.22)' : 'none'};
   transform: ${props => props.hidden? 'translateY(-100px)' : 'none'};
   z-index: 1199;

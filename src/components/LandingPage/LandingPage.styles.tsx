@@ -5,17 +5,13 @@ import {PrimaryHeadline, SecondaryHeadline, Text, VibrantCode} from "../../style
 
 export const Context = styled('div')`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 20px 20px 20px 100px;
+  padding: 100px 20px 20px 100px;
   position: relative;
   @media (max-width: 1150px) {
-    padding: 20px;
     justify-content: center;
-  }
-  @media (max-width: 410px) {
-    margin-top: 25px;
   }
 `;
 
