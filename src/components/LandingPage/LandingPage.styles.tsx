@@ -8,7 +8,7 @@ export const Context = styled('div')`
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 100px 20px 20px 150px;
+  padding: 100px 20px 50px 150px;
   position: relative;
   @media (max-width: 1150px) {
     padding-left: 20px;

@@ -1,16 +1,15 @@
 import {styled} from "@mui/material";
 import {motion} from "framer-motion";
-import {Text} from "../../styles/presets.styles";
+import {Section, Text} from "../../styles/presets.styles";
 
 
-export const Context = styled(motion.div)`
-  width: 100vw;
-  min-height: 100vh;
+export const Context = styled(Section)`
   padding: 5% 15% 5% 15%;
-  display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   gap: 100px;
+  margin-bottom: 50px;
   @media(max-width: ${props => props.theme.breakpoints.values.md}px) {
     flex-direction: column-reverse;
     padding: 50px 20px 50px 20px;
@@ -53,18 +52,4 @@ export const ChessWheelWrapper = styled('div')`
 export const BulletPoint = styled('span')`
   color: ${props => props.theme.palette.primary.main};
   margin-right: 10px;
-`;
-
-export const ParallaxWrapper = styled('span')`
-  display: flex;
-  align-items: center;
-  padding: 10px 0 13px 0;
-  margin: 30px 0 30px 0;
-`;
-
-export const ParallaxContent = styled('span')`
-  color: ${props => props.theme.palette.primary.main};
-  font-family: "Plaster", serif;
-  font-size: 3rem;
-  user-select: none;
 `;

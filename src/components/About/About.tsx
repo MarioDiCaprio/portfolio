@@ -1,8 +1,8 @@
 import React from "react";
 import {MotionProps, Variants} from "framer-motion";
 import {useLargeScreen} from "../../hooks/useScreen";
-import {ContentWrapper, Context} from "./About.styles";
-import {PrimaryHeadline, SecondaryHeadline, Text, VibrantCode} from "../../styles/presets.styles";
+import {ContentWrapper} from "./About.styles";
+import {PrimaryHeadline, SecondaryHeadline, Section, Text, VibrantCode} from "../../styles/presets.styles";
 
 
 const childVariants: Variants = {
@@ -40,7 +40,7 @@ export const About: React.FC = () => {
     }
 
     return (
-        <Context id="about">
+        <Section secondary id="about">
             <ContentWrapper {...containerMotion}>
 
                 <PrimaryHeadline variants={childVariants}>
@@ -65,7 +65,7 @@ export const About: React.FC = () => {
                 </Text>
 
             </ContentWrapper>
-        </Context>
+        </Section>
     );
 }
 

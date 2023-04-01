@@ -7,13 +7,10 @@ import {
     ContentWrapper,
     Context,
     Interest,
-    InterestList,
-    ParallaxContent,
-    ParallaxWrapper
+    InterestList
 } from "./Interests.styles";
 import {PrimaryHeadline, VibrantCode} from "../../styles/presets.styles";
 import {interestListMotion, interestVariants} from "./Interests.motion";
-import ParallaxText from "../ParallaxText/ParallaxText";
 import {useParallaxScroll} from "../../hooks/useParallaxScroll";
 import {
     FaChessKnight as KnightIcon,
@@ -59,86 +56,62 @@ export const Interests: React.FC = () => {
     }
 
     return (
-        <>
-            <Context id="interests" {...fadeOnScrollEffect}>
+        <Context secondary id="interests" {...fadeOnScrollEffect}>
 
-                <ChessWheel />
+            <ChessWheel />
 
-                <ContentWrapper>
+            <ContentWrapper>
 
-                    <PrimaryHeadline>
-                        <VibrantCode>
-                            03.
-                        </VibrantCode>
-                        My Interests
-                    </PrimaryHeadline>
+                <PrimaryHeadline>
+                    <VibrantCode>
+                        03.
+                    </VibrantCode>
+                    My Interests
+                </PrimaryHeadline>
 
-                    <InterestList {...interestListMotion}>
+                <InterestList {...interestListMotion}>
 
-                        <Interest variants={interestVariants}>
-                            <BulletPoint>
-                                <KnightIcon />
-                            </BulletPoint>
-                            I like developing new skills
-                        </Interest>
+                    <Interest variants={interestVariants}>
+                        <BulletPoint>
+                            <KnightIcon />
+                        </BulletPoint>
+                        I like developing new skills
+                    </Interest>
 
-                        <Interest variants={interestVariants}>
-                            <BulletPoint>
-                                <KingIcon />
-                            </BulletPoint>
-                            I <b>LOVE</b> playing chess
-                        </Interest>
+                    <Interest variants={interestVariants}>
+                        <BulletPoint>
+                            <KingIcon />
+                        </BulletPoint>
+                        I <b>LOVE</b> playing chess
+                    </Interest>
 
-                        <Interest variants={interestVariants}>
-                            <BulletPoint>
-                                <RookIcon />
-                            </BulletPoint>
-                            I take an interest in cooking
-                        </Interest>
+                    <Interest variants={interestVariants}>
+                        <BulletPoint>
+                            <RookIcon />
+                        </BulletPoint>
+                        I take an interest in cooking
+                    </Interest>
 
-                        <Interest variants={interestVariants}>
-                            <BulletPoint>
-                                <BishopIcon />
-                            </BulletPoint>
-                            I enjoy traveling and exploring new cultures
-                        </Interest>
+                    <Interest variants={interestVariants}>
+                        <BulletPoint>
+                            <BishopIcon />
+                        </BulletPoint>
+                        I enjoy traveling and exploring new cultures
+                    </Interest>
 
-                        <Interest variants={interestVariants}>
-                            <BulletPoint>
-                                <QueenIcon />
-                            </BulletPoint>
-                            I go to the gym
-                            <img alt="" src="/gif/flexedBiceps.gif" style={{ height: '1.5rem', marginLeft: 5 }} />
-                        </Interest>
+                    <Interest variants={interestVariants}>
+                        <BulletPoint>
+                            <QueenIcon />
+                        </BulletPoint>
+                        I go to the gym
+                        <img alt="" src="/gif/flexedBiceps.gif" style={{ height: '1.5rem', marginLeft: 5 }} />
+                    </Interest>
 
-                    </InterestList>
+                </InterestList>
 
-                </ContentWrapper>
+            </ContentWrapper>
 
-
-
-            </Context>
-
-            <ParallaxWrapper>
-                <ParallaxText baseVelocity={2.5}>
-                    <ParallaxContent>
-                        Did you know? My favourite opening is the Sicilian Defense, especially the
-                        Sveshnikov variation!
-                    </ParallaxContent>
-                </ParallaxText>
-            </ParallaxWrapper>
-
-            <ParallaxWrapper>
-                <ParallaxText baseVelocity={-2.5}>
-                    <ParallaxContent>
-                        Also, my favourite plate of pasta is the very classy Spaghetti Carbonara!
-                    </ParallaxContent>
-                </ParallaxText>
-            </ParallaxWrapper>
-
-            <div style={{ marginBottom: 200 }} />
-
-        </>
+        </Context>
 
     );
 }
