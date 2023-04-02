@@ -34,7 +34,7 @@ export const LandingPage: React.FC = () => {
                 </Summary>
 
                 <GithubButton
-                    href="https://github.com/MarioDiCaprioUni"
+                    href="https://github.com/MarioDiCaprio"
                     target="_blank"
                     rel="noreferrer"
                     variants={childVariants}
