@@ -28,16 +28,16 @@ export const Projects: React.FC = () => {
                 </Title>
 
                 <FeaturedProject
-                    imgSrc="/projects/domcol-js.webp"
-                    title="Domcol-JS"
+                    imgSrc="/projects/complexify.webp"
+                    title="Complexify"
                     links={{
-                        official: 'https://domcol-js.vercel.app',
-                        github: 'https://github.com/MarioDiCaprioUni/domcol-js'
+                        official: 'https://complexify.vercel.app',
+                        github: 'https://github.com/MarioDiCaprioUni/complexify'
                     }}
                 >
-                    A tool for visualizing complex-valued functions using a method called {' '}
-                    <i>Domain Coloring</i>. Check it out if you are a math-geek, you can even
-                    plot the famous Mandelbrot-Set!
+                    A tool for visualizing complex-valued functions using standard techniques such
+                    as <i>Domain Coloring</i> or the stereographic projection of the <i>Riemann Sphere</i>.
+                    Check it out if you are a math geek!
                 </FeaturedProject>
 
                 <FeaturedProject
