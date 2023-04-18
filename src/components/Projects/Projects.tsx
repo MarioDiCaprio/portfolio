@@ -32,7 +32,7 @@ export const Projects: React.FC = () => {
                     title="Complexify"
                     links={{
                         official: 'https://complexify.vercel.app',
-                        github: 'https://github.com/MarioDiCaprioUni/complexify'
+                        github: 'https://github.com/MarioDiCaprio/complexify'
                     }}
                 >
                     A tool for visualizing complex-valued functions using standard techniques such
@@ -45,7 +45,7 @@ export const Projects: React.FC = () => {
                     title="Travel2Go"
                     links={{
                         official: 'https://travel2go.vercel.app',
-                        github: 'https://github.com/MarioDiCaprioUni/travel2go'
+                        github: 'https://github.com/MarioDiCaprio/travel2go'
                     }}
                 >
                     This project is a reference for many interesting travel locations. Useful data,
