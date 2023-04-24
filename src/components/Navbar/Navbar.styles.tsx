@@ -39,5 +39,6 @@ export const MenuButtonWrapper = styled(motion.div)`
 `;
 
 export const LogoWrapper = styled(motion.div)`
-
+  user-select: none;
+  pointer-events: none;
 `;

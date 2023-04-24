@@ -14,6 +14,9 @@ export const Context = styled(motion.div)`
   overflow: hidden;
 `;
 
-export const LogoWrapper = styled(motion.div)`
-
+export const Video = styled(motion.video)`
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+  max-height: 100%;
 `;

@@ -6,7 +6,6 @@ import {Context, Links, LogoWrapper, MenuButtonWrapper} from "./Navbar.styles";
 import Sidebar from "../Sidebar/Sidebar";
 import NavbarLink from "../NavbarLink/NavbarLink";
 import {logoMotion, menuButtonMotion} from "./Navbar.motion";
-import Logo from "../Logo/Logo";
 
 
 /**
@@ -47,7 +46,7 @@ export const Navbar: React.FC = () => {
             <Context elevated={isElevated} hidden={isHidden}>
 
                 <LogoWrapper {...logoMotion}>
-                    <Logo width={45} />
+                    <img src="/logo75.png" alt="Mario Di Caprio" style={{ width: '55px' }}/>
                 </LogoWrapper>
 
                 <MenuButtonWrapper onClick={toggleMenuOpen} {...menuButtonMotion}>
@@ -64,7 +63,7 @@ export const Navbar: React.FC = () => {
         <Context elevated={isElevated} hidden={isHidden}>
 
             <LogoWrapper {...logoMotion}>
-                <Logo width={45} />
+                <img src="/logo75.png" alt="Mario Di Caprio" style={{ width: '55px' }}/>
             </LogoWrapper>
 
             <Links>

@@ -1,5 +1,5 @@
 <div align="center">
-    <img alt="logo" src="public/logo.svg" width="100">
+    <img alt="Mario Di Caprio" src="public/logo_README.png" style="border-radius: 50%; width: 200px">
 </div>
 <h1 align="center">
     mariodicaprio.vercel.app

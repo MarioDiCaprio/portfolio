@@ -1,7 +1,5 @@
-import React from "react";
-import {Context, LogoWrapper} from "./BootScreen.styles";
-import Logo from "../Logo/Logo";
-import {contextMotion, logoMotion} from "./BootScreen.motion";
+import React, {useEffect, useState} from "react";
+import {Context, Video} from "./BootScreen.styles";
 
 
 interface BootScreenProps {
@@ -16,11 +14,19 @@ interface BootScreenProps {
  * pleasant animation.
  */
 export const BootScreen: React.FC<BootScreenProps> = ({ onAnimationComplete }) => {
+    const [mounted, setMounted] = useState<boolean>(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    if (!mounted) return <></>;
+
     return (
-        <Context {...contextMotion}>
-            <LogoWrapper {...logoMotion} onAnimationComplete={onAnimationComplete}>
-                <Logo width={100} />
-            </LogoWrapper>
+        <Context>
+            <Video id="boot-screen-video" autoPlay muted onEnded={onAnimationComplete}>
+                <source src="/bootScreen/boot.mp4" type="video/mp4"/>
+            </Video>
         </Context>
     );
 }
