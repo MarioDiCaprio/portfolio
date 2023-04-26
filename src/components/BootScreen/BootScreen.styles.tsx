@@ -8,6 +8,7 @@ export const Context = styled(motion.div)`
   position: fixed;
   top: 0;
   left: 0;
+  background: #031219; // inferred from mp4 animation
   display: flex;
   justify-content: center;
   align-items: center;
