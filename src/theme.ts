@@ -3,19 +3,21 @@ import {createTheme} from "@mui/material";
 
 export const theme = createTheme({
     palette: {
-        mode: 'dark',
+        mode: 'light',
         primary: {
-            main: '#00FFC6'
+            main: '#FF0F7BFF'
         },
         secondary: {
-            main: '#E9E6FF',
+            main: '#ffea61',
         },
         text: {
-            primary: '#C6C6C6',
+            primary: '#272839',
+            secondary: '#7C7D8A'
         },
         background: {
-            default: '#040F16',
-            paper: '#061e28'
         }
+    },
+    typography: {
+        fontFamily: `Barlow, sans-serif`
     }
 });
