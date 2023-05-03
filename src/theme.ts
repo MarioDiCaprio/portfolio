@@ -12,10 +12,11 @@ export const theme = createTheme({
         },
         text: {
             primary: '#272839',
-            secondary: '#7C7D8A'
+            secondary: '#7C7D8A',
         },
         background: {
-        }
+            default: '#ffffff'
+        },
     },
     typography: {
         fontFamily: `Barlow, sans-serif`

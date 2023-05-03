@@ -1,17 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import {Content, Context, LinksSection} from "./Navbar.styles";
 import NavLink from "../NavLink/NavLink";
 import {useMediaQuery, useTheme} from "@mui/material";
 import {HiOutlineMenuAlt3 as MenuIcon} from "react-icons/hi";
+import {useMotionValueEvent, useScroll} from "framer-motion";
 
 
 const Navbar: React.FC = () => {
     const theme = useTheme();
     const isSmallScreen = useMediaQuery(theme.breakpoints.down(750));
 
+    const {scrollY} = useScroll();
+    const [variant, setVariant] = useState<'initial' | 'scrolled'>('initial');
+    useMotionValueEvent(scrollY, 'change', val => {
+        setVariant(val > 110? 'scrolled' : "initial");
+    });
+
     if (isSmallScreen) {
         return (
-            <Context>
+            <Context variant={variant}>
                 <Content>
                     <span>
                         Mario Di Caprio
@@ -23,7 +30,7 @@ const Navbar: React.FC = () => {
     }
 
     return (
-        <Context>
+        <Context variant={variant}>
             <Content>
                 <span>
                     Mario Di Caprio

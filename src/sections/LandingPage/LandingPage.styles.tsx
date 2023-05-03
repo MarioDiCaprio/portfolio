@@ -2,6 +2,7 @@ import {styled} from "@mui/material";
 
 
 export const Context = styled('div')`
+  position: relative;
   width: 100vw;
   height: 100vh;
   padding:  0 100px 0 100px;
@@ -89,7 +90,7 @@ export const GithubButton = styled('a')`
 `;
 
 export const Wallpaper = styled('div')`
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100vw;

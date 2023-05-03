@@ -1,9 +1,10 @@
 import {styled} from "@mui/material";
 
 
-export const Context = styled('div')`
+export const Context = styled('div')<{ variant: 'initial' | 'scrolled' }>`
   width: 100vw;
-  height: 110px;
+  height: ${props => props.variant == 'initial'? '110px' : '75px'};
+  background: ${props => props.variant == 'scrolled' && props.theme.palette.text.primary};
   padding: 0 20px 0 20px;
   position: fixed;
   top: 0;
@@ -11,6 +12,8 @@ export const Context = styled('div')`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
+  transition: 0.3s;
 `;
 
 export const Content = styled('div')`
