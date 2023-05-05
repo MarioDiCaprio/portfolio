@@ -4,12 +4,17 @@ import {styled} from "@mui/material";
 export const Context = styled('div')`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: max(100vh, 67vw, 750px);
   padding:  0 100px 0 100px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: ${props => props.theme.palette.primary.contrastText};
+
+  background-image: url("/landing-page/wallpaper.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   @media (max-width: 650px) {
     padding: 0 20px 0 20px;
   }
@@ -49,12 +54,13 @@ export const Banner1 = styled('div')`
 export const Banner2 = styled(Banner1.withComponent('a'))`
   width: 34%;
   border-radius: 0 5px 5px 0;
+  color: ${props => props.theme.palette.text.primary};
   background: ${props => props.theme.palette.secondary.main};
   text-decoration: none;
   transition: 0.5s;
   &:hover {
-    background: #313131;
-    color: #fff;
+    background: ${props => props.theme.palette.text.primary};
+    color: ${props => props.theme.palette.primary.contrastText};
     transition: 0.5s;
   }
   @media (max-width: 600px) {
@@ -94,11 +100,8 @@ export const Wallpaper = styled('div')`
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
   z-index: -100;
-  background: linear-gradient(
-          135deg,
-          ${props => props.theme.palette.primary.main} 0%,
-          ${props => props.theme.palette.secondary.main} 100%
-  );
+  background-image: url("/landing-page/wallpaper.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 `;

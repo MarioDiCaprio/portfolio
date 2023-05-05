@@ -2,13 +2,14 @@ import {styled} from "@mui/material";
 
 export const Context = styled('div')`
   width: 100%;
-  padding-top: 50px;
+  padding-top: 20px;
   text-align: center;
 `;
 
 export const Title = styled('h2')`
   font-size: clamp(20px, 8vw, 3rem);
   font-weight: 800;
+  margin-top: 0;
 `;
 
 export const CardWrapper = styled('div')`

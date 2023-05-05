@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="152.39999mm"
+   height="100.80805mm"
+   viewBox="0 0 152.39999 100.80805"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient819">
+      <stop
+         style="stop-color:#ff0f7b;stop-opacity:1;"
+         offset="0"
+         id="stop815" />
+      <stop
+         style="stop-color:#ffea61;stop-opacity:1;"
+         offset="1"
+         id="stop817" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient819"
+       id="linearGradient821"
+       x1="29.115141"
+       y1="47.757397"
+       x2="117.32206"
+       y2="168.12904"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,1.1759471,0,-8.0126582)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-26.94513,-45.540164)">
+    <rect
+       style="fill:url(#linearGradient821);fill-opacity:1;fill-rule:evenodd;stroke-width:0.286917"
+       id="rect234"
+       height="100.80806"
+       x="26.945129"
+       y="45.540161"
+       width="152.39999"
+       ry="0"
+       inkscape:export-filename="wallpaper.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:#64ffda;stroke-width:4.01297;stroke-opacity:0"
+       d="m 18.409396,147.63105 119.565684,-23.4386 52.03567,23.63145 z"
+       id="path6739"
+       inkscape:export-filename="wallpaper.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
