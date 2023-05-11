@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 import About from "../sections/About/About";
 import {styled} from "@mui/material";
 import Projects from "../sections/Projects/Projects";
+import Interests from "../sections/Interests/Interests";
 
 
 const Wrapper = styled('div')`
@@ -20,6 +21,7 @@ const Index: NextPage = () => {
             <LandingPage />
             <About />
             <Projects />
+            <Interests />
 
         </Wrapper>
     );
