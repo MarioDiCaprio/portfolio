@@ -4,7 +4,7 @@ import {styled} from "@mui/material";
 export const Context = styled('div')`
   position: relative;
   width: 100vw;
-  height: max(100vh, 67vw, 750px);
+  height: max(100vh, 63vw, 750px);
   padding:  0 100px 0 100px;
   display: flex;
   justify-content: flex-start;
@@ -15,8 +15,25 @@ export const Context = styled('div')`
   background-repeat: no-repeat;
   background-size: cover;
   
+  &::before {
+    content: '';
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: ${props => props.theme.palette.background.default};
+    clip-path: polygon(71.5% 0, 0% 100%, 100% 100%);
+  }
+  
   @media (max-width: 650px) {
     padding: 0 20px 0 20px;
+  }
+  
+  @media (max-width: 990px) {
+    &::before {
+      height: 80px;
+    }
   }
 `;
 
