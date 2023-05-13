@@ -4,7 +4,7 @@ import {styled} from "@mui/material";
 export const Context = styled('div')`
   position: relative;
   width: 100vw;
-  height: max(100vh, 63vw, 750px);
+  height: 105vh;
   padding:  0 100px 0 100px;
   display: flex;
   justify-content: flex-start;
