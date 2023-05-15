@@ -45,14 +45,6 @@ export const PreviewImage = styled(motion.img)`
   }
 `;
 
-export const ImageMask = styled(PreviewImage.withComponent('div'))`
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: linear-gradient(140deg, ${props => props.theme.palette.primary.main}, ${props => props.theme.palette.secondary.main});
-  opacity: 0.3;
-`;
-
 export const ButtonContainer = styled('div')`
   width: 100%;
   margin-bottom: 75px;

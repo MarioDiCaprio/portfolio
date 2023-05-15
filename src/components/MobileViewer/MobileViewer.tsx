@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {
-    ButtonContainer, ImageMask,
+    ButtonContainer,
     PhoneImage,
     PhoneImagesContainer,
     PhonePreviewContainer,
@@ -66,12 +66,7 @@ const ImagesWithContainer: React.FC<ImagesWithContainerProps> = ({ index, direct
     return (
         <PhoneImagesContainer style={{ x }}>
             {
-                sources.map((src, index) => (
-                    <div style={{ position: 'relative' }}>
-                        <PreviewImage key={index} src={src}/>
-                        <ImageMask />
-                    </div>
-                ))
+                sources.map((src, i) => <PreviewImage key={i} src={src}/>)
             }
         </PhoneImagesContainer>
     );
