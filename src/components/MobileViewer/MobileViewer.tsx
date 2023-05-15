@@ -1,7 +1,14 @@
-import React, {useRef, useState} from "react";
-import {ButtonContainer, PhoneImage, PhonePreviewContainer, PreviewImage} from "./MobileViewer.styles";
+import React, {useEffect, useState} from "react";
+import {
+    ButtonContainer, ImageMask,
+    PhoneImage,
+    PhoneImagesContainer,
+    PhonePreviewContainer,
+    PreviewImage
+} from "./MobileViewer.styles";
 import {FaArrowLeft as LeftArrowIcon, FaArrowRight as RightArrowIcon} from "react-icons/fa";
 import {IconButton, useMediaQuery} from "@mui/material";
+import {animate, useMotionValue} from "framer-motion";
 
 
 // NOTE: Number of sources should be odd (ideally, 5)
@@ -13,80 +20,94 @@ const sources = [
     "/projects/mobile/mobile-complexify-1.png",
 ];
 
-function calculateNextIndex(index: number): number {
-    let j = index + 1;
-    return (j === sources.length)? 0 : j;
-}
-
-function calculatePrevIndex(index: number): number {
-    let j = index - 1;
-    return (j < 0)? sources.length - 1 : j;
-}
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-interface MobileImageProps {
-    activeIndex: number;
+interface ImagesWithContainerProps {
     index: number;
-    src: string;
+    direction: 'forward' | 'backward';
+    containerPosition: number;
+    wrappingInterval: [number, number];
 }
 
-const MobileImage: React.FC<MobileImageProps> = ({ src, index, activeIndex }) => {
-    const ref = useRef<HTMLImageElement>(null);
+const ImagesWithContainer: React.FC<ImagesWithContainerProps> = ({ index, direction, containerPosition, wrappingInterval }) => {
     const isSmallScreen = useMediaQuery('(max-width: 600px)');
+    const [containerPos, setContainerPos] = useState<number>(containerPosition);
+    const x = useMotionValue<number>(0);
 
-    let width = isSmallScreen? 230 : 289;
-    let center = Math.floor(sources.length / 2);
+    const fac = (direction === 'forward')? 1 : -1;
+    const imageWidth = isSmallScreen? 230 : 289;
+    const containerWidth = (imageWidth + 50) * sources.length;
 
-    let shift = index - activeIndex;
-    if (shift < -center)
-        shift += sources.length;
-    if (shift > center)
-        shift -= sources.length;
-
-    if (ref.current) {
-
+    function fixPositionIfNecessary() {
+        if (index % sources.length === 0) {
+            let pos = containerPos + fac;
+            if (pos > wrappingInterval[1]) {
+                pos = wrappingInterval[0];
+            } else if (pos < wrappingInterval[0]) {
+                pos = wrappingInterval[1];
+            }
+            setContainerPos(pos);
+        }
     }
 
+    useEffect(() => {
+        x.set(containerWidth * containerPosition);
+    }, [containerPos, isSmallScreen]);
+
+    useEffect(() => {
+        animate(x, x.get() + (imageWidth + 50) * fac, {
+            duration: 0.5,
+            onComplete: () => {
+                fixPositionIfNecessary();
+            }
+        });
+    }, [index]);
+
     return (
-        <PreviewImage
-            ref={ref}
-            key={index}
-            src={src}
-            animate={{
-                translateX: (width + 50) * shift
-            }}
-            transition={{
-                duration: 0.5
-            }}
-        />
+        <PhoneImagesContainer style={{ x }}>
+            {
+                sources.map((src, index) => (
+                    <div style={{ position: 'relative' }}>
+                        <PreviewImage key={index} src={src}/>
+                        <ImageMask />
+                    </div>
+                ))
+            }
+        </PhoneImagesContainer>
     );
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const MobileViewer: React.FC = () => {
-    const [active, setActive] = useState<number>(0);
+    const [index, setIndex] = useState<number>(0);
+    const [direction, setDirection] = useState<'forward' | 'backward'>('forward');
 
     function nextIndex() {
-        let i = calculateNextIndex(active);
-        setActive(i);
+        setDirection('forward');
+        setIndex(index + 1);
     }
 
     function prevIndex() {
-        let i = calculatePrevIndex(active);
-        setActive(i);
+        setDirection('backward');
+        setIndex(index - 1);
     }
-
-    const imageComponents = sources.map((src, index) => (
-        <MobileImage index={index} activeIndex={active} src={src} />
-    ));
 
     return (
         <>
             <PhonePreviewContainer>
                 <PhoneImage src="/projects/mobile/phone.svg"/>
-                { ...imageComponents }
+                {
+                    [-2, -1, 0, 1, 2].map(key => (
+                        <ImagesWithContainer
+                            key={key}
+                            index={index}
+                            direction={direction}
+                            containerPosition={key}
+                            wrappingInterval={[-2, 2]}
+                        />
+                    ))
+                }
             </PhonePreviewContainer>
             <ButtonContainer>
                 <IconButton color="primary" onClick={prevIndex}>

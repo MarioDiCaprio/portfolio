@@ -8,6 +8,20 @@ export const PhonePreviewContainer = styled('div')`
   position: relative;
 `;
 
+export const PhoneImagesContainer = styled(motion.div)`
+  position: absolute;
+  top: calc(50% - 442px / 2);
+  left: calc(50% - 289px / 2);
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  overflow: visible;
+  @media (max-width: 600px) {
+    left: calc(50% - 230px / 2);
+    top: calc(50% - 368px / 2);
+  }
+`;
+
 export const PhoneImage = styled('img')`
   position: absolute;
   top: 50%;
@@ -23,17 +37,20 @@ export const PhoneImage = styled('img')`
 `;
 
 export const PreviewImage = styled(motion.img)`
-  position: absolute;
-  left: calc(50% - 289px / 2);
-  top: calc(50% - 442px / 2);
   width: 289px;
   height: 442px;
   @media (max-width: 600px) {
     width: 230px;
     height: 368px;
-    left: calc(50% - 230px / 2);
-    top: calc(50% - 368px / 2);
   }
+`;
+
+export const ImageMask = styled(PreviewImage.withComponent('div'))`
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(140deg, ${props => props.theme.palette.primary.main}, ${props => props.theme.palette.secondary.main});
+  opacity: 0.3;
 `;
 
 export const ButtonContainer = styled('div')`
@@ -47,5 +64,9 @@ export const ButtonContainer = styled('div')`
   z-index: 100;
   * {
     font-size: 2rem;
+  }
+  @media (max-width: 600px) {
+    translate: 0 -100px;
+    margin-bottom: 0;
   }
 `;
