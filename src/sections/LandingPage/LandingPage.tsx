@@ -7,14 +7,24 @@ import {
     Banner1,
     Banner2,
     Summary,
-    Wallpaper,
-    GithubButton
+    GithubButton, PhoneImage
 } from "./LandingPage.styles";
 
 const LandingPage: React.FC = () => {
     return (
         <Context>
-            <Wallpaper />
+
+            <PhoneImage
+                src="/landing-page/phone.svg"
+                animate={{
+                    translateY: [0, -30, 0]
+                }}
+                transition={{
+                    duration: 7,
+                    repeat: Infinity
+                }}
+            />
+
             <Content>
 
                 <BannerContainer>

@@ -1,10 +1,12 @@
 import {styled} from "@mui/material";
+import {motion} from "framer-motion";
 
 
 export const Context = styled('div')`
   position: relative;
   width: 100vw;
   height: 105vh;
+  min-height: 900px;
   padding:  0 100px 0 100px;
   display: flex;
   justify-content: flex-start;
@@ -31,6 +33,7 @@ export const Context = styled('div')`
   }
   
   @media (max-width: 990px) {
+    min-height: 800px;
     &::before {
       height: 80px;
     }
@@ -112,13 +115,24 @@ export const GithubButton = styled('a')`
   }
 `;
 
-export const Wallpaper = styled('div')`
+export const PhoneImage = styled(motion.img)`
+  width: 600px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  z-index: -100;
-  background-image: url("/landing-page/wallpaper.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  left: 50vw;
+  bottom: 45px;
+  @media (max-width: 1400px) {
+    left: 55vw;
+  }
+  @media (max-width: 1200px) {
+    width: 500px;
+    left: 61vw;
+  }
+  @media (max-width: 1100px) {
+    width: 400px;
+    left: 67vw;
+    bottom: 60px;
+  }
+  @media (max-width: 990px) {
+    display: none;
+  }
 `;
