@@ -21,7 +21,7 @@ export const Context = styled('div')`
     height: 200px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     background: ${props => props.theme.palette.background.default};
     clip-path: polygon(71.5% 0, 0% 100%, 100% 100%);
   }
