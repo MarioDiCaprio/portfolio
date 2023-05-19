@@ -38,6 +38,12 @@ export const SubmitButton = styled('button')`
   font-size: 1.2rem;
   font-weight: 800;
   color: ${props => props.theme.palette.primary.contrastText};
-  background: linear-gradient(90deg, ${props => props.theme.palette.primary.main}, ${props => props.theme.palette.secondary.main});
+  background: linear-gradient(90deg, ${props => props.theme.palette.primary.main}, ${props => props.theme.palette.secondary.main}, ${props => props.theme.palette.primary.main});
+  background-size: 200%;
   cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    background-position: -300px;
+    transition: 0.5s;
+  }
 `;
