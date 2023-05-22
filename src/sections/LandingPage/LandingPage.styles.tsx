@@ -115,8 +115,7 @@ export const GithubButton = styled('a')`
   }
 `;
 
-export const PhoneImage = styled(motion.img)`
-  width: 600px;
+export const Phone = styled(motion.div)`
   position: absolute;
   left: 50vw;
   bottom: 45px;
@@ -124,15 +123,25 @@ export const PhoneImage = styled(motion.img)`
     left: 55vw;
   }
   @media (max-width: 1200px) {
-    width: 500px;
     left: 61vw;
   }
   @media (max-width: 1100px) {
-    width: 400px;
     left: 67vw;
     bottom: 60px;
   }
   @media (max-width: 990px) {
     display: none;
   }
+`;
+
+export const PhoneImage = styled(motion.img)`
+  width: 600px;
+  @media (max-width: 1200px) {
+    width: 500px;
+  }
+  @media (max-width: 1100px) {
+    width: 400px;
+  }
+  user-select: none;
+  pointer-events: none;
 `;

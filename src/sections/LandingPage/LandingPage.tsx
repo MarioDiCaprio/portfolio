@@ -7,15 +7,15 @@ import {
     Banner1,
     Banner2,
     Summary,
-    GithubButton, PhoneImage
+    GithubButton, PhoneImage, Phone
 } from "./LandingPage.styles";
+import PhoneScreenOverload from "../../components/PhoneScreenOverload/PhoneScreenOverload";
 
 const LandingPage: React.FC = () => {
     return (
         <Context>
 
-            <PhoneImage
-                src="/landing-page/phone.svg"
+            <Phone
                 animate={{
                     translateY: [0, -30, 0]
                 }}
@@ -23,7 +23,10 @@ const LandingPage: React.FC = () => {
                     duration: 7,
                     repeat: Infinity
                 }}
-            />
+            >
+                <PhoneScreenOverload />
+                <PhoneImage id="landing-page-phone" src="/landing-page/phone.svg"/>
+            </Phone>
 
             <Content>
 
