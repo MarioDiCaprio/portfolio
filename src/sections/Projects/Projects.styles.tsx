@@ -8,11 +8,6 @@ export const Context = styled('div')`
   background: #f4f4f8;
 `;
 
-export const Title = styled('h2')`
-  font-size: clamp(20px, 8vw, 3rem);
-  font-weight: 800;
-`;
-
 export const ProjectContainer = styled('div')`
   width: 100%;
   display: flex;

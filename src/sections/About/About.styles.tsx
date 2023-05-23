@@ -25,11 +25,6 @@ export const Box2 = styled('div')`
   }
 `;
 
-export const Title = styled('h3')`
-  font-size: clamp(20px, 8vw, 3rem);
-  font-weight: 800;
-`;
-
 export const ParagraphContainer = styled('div')`
   display: flex;
   margin-bottom: 40px;

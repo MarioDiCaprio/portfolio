@@ -1,15 +1,21 @@
 import React from "react";
 import {Container, Grid} from "@mui/material";
-import {Content, Info, StyledInput, StyledTextArea, SubmitButton, Title} from "./Contact.styles";
+import {Content, Info, StyledInput, StyledTextArea, SubmitButton} from "./Contact.styles";
+import {Title, Subtitle} from "../../styles/presets.motion";
 
 
 const Contact: React.FC = () => {
     return (
         <Container maxWidth="lg" style={{ marginBottom: '100px' }}>
             <Content>
+
+                <Subtitle>
+                    Contact Me
+                </Subtitle>
                 <Title>
                     Write A Message
                 </Title>
+
                 <Info>
                     Note: As of the current moment, I am not taking any mail. Therefore,
                     this option is disabled.

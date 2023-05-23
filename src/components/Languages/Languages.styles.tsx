@@ -6,12 +6,6 @@ export const Context = styled('div')`
   text-align: center;
 `;
 
-export const Title = styled('h2')`
-  font-size: clamp(20px, 8vw, 3rem);
-  font-weight: 800;
-  margin-top: 0;
-`;
-
 export const CardWrapper = styled('div')`
   width: 100%;
   display: flex;

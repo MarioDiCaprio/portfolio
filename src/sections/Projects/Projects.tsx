@@ -5,9 +5,9 @@ import {
     ProjectContent,
     ProjectDescription,
     ProjectImage, ProjectLinks,
-    ProjectTitle,
-    Title
+    ProjectTitle
 } from "./Projects.styles";
+import {Title, Subtitle} from "../../styles/presets.motion";
 import {Container, IconButton} from "@mui/material";
 import {FaFirefox as BrowserIcon} from "react-icons/fa";
 import {BsGithub as GithubIcon} from "react-icons/bs";
@@ -20,6 +20,9 @@ const Projects: React.FC = () => {
             <Context>
                 <Container maxWidth="lg">
 
+                    <Subtitle>
+                        Featured Works
+                    </Subtitle>
                     <Title>
                         Some Of My Projects
                     </Title>

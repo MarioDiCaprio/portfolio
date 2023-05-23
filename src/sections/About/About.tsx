@@ -1,7 +1,15 @@
 import React from "react";
 import Languages from "../../components/Languages/Languages";
 import {Container} from "@mui/material";
-import {Box1, Box2, Content, ParagraphContainer, ParagraphContent, ParagraphIcon, Title} from "./About.styles";
+import {
+    Box1,
+    Box2,
+    Content,
+    ParagraphContainer,
+    ParagraphContent,
+    ParagraphIcon,
+} from "./About.styles";
+import {Title, Subtitle} from "../../styles/presets.motion";
 import {GiTechnoHeart as HeartIcon} from "react-icons/gi";
 import {FaGlobeAmericas as GlobeIcon} from "react-icons/fa";
 
@@ -16,6 +24,9 @@ const About: React.FC = () => {
                 </Box1>
                 <Box2>
 
+                    <Subtitle>
+                        A Little About Myself
+                    </Subtitle>
                     <Title>
                         Who is Mario?
                     </Title>

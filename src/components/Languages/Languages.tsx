@@ -1,13 +1,19 @@
 import React from "react";
-import {Card, CardWrapper, Context, Title} from "./Languages.styles";
+import {Card, CardWrapper, Context} from "./Languages.styles";
+import {Title, Subtitle} from "../../styles/presets.motion";
 
 
 const Languages: React.FC = () => {
     return (
         <Context>
+
+            <Subtitle>
+                Check This Out
+            </Subtitle>
             <Title>
                 Languages I Speak
             </Title>
+
             <CardWrapper>
                 <Card>
                     <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"/>

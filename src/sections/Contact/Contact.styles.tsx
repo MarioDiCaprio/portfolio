@@ -5,11 +5,6 @@ export const Content = styled('div')`
   width: 100%;
 `;
 
-export const Title = styled('h2')`
-  font-size: clamp(20px, 8vw, 3rem);
-  font-weight: 800;
-`;
-
 export const Info = styled('div')`
   color: ${props => props.theme.palette.info.main};
   margin-bottom: 50px;

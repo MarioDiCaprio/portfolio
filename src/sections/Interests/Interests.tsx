@@ -8,9 +8,9 @@ import {
     InterestContainer,
     InterestDescription,
     InterestElement, InterestTitle,
-    MainContainer,
-    Title
+    MainContainer
 } from "./Interests.styles";
+import {Title, Subtitle} from "../../styles/presets.motion";
 import {
     LayoutGroup,
     motion, MotionProps,
@@ -129,6 +129,10 @@ const Interests: React.FC = () => {
                 </CircleContainer>
 
                 <MainContainer>
+
+                    <Subtitle>
+                        A Bit More About Myself
+                    </Subtitle>
                     <Title>
                         Some Of My Interests
                     </Title>

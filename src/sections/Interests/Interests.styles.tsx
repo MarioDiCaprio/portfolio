@@ -54,11 +54,6 @@ export const MainContainer = styled('div')`
   }
 `;
 
-export const Title = styled('h2')`
-  font-size: clamp(20px, 8vw, 3rem);
-  font-weight: 800;
-`;
-
 export const InterestContainer = styled('div')<{ display?: string }>`
   display: ${props => props.display};
 `;
