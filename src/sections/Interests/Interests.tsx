@@ -18,6 +18,7 @@ import {
     useMotionValue,
     useMotionValueEvent,
 } from "framer-motion";
+import {interestContainerMotion} from "./Interests.motion";
 
 
 const Interests: React.FC = () => {
@@ -36,6 +37,11 @@ const Interests: React.FC = () => {
         let tmp = Math.sin(value * (Math.PI / 180)) * 10;
         circleRotation.set(tmp);
     });
+
+    const transition: MotionProps['transition'] = {
+        duration: 0.8,
+        ease: "easeOut"
+    }
 
     function previousIndex() {
         if (active === 0)
@@ -86,6 +92,7 @@ const Interests: React.FC = () => {
                         <InterestElement
                             layout
                             animate={elementAnimation(0, active === 0)}
+                            transition={transition}
                             src="/interests/chess.webp"
                             alt="chess"
                             onClick={() => setActive(0)}
@@ -93,6 +100,7 @@ const Interests: React.FC = () => {
                         <InterestElement
                             layout
                             animate={elementAnimation(1, active === 1)}
+                            transition={transition}
                             src="/interests/coding.webp"
                             alt="coding"
                             onClick={() => setActive(1)}
@@ -100,6 +108,7 @@ const Interests: React.FC = () => {
                         <InterestElement
                             layout
                             animate={elementAnimation(2, active === 2)}
+                            transition={transition}
                             src="/interests/gym.webp"
                             alt="gym"
                             onClick={() => setActive(2)}
@@ -107,6 +116,7 @@ const Interests: React.FC = () => {
                         <InterestElement
                             layout
                             animate={elementAnimation(3, active === 3)}
+                            transition={transition}
                             src="/interests/pasta.webp"
                             alt="pasta"
                             onClick={() => setActive(3)}
@@ -114,6 +124,7 @@ const Interests: React.FC = () => {
                         <InterestElement
                             layout
                             animate={elementAnimation(4, active === 4)}
+                            transition={transition}
                             src="/interests/modelling.webp"
                             alt="modelling"
                             onClick={() => setActive(4)}
@@ -121,6 +132,7 @@ const Interests: React.FC = () => {
                         <InterestElement
                             layout
                             animate={elementAnimation(5, active === 5)}
+                            transition={transition}
                             src="/interests/hiking.webp"
                             alt="hiking"
                             onClick={() => setActive(5)}
@@ -137,72 +149,6 @@ const Interests: React.FC = () => {
                         Some Of My Interests
                     </Title>
 
-                    <InterestContainer display={active === 0? 'block' : 'none'}>
-                        <InterestTitle>
-                            Chess
-                        </InterestTitle>
-                        <InterestDescription>
-                            Some years ago, I started cultivating an interest in chess. I love
-                            learning new openings, improving my middle- and endgame and putting
-                            my skills to the test on official tournaments!
-                        </InterestDescription>
-                    </InterestContainer>
-
-                    <InterestContainer display={active === 1? 'block' : 'none'}>
-                        <InterestTitle>
-                            Software Development
-                        </InterestTitle>
-                        <InterestDescription>
-                            Obviously, this one had to be on the list, being the foundation
-                            of my career as a software developer. Learning new tools and staying
-                            up-to-date is also part of the job!
-                        </InterestDescription>
-                    </InterestContainer>
-
-                    <InterestContainer display={active === 2? 'block' : 'none'}>
-                        <InterestTitle>
-                            Weightlifting
-                        </InterestTitle>
-                        <InterestDescription>
-                            I am a firm believer that staying in tip-top shape and regularly
-                            working your muscles raises your confidence like few other things
-                            do. Plus, its super fun!
-                        </InterestDescription>
-                    </InterestContainer>
-
-                    <InterestContainer display={active === 3? 'block' : 'none'}>
-                        <InterestTitle>
-                            Cooking
-                        </InterestTitle>
-                        <InterestDescription>
-                            Before moving out for the first time, I have started to appreciate
-                            the various comfort-foods that different cultures can bring. It is
-                            always good to have a dish or two up your sleeves to impress friends
-                            and family!
-                        </InterestDescription>
-                    </InterestContainer>
-
-                    <InterestContainer display={active === 4? 'block' : 'none'}>
-                        <InterestTitle>
-                            3D Modelling
-                        </InterestTitle>
-                        <InterestDescription>
-                            While I would never consider myself an expert, 3D modelling is
-                            definitely an interesting pastime.
-                        </InterestDescription>
-                    </InterestContainer>
-
-                    <InterestContainer display={active === 5? 'block' : 'none'}>
-                        <InterestTitle>
-                            Hiking
-                        </InterestTitle>
-                        <InterestDescription>
-                            One of my favourite things to do is going on long hikes
-                            and being out in the open, exploring the beauties mother
-                            nature has to offer!
-                        </InterestDescription>
-                    </InterestContainer>
-
                     <ButtonContainer>
                         <IconButton color="primary" onClick={previousIndex}>
                             <LeftArrowIcon />
@@ -211,6 +157,74 @@ const Interests: React.FC = () => {
                             <RightArrowIcon />
                         </IconButton>
                     </ButtonContainer>
+
+                    <div style={{ position: 'relative' }}>
+                        <InterestContainer {...interestContainerMotion(active === 0)}>
+                            <InterestTitle>
+                                Chess
+                            </InterestTitle>
+                            <InterestDescription>
+                                Some years ago, I started cultivating an interest in chess. I love
+                                learning new openings, improving my middle- and endgame and putting
+                                my skills to the test on official tournaments!
+                            </InterestDescription>
+                        </InterestContainer>
+
+                        <InterestContainer {...interestContainerMotion(active === 1)}>
+                            <InterestTitle>
+                                Software Development
+                            </InterestTitle>
+                            <InterestDescription>
+                                Obviously, this one had to be on the list, being the foundation
+                                of my career as a software developer. Learning new tools and staying
+                                up-to-date is also part of the job!
+                            </InterestDescription>
+                        </InterestContainer>
+
+                        <InterestContainer {...interestContainerMotion(active === 2)}>
+                            <InterestTitle>
+                                Weightlifting
+                            </InterestTitle>
+                            <InterestDescription>
+                                I am a firm believer that staying in tip-top shape and regularly
+                                working your muscles raises your confidence like few other things
+                                do. Plus, its super fun!
+                            </InterestDescription>
+                        </InterestContainer>
+
+                        <InterestContainer {...interestContainerMotion(active === 3)}>
+                            <InterestTitle>
+                                Cooking
+                            </InterestTitle>
+                            <InterestDescription>
+                                Before moving out for the first time, I have started to appreciate
+                                the various comfort-foods that different cultures can bring. It is
+                                always good to have a dish or two up your sleeves to impress friends
+                                and family!
+                            </InterestDescription>
+                        </InterestContainer>
+
+                        <InterestContainer {...interestContainerMotion(active === 4)}>
+                            <InterestTitle>
+                                3D Modelling
+                            </InterestTitle>
+                            <InterestDescription>
+                                While I would never consider myself an expert, 3D modelling is
+                                definitely an interesting pastime.
+                            </InterestDescription>
+                        </InterestContainer>
+
+                        <InterestContainer {...interestContainerMotion(active === 5)}>
+                            <InterestTitle>
+                                Hiking
+                            </InterestTitle>
+                            <InterestDescription>
+                                One of my favourite things to do is going on long hikes
+                                and being out in the open, exploring the beauties mother
+                                nature has to offer!
+                            </InterestDescription>
+                        </InterestContainer>
+                    </div>
 
                 </MainContainer>
 

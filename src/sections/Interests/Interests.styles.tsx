@@ -54,8 +54,10 @@ export const MainContainer = styled('div')`
   }
 `;
 
-export const InterestContainer = styled('div')<{ display?: string }>`
-  display: ${props => props.display};
+export const InterestContainer = styled(motion.div)`
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 export const InterestTitle = styled('h4')`
@@ -73,5 +75,5 @@ export const InterestDescription = styled('div')`
 export const ButtonContainer = styled('div')`
   display: flex;
   gap: 10px;
-  margin-top: 10px;
+  margin: 10px 0 5px 0;
 `;
