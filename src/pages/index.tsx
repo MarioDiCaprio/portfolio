@@ -6,6 +6,7 @@ import {styled} from "@mui/material";
 import Projects from "../sections/Projects/Projects";
 import Interests from "../sections/Interests/Interests";
 import Contact from "../sections/Contact/Contact";
+import Footer from "../sections/Footer/Footer";
 
 
 const Wrapper = styled('div')`
@@ -24,6 +25,7 @@ const Index: NextPage = () => {
             <Projects />
             <Interests />
             <Contact />
+            <Footer />
 
         </Wrapper>
     );
