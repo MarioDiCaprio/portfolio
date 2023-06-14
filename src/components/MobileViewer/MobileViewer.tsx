@@ -13,11 +13,11 @@ import {animate, useMotionValue} from "framer-motion";
 
 // NOTE: Number of sources should be odd (ideally, 5)
 const sources = [
-    "/projects/mobile/mobile-complexify-1.png",
-    "/projects/mobile/mobile-complexify-2.png",
-    "/projects/mobile/mobile-complexify-1.png",
-    "/projects/mobile/mobile-complexify-2.png",
-    "/projects/mobile/mobile-complexify-1.png",
+    "/projects/mobile/complexify-1.png",
+    "/projects/mobile/complexify-2.png",
+    "/projects/mobile/complexify-1.png",
+    "/projects/mobile/complexify-2.png",
+    "/projects/mobile/complexify-1.png",
 ];
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -35,8 +35,8 @@ const ImagesWithContainer: React.FC<ImagesWithContainerProps> = ({ index, direct
     const x = useMotionValue<number>(0);
 
     const fac = (direction === 'forward')? 1 : -1;
-    const imageWidth = isSmallScreen? 230 : 289;
-    const containerWidth = (imageWidth + 50) * sources.length;
+    const imageWidth = isSmallScreen? 506 * 0.725 : 506;
+    const containerWidth = (imageWidth + 100) * sources.length;
 
     function fixPositionIfNecessary() {
         if (index % sources.length === 0) {
@@ -55,7 +55,7 @@ const ImagesWithContainer: React.FC<ImagesWithContainerProps> = ({ index, direct
     }, [containerPos, isSmallScreen]);
 
     useEffect(() => {
-        animate(x, x.get() + (imageWidth + 50) * fac, {
+        animate(x, x.get() + (imageWidth + 100) * fac, {
             duration: 0.5,
             onComplete: () => {
                 fixPositionIfNecessary();
@@ -91,7 +91,7 @@ const MobileViewer: React.FC = () => {
     return (
         <>
             <PhonePreviewContainer>
-                <PhoneImage src="/projects/mobile/phone.svg"/>
+                <PhoneImage src="/projects/mobile/ipad.svg"/>
                 {
                     [-2, -1, 0, 1, 2].map(key => (
                         <ImagesWithContainer

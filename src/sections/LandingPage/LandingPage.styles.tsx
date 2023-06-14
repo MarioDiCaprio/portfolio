@@ -117,31 +117,22 @@ export const GithubButton = styled('a')`
 
 export const Phone = styled(motion.div)`
   position: absolute;
-  left: 50vw;
+  right: 15vw;
   bottom: 45px;
-  @media (max-width: 1400px) {
-    left: 55vw;
+  @media (max-width: 1300px) {
+    right: 5vw;
   }
-  @media (max-width: 1200px) {
-    left: 61vw;
+  @media (max-width: 1170px) {
+    right: 0;
   }
-  @media (max-width: 1100px) {
-    left: 67vw;
-    bottom: 60px;
-  }
-  @media (max-width: 990px) {
+  @media (max-width: 1020px) {
     display: none;
   }
 `;
 
 export const PhoneImage = styled(motion.img)`
-  width: 600px;
-  @media (max-width: 1200px) {
-    width: 500px;
-  }
-  @media (max-width: 1100px) {
-    width: 400px;
-  }
+  width: 25vw;
+  min-width: 300px;
   user-select: none;
   pointer-events: none;
 `;

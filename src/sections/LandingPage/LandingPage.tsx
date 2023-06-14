@@ -9,7 +9,6 @@ import {
     Summary,
     GithubButton, PhoneImage, Phone
 } from "./LandingPage.styles";
-import PhoneScreenOverload from "../../components/PhoneScreenOverload/PhoneScreenOverload";
 
 const LandingPage: React.FC = () => {
     return (
@@ -24,8 +23,7 @@ const LandingPage: React.FC = () => {
                     repeat: Infinity
                 }}
             >
-                <PhoneScreenOverload />
-                <PhoneImage id="landing-page-phone" src="/landing-page/phone.svg"/>
+                <PhoneImage id="landing-page-phone" src="/landing-page/iphone.svg"/>
             </Phone>
 
             <Content>
