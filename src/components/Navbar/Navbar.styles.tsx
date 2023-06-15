@@ -12,7 +12,7 @@ export const Context = styled('div')<{ variant: 'initial' | 'scrolled' }>`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 1000;
   transition: 0.3s;
 `;
 
@@ -30,4 +30,9 @@ export const Content = styled('div')`
 export const LinksSection = styled('div')`
   display: flex;
   gap: 40px;
+`;
+
+export const Logo = styled('img')`
+  width: 70px;
+  border-radius: 50%;
 `;

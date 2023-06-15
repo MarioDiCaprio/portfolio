@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Content, Context, LinksSection} from "./Navbar.styles";
+import {Content, Context, LinksSection, Logo} from "./Navbar.styles";
 import NavLink from "../NavLink/NavLink";
 import {useMediaQuery, useTheme} from "@mui/material";
 import {HiOutlineMenuAlt3 as MenuIcon} from "react-icons/hi";
@@ -20,9 +20,7 @@ const Navbar: React.FC = () => {
         return (
             <Context variant={variant}>
                 <Content>
-                    <span>
-                        Mario Di Caprio
-                    </span>
+                    <Logo src="/logo.png" alt="Mario Di Caprio" />
                     <MenuIcon fontSize="2rem" />
                 </Content>
             </Context>
@@ -32,9 +30,7 @@ const Navbar: React.FC = () => {
     return (
         <Context variant={variant}>
             <Content>
-                <span>
-                    Mario Di Caprio
-                </span>
+                <Logo src="/logo.png" alt="Mario Di Caprio" />
                 <LinksSection>
                     <NavLink>
                         Home
