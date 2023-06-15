@@ -10,6 +10,7 @@ export const Content = styled('div')`
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
+    margin-bottom: 300px;
   }
 `;
 
