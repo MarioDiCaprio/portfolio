@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 1024 1024" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="505.744" id="Filter" width="793.571" x="166.559" y="451.521">
+<feGaussianBlur in="SourceGraphic" result="Blur" stdDeviation="0.0964153"/>
+</filter>
+</defs>
+<g id="Layer-1" vectornator:layerName="Layer 1">
+<path d="M2.84217e-14 0L1024 0L1024 1024L2.84217e-14 1024L2.84217e-14 0Z" fill="#3178c6" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Rectangle 1"/>
+<g fill="#ffffff" filter="url(#Filter)" opacity="1" stroke="#ffffff" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="28.0105" vectornator:blur="0.192831" vectornator:layerName="Text 1">
+<path d="M547.354 478.068L547.354 531.882L395.138 531.882L395.138 929.796L333.022 929.796L333.022 531.882L180.806 531.882L180.806 478.068L547.354 478.068Z"/>
+<path d="M643.297 784.038C644.732 809.663 650.779 830.471 661.439 846.462C681.735 876.392 717.508 891.358 768.76 891.358C791.72 891.358 812.631 888.078 831.491 881.517C867.982 868.807 886.227 846.052 886.227 813.251C886.227 788.65 878.54 771.122 863.164 760.667C847.584 750.417 823.188 741.499 789.978 733.914L728.784 720.076C688.808 711.056 660.517 701.113 643.912 690.248C615.211 671.387 600.861 643.199 600.861 605.683C600.861 565.092 614.903 531.779 642.989 505.743C671.075 479.708 710.846 466.69 762.302 466.69C809.658 466.69 849.89 478.119 882.998 500.977C916.107 523.835 932.661 560.377 932.661 610.603L875.157 610.603C872.082 586.413 865.522 567.86 855.477 554.945C836.821 531.369 805.148 519.581 760.457 519.581C724.376 519.581 698.443 527.167 682.657 542.337C666.872 557.507 658.979 575.138 658.979 595.228C658.979 617.369 668.205 633.564 686.655 643.814C698.75 650.374 726.118 658.575 768.76 668.415L832.106 682.868C862.652 689.838 886.227 699.371 902.833 711.466C931.533 732.581 945.884 763.23 945.884 803.411C945.884 853.432 927.689 889.205 891.301 910.731C854.913 932.256 812.631 943.019 764.454 943.019C708.283 943.019 664.31 928.668 632.534 899.968C600.758 871.472 585.178 832.829 585.793 784.038L643.297 784.038Z"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 456 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<path d="M209.764 507.658L18.2363 397.554C8.16466 391.764 8.52444e-14 377.483 8.08364e-14 365.655L-9.00355e-16 146.345C-5.30838e-15 134.517 8.16466 120.236 18.2363 114.446L209.764 4.34241C219.835-1.44747 236.165-1.44747 246.236 4.34241L437.764 114.446C447.835 120.236 456 134.517 456 146.345L456 365.655C456 377.483 447.835 391.764 437.764 397.554L246.236 507.658C236.165 513.447 219.835 513.447 209.764 507.658Z" id="Fill"/>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="512" width="456" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Layer-2" vectornator:layerName="Layer 2">
+<use fill="#a179dc" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Polygon 1" xlink:href="#Fill"/>
+<clipPath clip-rule="nonzero" id="ClipPath">
+<use xlink:href="#Fill"/>
+</clipPath>
+<g clip-path="url(#ClipPath)">
+<path d="M228 256L-19.1097 397.074L228 520.699L484.498 380.09L228 256Z" fill="#280068" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Curve 2"/>
+<path d="M100.414 254.401C100.414 184.764 157.536 128.312 228 128.312C298.464 128.312 355.586 184.764 355.586 254.401C355.586 324.038 298.464 380.49 228 380.49C157.536 380.49 100.414 324.038 100.414 254.401Z" fill="none" opacity="1" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="miter" stroke-width="81.2535" vectornator:layerName="Oval 1"/>
+<path d="M456 122.963L228 256L456 387.875L456 122.963Z" fill="#390091" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Curve 1"/>
+</g>
+</g>
+<g id="Layer-3" vectornator:layerName="Layer 3">
+<path d="M347.431 207.053L360.004 207.053L360.004 302.185L347.431 302.185L347.431 207.053Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Rectangle 2"/>
+<path d="M383.808 208.434L396.38 208.434L396.38 303.566L383.808 303.566L383.808 208.434Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Rectangle 3"/>
+<path d="M419.781 231.143L419.782 243.716L324.65 243.724L324.649 231.151L419.781 231.143Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Rectangle 6"/>
+<path d="M419.781 265.627L419.782 278.199L324.65 278.208L324.649 265.635L419.781 265.627Z" fill="#ffffff" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Rectangle 5"/>
+</g>
+</svg>

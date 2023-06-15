@@ -27,8 +27,7 @@ export const Card = styled('div')`
   font-weight: 600;
   
   img {
-    width: 90px;
-    height: 90px;
+    width: 70px;
   }
   
   @media (max-width: 490px) {

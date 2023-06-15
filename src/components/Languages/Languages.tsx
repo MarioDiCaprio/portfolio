@@ -16,27 +16,27 @@ const Languages: React.FC = () => {
 
             <CardWrapper>
                 <Card>
-                    <img alt="" src="/languages/javascript.svg" />
+                    <img alt="" src="/languages/JavaScript.svg" />
                     JavaScript
                 </Card>
                 <Card>
-                    <img alt="" src="/languages/typescript.svg" />
+                    <img alt="" src="/languages/TypeScript.svg" />
                     TypeScript
                 </Card>
                 <Card>
-                    <img alt="" src="https://classes.engineering.wustl.edu/cse231/core/images/2/26/Java.png"/>
+                    <img alt="" src="/languages/Java.svg"/>
                     Java
                 </Card>
                 <Card>
-                    <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kotlin_Icon.svg/1200px-Kotlin_Icon.svg.png"/>
+                    <img alt="" src="/languages/Kotlin.svg"/>
                     Kotlin
                 </Card>
                 <Card>
-                    <img alt="" src="/languages/python.svg" />
+                    <img alt="" src="/languages/Python.svg" />
                     Python
                 </Card>
                 <Card>
-                    <img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Logo_C_sharp.svg"/>
+                    <img alt="" src="/languages/C%23.svg"/>
                     C#
                 </Card>
             </CardWrapper>
