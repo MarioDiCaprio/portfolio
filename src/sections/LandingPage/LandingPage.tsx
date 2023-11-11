@@ -7,8 +7,9 @@ import {
     Banner1,
     Banner2,
     Summary,
-    GithubButton, PhoneImage, Phone
+    GithubButton, PhoneImage, Phone, SummaryLink
 } from "./LandingPage.styles";
+import {UnderlinedLink} from "../../styles/presets.styles";
 
 const LandingPage: React.FC = () => {
     return (
@@ -43,8 +44,8 @@ const LandingPage: React.FC = () => {
                 </Title>
 
                 <Summary>
-                    Hi! I am an aspiring software engineer based in Ulm, Germany. Soon, I will
-                    be joining Wieland Werke AG to pursue my studies.
+                    Hi! I am an aspiring software engineer based in Ulm, Germany. At the moment, I am
+                    studying computer science and working at <SummaryLink href="https://wieland.com" target="_blank">Wieland-Werke AG</SummaryLink>.
                 </Summary>
 
                 <GithubButton href="https://github.com/MarioDiCaprio" target="_blank">

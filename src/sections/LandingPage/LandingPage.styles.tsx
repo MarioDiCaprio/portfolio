@@ -1,5 +1,6 @@
 import {styled} from "@mui/material";
 import {motion} from "framer-motion";
+import {UnderlinedLink} from "../../styles/presets.styles";
 
 
 export const Context = styled('div')`
@@ -98,6 +99,14 @@ export const Summary = styled('p')`
   font-size: 1rem;
   line-height: 2rem;
   margin-bottom: 60px;
+`;
+
+export const SummaryLink = styled(UnderlinedLink)`
+  color: white;
+  font-weight: bold;
+  &::after {
+    background: white;
+  }
 `;
 
 export const GithubButton = styled('a')`
