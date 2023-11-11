@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                         <StyledInput placeholder="Last Name"/>
                     </Grid>
                     <Grid item xs={12}>
-                        <StyledInput placeholder="Email"/>
+                        <StyledInput placeholder="Email" type="email"/>
                     </Grid>
                     <Grid item xs={12}>
                         <StyledTextArea placeholder="Message"/>

@@ -17,6 +17,7 @@ export const StyledInput = styled('input')`
   border: none;
   font-size: 1rem;
   font-weight: 500;
+  font-family: monospace;
 `;
 
 export const StyledTextArea = styled(StyledInput.withComponent('textarea'))`
