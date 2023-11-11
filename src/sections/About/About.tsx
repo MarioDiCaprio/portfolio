@@ -19,9 +19,11 @@ const About: React.FC = () => {
         <Container maxWidth="lg">
             <Languages />
             <Content>
+                
                 <Box1>
-
+                    <img src="/about/selfie.png" alt="Mario"/>
                 </Box1>
+                
                 <Box2>
 
                     <Subtitle>

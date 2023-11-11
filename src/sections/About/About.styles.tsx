@@ -11,8 +11,15 @@ export const Content = styled('div')`
 
 export const Box1 = styled('div')`
   width: 50%;
-  @media (max-width: 850px) {
+  img {
     width: 100%;
+    user-select: none;
+    pointer-events: none;
+  }
+  @media (max-width: 850px) {
+    width: 90%;
+    justify-self: center;
+    align-self: center;
   }
 `;
 
