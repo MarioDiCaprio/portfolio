@@ -3,7 +3,7 @@ import {Content, Context, LinksSection, Logo} from "./Navbar.styles";
 import NavLink from "../NavLink/NavLink";
 import {useMediaQuery, useTheme} from "@mui/material";
 import {HiOutlineMenuAlt3 as MenuIcon} from "react-icons/hi";
-import {useMotionValueEvent, useScroll} from "framer-motion";
+import {useMotionValueEvent, useScroll, useVelocity} from "framer-motion";
 
 
 const Navbar: React.FC = () => {
@@ -16,9 +16,18 @@ const Navbar: React.FC = () => {
         setVariant(val > 110? 'scrolled' : "initial");
     });
 
+    const scrollVelocity = useVelocity(scrollY);
+    const [isScrollingDown, setIsScrollingDown] = useState<boolean>(false);
+    useMotionValueEvent(scrollVelocity, 'change', val => {
+        if (val > 0)
+            setIsScrollingDown(true);
+        else if (val < 0)
+            setIsScrollingDown(false);
+    });
+
     if (isSmallScreen) {
         return (
-            <Context variant={variant}>
+            <Context variant={variant} isScrollingDown={isScrollingDown}>
                 <Content>
                     <Logo src="/logo.png" alt="Mario Di Caprio" />
                     <MenuIcon fontSize="2rem" />
@@ -28,25 +37,15 @@ const Navbar: React.FC = () => {
     }
 
     return (
-        <Context variant={variant}>
+        <Context variant={variant} isScrollingDown={isScrollingDown}>
             <Content>
                 <Logo src="/logo.png" alt="Mario Di Caprio" />
                 <LinksSection>
-                    <NavLink>
+                    
+                    <NavLink to="/">
                         Home
                     </NavLink>
-                    <NavLink>
-                        About
-                    </NavLink>
-                    <NavLink>
-                        Projects
-                    </NavLink>
-                    <NavLink>
-                        Interests
-                    </NavLink>
-                    <NavLink>
-                        Contact
-                    </NavLink>
+                    
                 </LinksSection>
             </Content>
         </Context>

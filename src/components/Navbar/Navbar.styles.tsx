@@ -1,7 +1,7 @@
 import {styled} from "@mui/material";
 
 
-export const Context = styled('div')<{ variant: 'initial' | 'scrolled' }>`
+export const Context = styled('div')<{ variant: 'initial' | 'scrolled', isScrollingDown: boolean }>`
   width: 100vw;
   height: ${props => props.variant == 'initial'? '110px' : '75px'};
   background: ${props => props.variant == 'scrolled' && props.theme.palette.text.primary};
@@ -13,6 +13,7 @@ export const Context = styled('div')<{ variant: 'initial' | 'scrolled' }>`
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  transform: ${props => props.isScrollingDown? 'translateY(-110px)' : 'translateY(0)'};
   transition: 0.3s;
 `;
 
