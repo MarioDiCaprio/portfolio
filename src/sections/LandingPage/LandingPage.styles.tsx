@@ -125,9 +125,12 @@ export const GithubButton = styled('a')`
 `;
 
 export const Phone = styled(motion.div)`
+  width: 22vw;
+  min-width: 300px;
+  user-select: none;
+  pointer-events: none;
   position: absolute;
   right: 15vw;
-  bottom: 45px;
   @media (max-width: 1300px) {
     right: 5vw;
   }
@@ -140,8 +143,5 @@ export const Phone = styled(motion.div)`
 `;
 
 export const PhoneImage = styled(motion.img)`
-  width: 25vw;
-  min-width: 300px;
-  user-select: none;
-  pointer-events: none;
+  width: 100%;
 `;
