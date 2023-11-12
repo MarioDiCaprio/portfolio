@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 1050 1350" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="1190.24" id="Filter" width="890.237" x="90.7673" y="92.0716">
+<feDropShadow dx="10.8856" dy="12.1899" flood-color="#000000" flood-opacity="0.572087" in="SourceGraphic" result="Shadow" stdDeviation="10.4452"/>
+</filter>
+</defs>
+<g id="Layer-1" vectornator:layerName="Layer 1">
+<path d="M120 169.579C120 142.197 147.41 120 181.221 120L868.779 120C902.59 120 930 142.197 930 169.579L930 1180.42C930 1207.8 902.59 1230 868.779 1230L181.221 1230C147.41 1230 120 1207.8 120 1180.42L120 169.579Z" fill="none" filter="url(#Filter)" stroke="#000000" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="28.0105" vectornator:layerName="Rectangle 1" vectornator:shadowAngle="0.84186" vectornator:shadowColor="#000000" vectornator:shadowOffset="16.3429" vectornator:shadowOpacity="0.572087" vectornator:shadowRadius="20.8904"/>
+</g>
+</svg>

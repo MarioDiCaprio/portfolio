@@ -1,48 +1,35 @@
-// noinspection JSUnusedGlobalSymbols
-
 import type { NextPage } from 'next';
-import {useState} from "react";
-import LandingPage from "../components/LandingPage/LandingPage";
-import About from "../components/About/About";
-import Skills from "../components/Skills/Skills";
-import Interests from "../components/Interests/Interests";
-import Projects from "../components/Projects/Projects";
+import LandingPage from "../sections/LandingPage/LandingPage";
 import Navbar from "../components/Navbar/Navbar";
-import Credentials from "../components/Credentials/Credentials";
-import BootScreen from "../components/BootScreen/BootScreen";
+import About from "../sections/About/About";
+import {styled} from "@mui/material";
+import Projects from "../sections/Projects/Projects";
+import Interests from "../sections/Interests/Interests";
+import Contact from "../sections/Contact/Contact";
+import Footer from "../sections/Footer/Footer";
 
 
-/**
- * This is the main page.
- */
+const Wrapper = styled('div')`
+  max-width: 100%;
+  overflow: hidden;
+`;
+
 const Index: NextPage = () => {
-    const [hasBooted, setHasBooted] = useState<boolean>(false);
-
-    function completeBoot() {
-        setHasBooted(true);
-    }
-
-    if (!hasBooted) {
-        return (
-            <BootScreen onAnimationComplete={completeBoot} />
-        );
-    }
-
     return (
-        <>
+        <Wrapper>
 
             <Navbar />
 
             <LandingPage />
             <About />
-            <Skills />
-            <Interests />
             <Projects />
+            <Interests />
+            <Contact />
+            <Footer />
 
-            <Credentials />
-
-        </>
+        </Wrapper>
     );
 }
 
+// noinspection JSUnusedGlobalSymbols
 export default Index;

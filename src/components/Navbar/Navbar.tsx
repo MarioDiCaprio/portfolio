@@ -1,86 +1,55 @@
-import React, {useEffect, useState} from "react";
-import {useScroll, useVelocity} from "framer-motion";
-import {AiOutlineMenu as MenuIcon} from "react-icons/ai";
-import {useSmallScreen} from "../../hooks/useScreen";
-import {Context, Links, LogoWrapper, MenuButtonWrapper} from "./Navbar.styles";
-import Sidebar from "../Sidebar/Sidebar";
-import NavbarLink from "../NavbarLink/NavbarLink";
-import {logoMotion, menuButtonMotion} from "./Navbar.motion";
+import React, {useState} from "react";
+import {Content, Context, LinksSection, Logo} from "./Navbar.styles";
+import NavLink from "../NavLink/NavLink";
+import {useMediaQuery, useTheme} from "@mui/material";
+import {HiOutlineMenuAlt3 as MenuIcon} from "react-icons/hi";
+import {useMotionValueEvent, useScroll, useVelocity} from "framer-motion";
 
 
-/**
- * This is the page's navbar. It contains the logo and useful links to
- * scroll to. On small screens, contains a button that opens a sidebar
- * to access those links.
- * The Navbar is elevated when scrolled away from the top of the page
- * and generally hidden when scrolled down, but shown when scrolled
- * up.
- */
-export const Navbar: React.FC = () => {
-    const isSmallScreen = useSmallScreen();
+const Navbar: React.FC = () => {
+    const theme = useTheme();
+    const isSmallScreen = useMediaQuery(theme.breakpoints.down(750));
+
     const {scrollY} = useScroll();
+    const [variant, setVariant] = useState<'initial' | 'scrolled'>('initial');
+    useMotionValueEvent(scrollY, 'change', val => {
+        setVariant(val > 110? 'scrolled' : "initial");
+    });
+
     const scrollVelocity = useVelocity(scrollY);
-    const [isElevated, setIsElevated] = useState<boolean>(false);
-    const [isHidden, setIsHidden] = useState<boolean>(false);
-    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-
-    useEffect(() => {
-        scrollY.onChange(y => {
-            setIsElevated(y > 100);
-        });
-        scrollVelocity.onChange(v => {
-            if (v > 0) {
-                setIsHidden(true);
-            } else if (v < 0) {
-                setIsHidden(false);
-            }
-        });
-    }, []);
-
-    function toggleMenuOpen() {
-        setIsMenuOpen(!isMenuOpen);
-    }
+    const [isScrollingDown, setIsScrollingDown] = useState<boolean>(false);
+    useMotionValueEvent(scrollVelocity, 'change', val => {
+        if (val > 0)
+            setIsScrollingDown(true);
+        else if (val < 0)
+            setIsScrollingDown(false);
+    });
 
     if (isSmallScreen) {
         return (
-            <Context elevated={isElevated} hidden={isHidden}>
-
-                <LogoWrapper {...logoMotion}>
-                    <img src="/logo75.png" alt="Mario Di Caprio" style={{ width: '55px' }}/>
-                </LogoWrapper>
-
-                <MenuButtonWrapper onClick={toggleMenuOpen} {...menuButtonMotion}>
-                    <MenuIcon />
-                </MenuButtonWrapper>
-
-                <Sidebar open={isMenuOpen} onLinkClick={toggleMenuOpen} onClose={toggleMenuOpen} />
-
+            <Context variant={variant} isScrollingDown={isScrollingDown}>
+                <Content>
+                    <Logo src="/logo.png" alt="Mario Di Caprio" />
+                    <MenuIcon fontSize="2rem" />
+                </Content>
             </Context>
         );
     }
 
     return (
-        <Context elevated={isElevated} hidden={isHidden}>
-
-            <LogoWrapper {...logoMotion}>
-                <img src="/logo75.png" alt="Mario Di Caprio" style={{ width: '55px' }}/>
-            </LogoWrapper>
-
-            <Links>
-
-                <NavbarLink scrollLinkId="about" prefix="0.1" title="About" />
-
-                <NavbarLink scrollLinkId="skills" prefix="0.2" title="Skills" />
-
-                <NavbarLink scrollLinkId="interests" prefix="0.3" title="Interests" />
-
-                <NavbarLink scrollLinkId="projects" prefix="0.4" title="Projects" />
-
-            </Links>
-
+        <Context variant={variant} isScrollingDown={isScrollingDown}>
+            <Content>
+                <Logo src="/logo.png" alt="Mario Di Caprio" />
+                <LinksSection>
+                    
+                    <NavLink to="/">
+                        Home
+                    </NavLink>
+                    
+                </LinksSection>
+            </Content>
         </Context>
     );
 }
-
 
 export default Navbar;

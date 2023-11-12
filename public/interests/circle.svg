@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="102mm"
+   height="102.00001mm"
+   viewBox="0 0 102 102.00001"
+   version="1.1"
+   id="svg2282"
+   sodipodi:docname="circle.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview2284"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2279">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient6544">
+      <stop
+         style="stop-color:#ff0f7b;stop-opacity:1;"
+         offset="0"
+         id="stop6540" />
+      <stop
+         style="stop-color:#ffea61;stop-opacity:1;"
+         offset="1"
+         id="stop6542" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient6544"
+       id="linearGradient6546"
+       x1="51.090065"
+       y1="55.015575"
+       x2="153.30247"
+       y2="156.23199"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-50.703491,-53.676849)">
+    <circle
+       style="fill:none;fill-opacity:0;stroke:url(#linearGradient6546);stroke-width:2;stroke-dasharray:none;stroke-opacity:1"
+       id="path3492"
+       cx="101.70349"
+       cy="104.67685"
+       r="50"
+       inkscape:export-filename="circle.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#eeedf2;fill-opacity:0.397867;stroke:#64ffda;stroke-width:5.3125;stroke-opacity:0"
+       id="path422"
+       cx="101.32849"
+       cy="104.30186"
+       rx="39.84375"
+       ry="39.843754" />
+    <ellipse
+       style="fill:#eeedf2;fill-opacity:0.601297;stroke:#64ffda;stroke-width:3.99999;stroke-opacity:0"
+       id="ellipse5962"
+       cx="101.32848"
+       cy="104.30185"
+       rx="30.000002"
+       ry="30.000004" />
+  </g>
+</svg>

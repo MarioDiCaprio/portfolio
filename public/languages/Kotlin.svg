@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 1200 1200" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient gradientTransform="matrix(1 0 0 1 -4.9738e-14 0)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="0.330052" x2="619.994" y1="1198.88" y2="578.659">
+<stop offset="0" stop-color="#0096d7"/>
+<stop offset="1" stop-color="#826ee4"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1.03747 0 0 1.02879 2.12966e-15 -1.6219e-14)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="-6.82242" x2="480.567" y1="215.927" y2="210.818">
+<stop offset="0" stop-color="#0096d7"/>
+<stop offset="1" stop-color="#826ee4"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_3" x1="1.35183" x2="966.935" y1="1192.75" y2="-195.851">
+<stop offset="0" stop-color="#c856bd"/>
+<stop offset="1" stop-color="#f88a02"/>
+</linearGradient>
+</defs>
+<clipPath id="ArtboardFrame">
+<rect height="1200" width="1200" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Layer-2" vectornator:layerName="Layer 2">
+<path d="M600 600L-4.9738e-14 1200L1200 1200L600 600Z" fill="url(#LinearGradient)" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Curve 1"/>
+<path d="M2.12966e-15-1.6219e-14L622.479-1.6219e-14L-5.68434e-14 657.336L2.12966e-15-1.6219e-14Z" fill="url(#LinearGradient_2)" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Curve 2"/>
+<path d="M600 0L1200 0L0 1200L0 638.944L600 0Z" fill="url(#LinearGradient_3)" fill-rule="nonzero" opacity="1" stroke="none" vectornator:layerName="Curve 3"/>
+</g>
+</svg>
