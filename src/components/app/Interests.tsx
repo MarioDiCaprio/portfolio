@@ -108,21 +108,21 @@ const Interests: React.FC = () => {
                         
                         <motion.img
                             className="absolute rounded-[50%] bg-white select-none cursor-pointer"
-                            src="/app/interests/gym.webp" alt=""
+                            src="/app/interests/weightlifting.webp" alt=""
                             layout animate={itemPosition(2)} transition={itemTransition}
                             onClick={() => setActive(2)}
                         />
                         
                         <motion.img
                             className="absolute rounded-[50%] bg-white select-none cursor-pointer"
-                            src="/app/interests/pasta.webp" alt=""
+                            src="/app/interests/cooking.webp" alt=""
                             layout animate={itemPosition(3)} transition={itemTransition}
                             onClick={() => setActive(3)}
                         />
                         
                         <motion.img
                             className="absolute rounded-[50%] bg-white select-none cursor-pointer"
-                            src="/app/interests/modelling.webp" alt=""
+                            src="/app/interests/3dmodelling.webp" alt=""
                             layout animate={itemPosition(4)} transition={itemTransition}
                             onClick={() => setActive(4)}
                         />
