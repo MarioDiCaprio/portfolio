@@ -6,14 +6,17 @@ import {BsGithub as GitHubIcon} from "react-icons/bs";
 
 const Footer: React.FC = () => (
     <div className="w-full flex justify-center bg-ebony-clay text-[#A3A4B3]">
-        <div className="w-full max-w-[1150px]">
+        <div className="w-full max-w-[1150px] px-5">
 
             {/* Footer Content */}
-            <div className="w-full pt-[140px] pb-[100px] grid grid-cols-4 border-b border-[rgba(255,255,255,0.1)]">
+            <div className="
+                w-full pt-[140px] pb-[100px]
+                grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4
+                border-b border-[rgba(255,255,255,0.1)]">
 
                 {/* Thanksgiving */}
                 <div>
-                    <h4 className="mb-5 text-2xl font-bold text-white">
+                    <h4 className="mb-5 text-2xl font-bold text-white col-span-1 md:col-span-3 lg:col-span-1">
                         Thanks For Visiting
                     </h4>
                     <p className="leading-[2rem]">
