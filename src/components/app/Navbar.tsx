@@ -10,9 +10,15 @@ const Navbar: React.FC = () => (
         </NavbarBrand>
         <NavbarContent>
             
-            <NavbarItem>
+            <NavbarItem className="gap-5">
                 <Link href="/" className="underlined-link">
                     Home
+                </Link>
+            </NavbarItem>
+            
+            <NavbarItem>
+                <Link href={"/impressum"} className="underlined-link">
+                    Impressum
                 </Link>
             </NavbarItem>
             
