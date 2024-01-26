@@ -22,11 +22,18 @@ const About: React.FC = () => (
                     Who Is Mario
                 </h3>
 
-                <div className="w-full mb-10 flex gap-6">
+                <div className="relative w-full flex gap-6">
+                    
+                    {/* Icon */}
                     <div className="w-[85px] h-[85px] p-2.5 rounded-[50%] text-white bg-gradient-to-br from-rose to-portica">
                         <HeartIcon className="w-full h-full" />
                     </div>
-                    <div className="w-[calc(100%-85px)]">
+
+                    {/* Line connecting two icons */}
+                    <div className="z-[-1] absolute left-[42.5px] translate-x-[-50%] w-[1px] h-full bg-white-200"/>
+
+                    {/* Content */}
+                    <div className="w-[calc(100%-85px)] mb-10">
                         <h4 className="mb-4 text-2xl font-bold">
                             I'm a sucker for technology
                         </h4>
@@ -35,12 +42,17 @@ const About: React.FC = () => (
                             problems into simple, beautiful solutions.
                         </p>
                     </div>
+                    
                 </div>
 
                 <div className="w-full mb-10 flex gap-6">
+
+                    {/* Icon */}
                     <div className="w-[85px] h-[85px] p-2.5 rounded-[50%] text-white bg-gradient-to-br from-rose to-portica">
                         <GlobeIcon className="w-full h-full" />
                     </div>
+
+                    {/* Content */}
                     <div className="w-[calc(100%-85px)]">
                         <h4 className="mb-4 text-2xl font-bold">
                             I'm always eager to learn
@@ -50,6 +62,7 @@ const About: React.FC = () => (
                             understanding is one way to live a fulfilling life.
                         </p>
                     </div>
+                    
                 </div>
                 
             </div>
