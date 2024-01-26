@@ -3,13 +3,14 @@ import { FaCode as CodeIcon } from "react-icons/fa6";
 import { FaGear as GearIcon } from "react-icons/fa6";
 import { IoPeople as PeopleIcon } from "react-icons/io5";
 import { TiTick as TickIcon } from "react-icons/ti";
+import { FaHeart as HeartIcon } from "react-icons/fa";
 
 
 interface CardProps {
     color: "rose" | "purple" | "blue";
     icon: ReactNode;
     title: string;
-    items: string[];
+    items: ReactNode[];
 }
 
 const Card: React.FC<CardProps> = ({ color, icon, title, items }) => {
@@ -86,7 +87,10 @@ const Technologies: React.FC = () => (
                 icon={<PeopleIcon />}
                 title="Soft Skills"
                 items={[
-                    "SCRUM", "Kanban", "UI & UX Design"
+                    "SCRUM", "Kanban", "UI & UX Design",
+                    <span className="flex gap-2">
+                        Mathematics <span className="flex items-center"><HeartIcon className="text-rose"/></span>
+                    </span>
                 ]}
             />
             
