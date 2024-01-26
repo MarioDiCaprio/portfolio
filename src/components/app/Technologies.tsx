@@ -42,8 +42,8 @@ const Card: React.FC<CardProps> = ({ color, icon, title, items }) => {
 
                 {/* The bottom section with content */}
                 <div className="h-full mt-10 p-10 bg-[#f4f7ff]">
-                    {items.map(item => (
-                        <div className="flex gap-2">
+                    {items.map((item, index) => (
+                        <div key={`Skill-${title}-${index}`} className="flex gap-2">
                             <span className={`flex items-center ${textCol}`}>
                                 <TickIcon />
                             </span>
