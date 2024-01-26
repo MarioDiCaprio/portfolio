@@ -5,7 +5,7 @@ import { BsServer as BackendIcon } from "react-icons/bs";
 
 
 interface CardProps {
-    color: "red" | "purple" | "blue"
+    color: "rose" | "purple" | "blue"
     icon: ReactNode;
     title: string;
 }
@@ -13,11 +13,11 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ color, icon, title }) => {
     // Tailwind requires to hard-code this!
     const circleBg =
-        color == "red"? "bg-torch-red" :
+        color == "rose"? "bg-rose" :
         color == "purple"? "bg-violet-eggplant" :
         "bg-curious-blue";
     const afterBg =
-        color == "red"? "after:bg-torch-red" :
+        color == "rose"? "after:bg-rose" :
         color == "purple"? "after:bg-violet-eggplant" :
         "after:bg-curious-blue";
     
@@ -67,7 +67,7 @@ const ThingsICanDo: React.FC = () => (
                 />
 
                 <Card
-                    color="red"
+                    color="rose"
                     icon={<BackendIcon />}
                     title="Backend"
                 />
