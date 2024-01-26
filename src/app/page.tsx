@@ -6,12 +6,14 @@ import Projects from "@/components/app/Projects";
 import Interests from "@/components/app/Interests";
 import Contact from "@/components/app/Contact";
 import Footer from "@/components/app/Footer";
+import Technologies from "@/components/app/Technologies";
 
 const Page: React.FC = () => (
     <>
         <LandingPage />
         <ThingsICanDo />
         <About />
+        <Technologies />
         <Projects />
         <Interests />
         <Contact />
