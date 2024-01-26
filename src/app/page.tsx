@@ -1,6 +1,6 @@
 import React from "react";
 import LandingPage from "@/components/app/LandingPage";
-import Languages from "@/components/app/Languages";
+import ThingsICanDo from "@/components/app/ThingsICanDo";
 import About from "@/components/app/About";
 import Projects from "@/components/app/Projects";
 import Interests from "@/components/app/Interests";
@@ -10,7 +10,7 @@ import Footer from "@/components/app/Footer";
 const Page: React.FC = () => (
     <>
         <LandingPage />
-        <Languages />
+        <ThingsICanDo />
         <About />
         <Projects />
         <Interests />
