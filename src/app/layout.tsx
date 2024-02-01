@@ -1,6 +1,6 @@
 import "@/css/globals.css"
 import "@/css/indexStyles.css"
-import "@/css/fonts/barlow.css"
+import "@/../public/fonts/barlow/barlow.css"
 
 import React, { ReactNode } from "react";
 import {Metadata} from "next";
