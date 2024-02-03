@@ -2,7 +2,7 @@ import React from "react";
 import PersonalInfoTable from "@/components/app/impressum/PersonalInfoTable";
 
 const Page: React.FC = () => (
-    <div className="w-full mt-[120px] mb-[100px] flex justify-center">
+    <div className="w-full mt-[120px] mb-[100px] px-5 flex justify-center">
         <div className="w-full max-w-[1150px]">
             
             <h1 className="mb-10 text-4xl font-bold">
