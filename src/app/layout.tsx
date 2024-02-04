@@ -15,6 +15,9 @@ export const metadata: Metadata = {
 
 const Layout: React.FC<{ children?: ReactNode }> = ({ children }) => (
     <html lang="en">
+        <head>
+            <link rel="canonical" href="https://mariodicaprio.com"/>
+        </head>
         <body className="font-barlow text-ebony-clay">
             <Providers>
                 <Navbar />
