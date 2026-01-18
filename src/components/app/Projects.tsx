@@ -51,7 +51,7 @@ interface ProjectProps {
 
 export const Project: React.FC<ProjectProps> = (props) => {
     return (
-        <article className="group relative p-[1.5px] overflow-hidden rounded-xl">
+        <article className="py-5 group relative p-[1.5px] overflow-hidden rounded-xl">
 
             {/* container */}
             <div className="w-full p-5 overflow-hidden rounded-xl grid grid-cols-1 sm:grid-cols-3 gap-5">

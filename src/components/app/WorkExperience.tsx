@@ -12,7 +12,7 @@ interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = (props) => {
     return (
-        <article className="grid grid-cols-3 p-5">
+        <article className="py-5 grid grid-cols-3 p-5">
 
             {/* Time Period */}
             <header aria-label={`${props.from} to ${props.to}`} className="flex justify-start items-center">
