@@ -13,7 +13,23 @@ const inter = Inter({
 
 export const metadata: Metadata = {
     title: "Mario Di Caprio",
-    description: "Mario Di Caprio's Portfolio Website",
+    description: "Fullstack engineer and dual student at Wieland-Werke AG. Specializing in web development. Explore Mario Di Caprio’s portfolio for high-performance web applications and enterprise software solutions.",
+    authors: {
+        name: "Mario Di Caprio",
+        url: "https://mariodicaprio.com/",
+    },
+    applicationName: "Mario Di Caprio Portfolio",
+    keywords: ["Mario Di Caprio", "Software Engineer", "Portfolio"],
+    openGraph: {
+        type: "website",
+        url: "https://mariodicaprio.com/",
+        title: "Mario Di Caprio | Dual Student at Wieland-Werke AG",
+        description: "Portfolio of Mario Di Caprio, a fullstack engineer and dual student. Building industrial-grade software solutions using state-of-the-art technologies.",
+        siteName: "Mario Di Caprio Portfolio",
+        images: {
+            url: "https://mariodicaprio.com/app/about/profile-pic.png",
+        }
+    }
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
