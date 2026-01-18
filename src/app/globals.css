@@ -39,10 +39,44 @@
     --color-woodsmoke-900: #292828;
     --color-woodsmoke-950: #141414;
     --color-woodsmoke: var(--color-woodsmoke-950);
+
+    --color-amethyst-50: #f6f3ff;
+    --color-amethyst-100: #efe9fe;
+    --color-amethyst-200: #e0d6fe;
+    --color-amethyst-300: #cab6fc;
+    --color-amethyst-400: #b28cf9;
+    --color-amethyst-500: #9456f4;
+    --color-amethyst-600: #8b3ceb;
+    --color-amethyst-700: #7c2ad7;
+    --color-amethyst-800: #6822b5;
+    --color-amethyst-900: #561e94;
+    --color-amethyst-950: #351164;
+    --color-amethyst: var(--color-amethyst-500);
+
+    --color-rose-50: #fff0f9;
+    --color-rose-100: #ffe3f5;
+    --color-rose-200: #ffc6eb;
+    --color-rose-300: #ff98d9;
+    --color-rose-400: #ff58be;
+    --color-rose-500: #ff27a2;
+    --color-rose-600: #ee0074;
+    --color-rose-700: #df0061;
+    --color-rose-800: #b80050;
+    --color-rose-900: #980345;
+    --color-rose-950: #5f0025;
+    --color-rose: var(--color-rose-600);
 }
 
 @layer components {
     .link {
+        color: var(--color-white-200);
+        transition: 300ms;
+        &:hover {
+            color: var(--color-white);
+        }
+    }
+    .link-inline {
+        text-decoration: underline;
         color: var(--color-white-200);
         transition: 300ms;
         &:hover {

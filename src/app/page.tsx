@@ -1,15 +1,15 @@
-import LandingPage from "@/components/app/LandingPage";
+import HeroSection from "@/components/app/HeroSection";
 import Projects from "@/components/app/Projects";
-import TechStack from "@/components/app/TechStack";
+import WorkExperience from "@/components/app/WorkExperience";
 import AboutMe from "@/components/app/AboutMe";
 
 
 export default function Home() {
     return (
         <>
-            <LandingPage />
+            <HeroSection />
             <Projects />
-            <TechStack />
+            <WorkExperience />
             <AboutMe />
         </>
     );

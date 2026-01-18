@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/app/Navbar";
 import Footer from "@/components/app/Footer";
 import Head from "next/head";
+import MouseLight from "@/components/MouseLight";
 
 
 const inter = Inter({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                     {children}
                 </main>
                 <Footer />
+                <MouseLight />
             </body>
         </html>
     );
