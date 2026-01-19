@@ -19,7 +19,9 @@ import { FaExternalLinkAlt as LinkIcon } from "react-icons/fa";
 
 import ComplexifyImage from "@/../public/app/projects/complexify.webp";
 import SpacesImage from "@/../public/app/projects/spaces.webp";
+import WielandMaterialsRankerImage from "@/../public/app/projects/wieland_materials_ranker.webp";
 import SpotlightList from "@/components/SpotlightList";
+import {UrlObject} from "node:url";
 
 
 type Technology = 'Git' | 'TypeScript' | 'React' | 'Next' | 'Vue' | 'Tailwind' | 'Blazor' | 'Docker' | 'Supabase' | 'OpenGL' | 'Python' | 'Azure';
@@ -46,7 +48,10 @@ interface ProjectProps {
     image: StaticImport;
     imageAlt: string;
     technologies?: Technology[];
-    link?: string;
+    link?: {
+        href: string | UrlObject;
+        text: string;
+    };
 }
 
 export const Project: React.FC<ProjectProps> = (props) => {
@@ -80,9 +85,9 @@ export const Project: React.FC<ProjectProps> = (props) => {
 
                     {/* Link to site */}
                     {props.link && (
-                        <Link href={props.link} target="_blank" className="link-inline py-2 flex items-center gap-2 w-fit  text-sm">
+                        <Link href={props.link.href} target="_blank" className="link-inline py-2 flex items-center gap-2 w-fit  text-sm">
                             <LinkIcon aria-hidden />
-                            <span>View Project</span>
+                            <span>{props.link.text}</span>
                         </Link>
                     )}
 
@@ -130,7 +135,7 @@ const projectList: ReactNode[] = [
             High performance and fully interactive graphs.
         </>}
         technologies={['React', 'Next', 'Tailwind', 'OpenGL', 'Git']}
-        link="https://complexify.mariodicaprio.com"
+        link={{ text: "View Site", href: "https://complexify.mariodicaprio.com" }}
     />,
     <Project
         key="spaces"
@@ -148,14 +153,15 @@ const projectList: ReactNode[] = [
         key="ir-system"
         title="Information Retrieval System"
         subtitle="Enterprise Project"
-        image={SpacesImage}
-        imageAlt="Non-Visual Project"
+        image={WielandMaterialsRankerImage}
+        imageAlt="UI of the information retrieval system"
         description={<>
             Built an Information Retrieval (IR) system for retrieving metals relevant to specific customer
             queries at <a href="https://www.wieland.com" target="_blank" className="link-inline">Wieland-Werke AG</a>.
-            The system used technologies in the Azure AI suite and Azure Functions. Vue-based frontend.
+            The system used technologies in the Azure AI suite and Azure Functions. Minimal frontend built with Vue.
         </>}
         technologies={['Python', 'Azure', 'Vue', 'Tailwind', 'Git']}
+        link={{ text: "View Case Study", href: "/projects/wieland-materials-ranker" }}
     />
 ]
 
