@@ -22,6 +22,7 @@ import SpacesImage from "@/../public/app/projects/spaces.webp";
 import WielandMaterialsRankerImage from "@/../public/app/projects/wieland_materials_ranker.webp";
 import SpotlightList from "@/components/SpotlightList";
 import {UrlObject} from "node:url";
+import Tag from "@/components/Tag";
 
 
 type Technology = 'Git' | 'TypeScript' | 'React' | 'Next' | 'Vue' | 'Tailwind' | 'Blazor' | 'Docker' | 'Supabase' | 'OpenGL' | 'Python' | 'Azure';
@@ -105,12 +106,9 @@ export const Project: React.FC<ProjectProps> = (props) => {
                         <ul className="list-none text-xl flex items-center gap-3 flex-wrap">
                             {props.technologies?.map(t =>
                                 <li key={t}>
-                                    <div className="py-1 px-2 flex items-center gap-2 text-xs bg-rose/30 rounded-xl text-rose-300">
-                                        {technologyIcons[t]}
-                                        <span>
-                                            {t}
-                                        </span>
-                                    </div>
+                                    <Tag icon={technologyIcons[t]}>
+                                        {t}
+                                    </Tag>
                                 </li>
                             )}
                         </ul>
