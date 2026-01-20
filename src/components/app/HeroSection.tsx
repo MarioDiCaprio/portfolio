@@ -12,7 +12,7 @@ const HeroSection: React.FC = () => {
                     mb-7 text-center text-6xl font-bold text-gradient">
                 Software Developer
             </h2>
-            <p className="w-full max-w-[400px] text-center">
+            <p className="w-full max-w-[400px] text-center text-woodsmoke-200">
                 I am a fullstack engineer specializing in frontend development. Currently, I am
                 pursuing a dual degree in computer science
                 at <a href="https://www.wieland.com" target="_blank" className="link-inline">Wieland-Werke AG</a>.

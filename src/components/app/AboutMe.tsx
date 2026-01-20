@@ -16,7 +16,7 @@ const AboutMe: React.FC = () => (
                     className="object-cover"
                 />
             </figure>
-            <div className="m-auto pt-4 lg:pt-0 text-center lg:text-left flex flex-col gap-4">
+            <div className="m-auto pt-4 lg:pt-0 text-center lg:text-left text-woodsmoke-200 flex flex-col gap-4">
                 <p>
                     I am experienced in many fullstack technologies and am passionate about building
                     user-friendly, accessible websites. I have worked with multiple agile teams

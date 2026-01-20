@@ -93,7 +93,7 @@ export const Project: React.FC<ProjectProps> = (props) => {
                     )}
 
                     {/* description */}
-                    <p aria-label="project description" className="pb-3 mt-2 mb-auto">
+                    <p className="pb-3 mt-2 mb-auto text-woodsmoke-200">
                         {props.description}
                     </p>
 
@@ -173,7 +173,7 @@ const Projects: React.FC = () => {
                 {projectList}
             </SpotlightList>
             <footer className="text-center text-xl">
-                <Link href="/projects" target="_blank" className="link flex justify-center items-center gap-3">
+                <Link href="/projects" className="link flex justify-center items-center gap-3">
                 <span aria-hidden>
                     <GalleryIcon />
                 </span>

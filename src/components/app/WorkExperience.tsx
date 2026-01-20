@@ -32,7 +32,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
                 </p>
 
                 {/* Content */}
-                <p className="mt-2">
+                <p className="mt-2 text-woodsmoke-200">
                     {props.children}
                 </p>
             </div>
