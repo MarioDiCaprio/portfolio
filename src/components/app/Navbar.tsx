@@ -29,6 +29,9 @@ const Navbar: React.FC = () => {
         </Link>,
         <Link href="/projects" key="projects" className="link" onClick={closeMenu}>
             Projects
+        </Link>,
+        <Link href="/impressum" key="impressum" className="link" onClick={closeMenu}>
+            Impressum
         </Link>
     ];
 
