@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowDown as ArrowDownIcon } from "react-icons/fa";
+import {ArrowDown} from "lucide-react";
 
 
 const HeroSection: React.FC = () => {
@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
                 Based in Ulm, Germany.
             </p>
             <div aria-hidden className="w-full h-full mt-20 flex justify-center items-center text-4xl">
-                <ArrowDownIcon className="animate-bounce" />
+                <ArrowDown size="1em" className="animate-bounce" />
             </div>
         </section>
     );

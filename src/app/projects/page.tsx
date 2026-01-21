@@ -1,8 +1,7 @@
 import React, {ReactNode} from "react";
 import Tag from "@/components/Tag";
 import Link from "next/link";
-import { FaExternalLinkAlt as ExternalLinkIcon } from "react-icons/fa";
-import { FaBookOpen as BookIcon } from "react-icons/fa6";
+import {BookOpen, ExternalLink} from "lucide-react";
 
 
 const tableCellClass = "min-w-[100px] py-4 pr-8";
@@ -94,7 +93,7 @@ export default function Projects() {
                                 {
                                     href: "/projects/nyt-connections-solver",
                                     name: "Case Study",
-                                    icon: <BookIcon />
+                                    icon: <BookOpen size="1em" />
                                 }
                             ]}
                         />
@@ -113,7 +112,7 @@ export default function Projects() {
                                 {
                                     href: "/projects/wieland-materials-ranker",
                                     name: "Case Study",
-                                    icon: <BookIcon />
+                                    icon: <BookOpen size="1em" />
                                 }
                             ]}
                         />
@@ -132,7 +131,7 @@ export default function Projects() {
                                 {
                                     href: "/projects/wieland-materials-ranker",
                                     name: "Case Study",
-                                    icon: <BookIcon />
+                                    icon: <BookOpen size="1em" />
                                 }
                             ]}
                         />
@@ -151,12 +150,12 @@ export default function Projects() {
                                 {
                                     href: "https://complexify.mariodicaprio.com",
                                     name: "View Site",
-                                    icon: <ExternalLinkIcon />
+                                    icon: <ExternalLink size="1em" />
                                 },
                                 {
                                     href: "/projects/complexify",
                                     name: "Case Study",
-                                    icon: <BookIcon />
+                                    icon: <BookOpen size="1em" />
                                 }
                             ]}
                         />

@@ -2,12 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
-import {FaLinkedin as LinkedInIcon} from "react-icons/fa";
-import {FaGithub as GitHubIcon} from "react-icons/fa6";
-import {IoDocument as ResumeIcon} from "react-icons/io5";
-import { IoMenu as MenuIcon } from "react-icons/io5";
-import { IoClose as CloseIcon } from "react-icons/io5";
 import {AnimatePresence, motion} from "framer-motion";
+import {File, Menu, X} from "lucide-react";
+import Linkedin from "@/components/icons/Linkedin";
+import Github from "@/components/icons/Github";
 import {email} from "@/globals";
 
 
@@ -36,15 +34,15 @@ const Navbar: React.FC = () => {
 
     const externalLinks: React.JSX.Element[] = [
         <a key="linkedin" href="https://www.linkedin.com/in/mario-di-caprio-a0897b243/" target="_blank" className="flex gap-2 items-center link">
-            <LinkedInIcon aria-hidden/>
+            <Linkedin strokeWidth={1.7} aria-hidden/>
             <span>LinkedIn</span>
         </a>,
         <a key="github" href="https://github.com/MarioDiCaprio/" target="_blank" className="flex gap-2 items-center link">
-            <GitHubIcon aria-hidden/>
+            <Github aria-hidden/>
             <span>GitHub</span>
         </a>,
         <a key="resume" href="https://.../" target="_blank" className="flex gap-2 items-center link">
-            <ResumeIcon aria-hidden/>
+            <File size="1em" aria-hidden/>
             <span>Resumé</span>
         </a>
     ];
@@ -89,7 +87,7 @@ const Navbar: React.FC = () => {
                 aria-label="open navigation menu"
                 onClick={openMenu}
                 className="block lg:hidden text-3xl">
-                <MenuIcon />
+                <Menu />
             </button>
 
             <AnimatePresence>
@@ -111,7 +109,7 @@ const Navbar: React.FC = () => {
 
                                 <div className="flex items-center justify-end text-3xl">
                                     <button id="closeMenuButton" aria-label="close navigation menu" onClick={closeMenu}>
-                                        <CloseIcon />
+                                        <X />
                                     </button>
                                 </div>
 

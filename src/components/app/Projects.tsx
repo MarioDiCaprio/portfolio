@@ -2,45 +2,14 @@ import React, {ReactNode} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {StaticImport} from "next/dist/shared/lib/get-img-props";
-import { FaGitAlt as GitIcon } from "react-icons/fa6";
-import { BiLogoTypescript as TypeScriptIcon } from "react-icons/bi";
-import { FaReact as ReactIcon } from "react-icons/fa";
-import { SiNextdotjs as NextIcon } from "react-icons/si";
-import { FaVuejs as VueIcon } from "react-icons/fa";
-import { SiTailwindcss as TailwindIcon } from "react-icons/si";
-import { SiBlazor as BlazorIcon } from "react-icons/si";
-import { SiDocker as DockerIcon } from "react-icons/si";
-import { SiSupabase as SupabaseIcon } from "react-icons/si";
-import { SiOpengl as OpenGlIcon } from "react-icons/si";
-import { FaPython as PythonIcon } from "react-icons/fa";
-import { VscAzure as AzureIcon } from "react-icons/vsc";
-import { LuGalleryVerticalEnd as GalleryIcon } from "react-icons/lu";
-import { FaExternalLinkAlt as LinkIcon } from "react-icons/fa";
+import Tag from "@/components/Tag";
+import SpotlightList from "@/components/SpotlightList";
+import {ExternalLink, GalleryVerticalEnd} from "lucide-react";
 
 import ComplexifyImage from "@/../public/app/projects/complexify.webp";
 import SpacesImage from "@/../public/app/projects/spaces.webp";
 import WielandMaterialsRankerImage from "@/../public/app/projects/wieland_materials_ranker.webp";
-import SpotlightList from "@/components/SpotlightList";
-import {UrlObject} from "node:url";
-import Tag from "@/components/Tag";
 
-
-type Technology = 'Git' | 'TypeScript' | 'React' | 'Next' | 'Vue' | 'Tailwind' | 'Blazor' | 'Docker' | 'Supabase' | 'OpenGL' | 'Python' | 'Azure';
-
-const technologyIcons: Record<Technology, React.JSX.Element> = {
-    'Git': <GitIcon aria-hidden />,
-    'TypeScript': <TypeScriptIcon aria-hidden />,
-    'React': <ReactIcon aria-hidden />,
-    'Next': <NextIcon aria-hidden />,
-    'Vue': <VueIcon aria-hidden />,
-    'Tailwind': <TailwindIcon aria-hidden />,
-    'Blazor': <BlazorIcon aria-hidden />,
-    'Docker': <DockerIcon aria-hidden />,
-    'Supabase': <SupabaseIcon aria-hidden />,
-    'OpenGL': <OpenGlIcon aria-hidden />,
-    'Python': <PythonIcon aria-hidden />,
-    'Azure': <AzureIcon aria-hidden />,
-};
 
 interface ProjectProps {
     title: string;
@@ -48,9 +17,9 @@ interface ProjectProps {
     description: ReactNode;
     image: StaticImport;
     imageAlt: string;
-    technologies?: Technology[];
+    technologies?: string[];
     link?: {
-        href: string | UrlObject;
+        href: string;
         text: string;
     };
 }
@@ -87,7 +56,7 @@ export const Project: React.FC<ProjectProps> = (props) => {
                     {/* Link to site */}
                     {props.link && (
                         <Link href={props.link.href} target="_blank" className="link-inline py-2 flex items-center gap-2 w-fit  text-sm">
-                            <LinkIcon aria-hidden />
+                            <ExternalLink aria-hidden size="1em" />
                             <span>{props.link.text}</span>
                         </Link>
                     )}
@@ -106,7 +75,7 @@ export const Project: React.FC<ProjectProps> = (props) => {
                         <ul className="list-none text-xl flex items-center gap-3 flex-wrap">
                             {props.technologies?.map(t =>
                                 <li key={t}>
-                                    <Tag icon={technologyIcons[t]}>
+                                    <Tag>
                                         {t}
                                     </Tag>
                                 </li>
@@ -172,14 +141,12 @@ const Projects: React.FC = () => {
             <SpotlightList className="my-12">
                 {projectList}
             </SpotlightList>
-            <footer className="text-center text-xl">
-                <Link href="/projects" className="link flex justify-center items-center gap-3">
-                <span aria-hidden>
-                    <GalleryIcon />
-                </span>
+            <footer className="text-center text-lg">
+                <Link href="/projects" className="link flex justify-center items-center gap-2">
+                    <GalleryVerticalEnd aria-hidden size="1em" />
                     <span>
-                    View full gallery
-                </span>
+                        view full gallery
+                    </span>
                 </Link>
             </footer>
         </section>
