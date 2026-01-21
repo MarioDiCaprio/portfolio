@@ -80,7 +80,7 @@
         color: var(--color-white-200);
         transition: 300ms;
         &:hover {
-            color: var(--color-white);
+            color: var(--color-rose);
         }
     }
     .title {
