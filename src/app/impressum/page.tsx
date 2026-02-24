@@ -23,7 +23,7 @@ const Page: React.FC = () => (
                     </tr>
                     <tr>
                         <th scope="row">Anschrift</th>
-                        <td>Schülinstraße 13/1, 89073 Ulm</td>
+                        <td>Neue Straße 28, 89073 Ulm</td>
                     </tr>
                     <tr>
                         <th scope="row">Mobil</th>
