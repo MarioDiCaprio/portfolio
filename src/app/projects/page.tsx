@@ -1,7 +1,5 @@
-import React, {ReactNode} from "react";
+import React from "react";
 import Tag from "@/components/Tag";
-import Link from "next/link";
-import {BookOpen, ExternalLink} from "lucide-react";
 
 
 const tableCellClass = "min-w-[100px] py-4 pr-8";
@@ -11,11 +9,6 @@ interface TableRowProps {
     name: string;
     madeAt: string;
     technologies: string[];
-    links?: {
-        icon?: ReactNode;
-        name: string;
-        href: string;
-    }[];
 }
 
 const TableRow: React.FC<TableRowProps> = (props) => (
@@ -44,21 +37,6 @@ const TableRow: React.FC<TableRowProps> = (props) => (
                 ))}
             </ul>
         </td>
-        {/* Links */}
-        <td className={tableCellClass}>
-            {props.links && (
-                <ul className="list-none flex flex-col gap-2">
-                    {props.links.map((link) => (
-                        <li key={link.name}>
-                            <Link href={link.href} target="_blank" className="link flex items-center gap-2 text-nowrap">
-                                {link.icon}
-                                <span>{link.name}</span>
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </td>
     </tr>
 );
 
@@ -80,7 +58,6 @@ export default function Projects() {
                             <th className={tableCellClass}>Project</th>
                             <th className={tableCellClass}>Made At</th>
                             <th className={tableCellClass}>Keywords</th>
-                            <th className={tableCellClass}>Links</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -89,13 +66,6 @@ export default function Projects() {
                             name="NYT Connections Solver"
                             madeAt="DHBW Heidenheim"
                             technologies={["Python", "Embeddings", "LLMs"]}
-                            links={[
-                                {
-                                    href: "/projects/nyt-connections-solver",
-                                    name: "Case Study",
-                                    icon: <BookOpen size="1em" />
-                                }
-                            ]}
                         />
                         <TableRow
                             year={2025}
@@ -108,13 +78,6 @@ export default function Projects() {
                             name="Wieland Materials Searcher"
                             madeAt="Wieland-Werke AG"
                             technologies={["Python", "Embeddings", "Azure AI", "Azure Functions", "Vue"]}
-                            links={[
-                                {
-                                    href: "/projects/wieland-materials-ranker",
-                                    name: "Case Study",
-                                    icon: <BookOpen size="1em" />
-                                }
-                            ]}
                         />
                         <TableRow
                             year={2024}
@@ -127,13 +90,6 @@ export default function Projects() {
                             name="Spaces | Social Media Website"
                             madeAt="DHBW Heidenheim"
                             technologies={["C#", "Blazor", "ASP.NET", "Postgres", "Docker"]}
-                            links={[
-                                {
-                                    href: "/projects/wieland-materials-ranker",
-                                    name: "Case Study",
-                                    icon: <BookOpen size="1em" />
-                                }
-                            ]}
                         />
                         <TableRow
                             year={2024}
@@ -146,18 +102,6 @@ export default function Projects() {
                             name="Complexify | Complex Function Visualizer"
                             madeAt="Personal Project"
                             technologies={["React", "Next.JS", "Redux Toolkit", "OpenGL", "ANTLR4"]}
-                            links={[
-                                {
-                                    href: "https://complexify.mariodicaprio.com",
-                                    name: "View Site",
-                                    icon: <ExternalLink size="1em" />
-                                },
-                                {
-                                    href: "/projects/complexify",
-                                    name: "Case Study",
-                                    icon: <BookOpen size="1em" />
-                                }
-                            ]}
                         />
                     </tbody>
                 </table>

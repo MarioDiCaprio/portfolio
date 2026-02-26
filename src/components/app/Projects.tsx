@@ -102,7 +102,6 @@ const projectList: ReactNode[] = [
             High performance and fully interactive graphs.
         </>}
         technologies={['React', 'Next', 'Tailwind', 'OpenGL', 'Git']}
-        link={{ text: "View Site", href: "https://complexify.mariodicaprio.com" }}
     />,
     <Project
         key="spaces"
@@ -128,7 +127,6 @@ const projectList: ReactNode[] = [
             The system used technologies in the Azure AI suite and Azure Functions. Minimal frontend built with Vue.
         </>}
         technologies={['Python', 'Azure', 'Vue', 'Tailwind', 'Git']}
-        link={{ text: "View Case Study", href: "/projects/wieland-materials-ranker" }}
     />
 ]
 
